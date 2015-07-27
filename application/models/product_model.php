@@ -49,20 +49,20 @@ public function delete_product($id)
 
 	
 
-public function update_product($id)
-{
+// public function update_product($id)
+// {
 
- $data=array(
-'product_category'=>$this->input->post(''),
-'product_link'=>$this->input->post(''),
-'product_price'=>$this->input->post(''),
-'product_title'=>$this->input->post(''),
-'product_image'=>$this->input->post('')
-);
-$this->db->where(array('product_id'=> $id));
-$this->db->update('product',$data);
-return true;
-}
+//  $data=array(
+// 'product_category'=>$this->input->post(''),
+// 'product_link'=>$this->input->post(''),
+// 'product_price'=>$this->input->post(''),
+// 'product_title'=>$this->input->post(''),
+// 'product_image'=>$this->input->post('')
+// );
+// $this->db->where(array('product_id'=> $id));
+// $this->db->update('product',$data);
+// return true;
+// }
 
 
 
