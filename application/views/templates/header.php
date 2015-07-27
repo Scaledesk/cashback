@@ -5,28 +5,28 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>:: Royal Market - Coming Soon ::</title>
+<title><?php if($title!='') echo $title; ?></title>
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 <!-- Ionicons font -->
-<link href="<?php echo base_url().'assets\css\ionicons.min.css" rel="stylesheet"'?>">
+<link href="<?php echo base_url().'assets\css\ionicons.min.css" rel="stylesheet"';?>">
 <!-- Bootstrap styles-->
-<link href="<?php echo base_url().'assets\css\bootstrap.min.css" rel="stylesheet"'?>">
+<link href="<?php echo base_url().'assets\css\bootstrap.min.css" rel="stylesheet"';?>">
 <!--custom styles-->
 
-<link href="<?php echo base_url().'assets\css\custom-red.css" rel="stylesheet"'?>">
+<link href="<?php echo base_url().'assets\css\custom-red.css" rel="stylesheet"';?>">
 <!--tooltiop-->
-<link href="<?php echo base_url().'assets\css\hint.css" rel="stylesheet"'?>">
+<link href="<?php echo base_url().'assets\css\hint.css" rel="stylesheet"';?>">
 
 <!-- animation -->
-<link href="<?php echo base_url().'assets\css\animate.css" rel="stylesheet"'?>">
+<link href="<?php echo base_url().'assets\css\animate.css" rel="stylesheet"';?>">
 
 <!--select-->
-<link href="<?php echo base_url().'assets\css\bootstrap-select.min.css"'?>" rel="stylesheet">
+<link href="<?php echo base_url().'assets\css\bootstrap-select.min.css"';?>" rel="stylesheet">
 
 <!--color picker-->
-<link href="<?php echo base_url().'assets\css\jquery.simplecolorpicker.css"'?>" rel="stylesheet">
+<link href="<?php echo base_url().'assets\css\jquery.simplecolorpicker.css"';?>" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -34,11 +34,11 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 <!-- favicon -->
-<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url().'assets\favicon\apple-touch-icon-57x57.png'?>">
-<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url().'assets\favicon\apple-touch-icon-60x60.png'?>">
-<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-32x32.png'?>" sizes="32x32">
-<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-16x16.png'?>" sizes="16x16">
-<link rel="manifest" href="<?php echo base_url().'assets\favicon\manifest.json'?>">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url().'assets\favicon\apple-touch-icon-57x57.png';?>">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url().'assets\favicon\apple-touch-icon-60x60.png';?>">
+<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-32x32.png';?>" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-16x16.png';?>" sizes="16x16">
+<link rel="manifest" href="<?php echo base_url().'assets\favicon\manifest.json';?>">
 </head>
 <body>
 <!--start of loader-->
@@ -50,20 +50,20 @@
   <div class="colors-panel">
     <ul class="colors-list">
       <li><a id="custom-red" class="red" title="switch styling" href="javascript: void(0)"></a></li>
-      
+
     </ul>
   </div>
 </div>
-<!--end of style switcher--> 
+<!--end of style switcher-->
 <!--start of top sec-->
 <div class="top-sec">
   <nav class="navbar navbar-static-top line-navbar-one">
     <div class="container">
-      <div class="navbar-header"> 
+      <div class="navbar-header">
         <!-- Top navbar button -->
         <button type="button" class="navbar-toggle collapsed ion-android-menu" data-toggle="collapse" data-target="#line-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="fa fa-ellipsis-v"></span> </button>
-        <!-- Cart button --> 
-        <a class="lno-cart" href="#"> <span class="glyphicon glyphicon-shopping-cart"></span> <span class="cart-item-quantity"></span> </a> 
+        <!-- Cart button -->
+        <a class="lno-cart" href="#"> <span class="glyphicon glyphicon-shopping-cart"></span> <span class="cart-item-quantity"></span> </a>
         <!-- left navbar button -->
         <button class="lno-btn-toggle"> <span class="fa fa-bars"></span> </button>
       </div>
@@ -97,7 +97,7 @@
             <li><a href="compare-list.html">Compare list</a></li>
             <li><a href="wish-list.html">wish list</a></li>
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
-            <li><a href="<?php echo base_url().'auth/register'?>">Register</a></li>
+            <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
                 <li> <a href="index.html"><i class="ion-home"></i>Home Style One</a> </li>
@@ -152,11 +152,11 @@
     </ul>
   </div>
 </div>
-<!--end of top sec--> 
+<!--end of top sec-->
 
 <!--start of content wrap (This is necessary for the menu effect)-->
-<div class="content-wrap" data-effect="lnl-push"> 
-  
+<div class="content-wrap" data-effect="lnl-push">
+
   <!--start of header-->
   <header>
     <div class="container">
@@ -185,20 +185,20 @@
             </div>
           </div>
         </div>
-        <!--end of features--> 
+        <!--end of features-->
       </div>
     </div>
   </header>
-  <!--end of header--> 
+  <!--end of header-->
   <!-- strat of navigation -->
   <nav class="navbar navbar-default navbar-static-top line-navbar-two">
-    <div class="container"> 
+    <div class="container">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="line-navbar-collapse-2">
         <ul class="nav navbar-nav lnt-nav-mega">
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-dot-circle-o"></span> Categories <span class="ion-android-arrow-dropdown"></span> </a>
             <div class="dropdown-menu" role="menu">
-              <div class="lnt-dropdown-mega-menu"> 
+              <div class="lnt-dropdown-mega-menu">
                 <!-- List of categories -->
                 <ul class="lnt-category list-unstyled">
                   <li class="active"><a href="#subcategory-home">All pages</a></li>
@@ -246,14 +246,14 @@
                           <li data-target="#carousel-category-home" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="subcategory-sports"> 
+                  <div id="subcategory-sports">
                     <!-- Sub categories list-->
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Sports and outdoors</h3>
@@ -285,14 +285,14 @@
                           <li data-target="#carousel-category-sports" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="subcategory-music"> 
+                  <div id="subcategory-music">
                     <!-- Sub categories list-->
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Digital music</h3>
@@ -359,14 +359,14 @@
                           <li data-target="#carousel-category-books" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="subcategory-fashion"> 
+                  <div id="subcategory-fashion">
                     <!-- Sub categories list-->
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Fashion and beauty</h3>
@@ -396,14 +396,14 @@
                           <li data-target="#carousel-category-fashion" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg'?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div id="subcategory-movies"> 
+                  <div id="subcategory-movies">
                     <!-- Sub categories list-->
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Movies and games</h3>
