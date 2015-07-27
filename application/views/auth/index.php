@@ -1,8 +1,8 @@
 
 <!--start of banner-->
   <div id="banner">
-    <div class="item"> <img class="img-responsive hidden-xs" src="<?php base_url().'assets\images\banner-img-1.jpg';?>" width="1920" height="550" alt="">
-    <img class="img-responsive visible-xs" src="<?php base_url().'assets\images\banner-img-1-small.jpg';?>" width="1920" height="550" alt="">
+    <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets\images\banner-img-1.jpg';?>" width="1920" height="550" alt="">
+    <img class="img-responsive visible-xs" src="<?php echo base_url().'assets\images\banner-img-1-small.jpg';?>" width="1920" height="550" alt="">
       <div class="slider-caption">
         <div class="container">
           <div class="row">
@@ -16,8 +16,8 @@
         </div>
       </div>
     </div>
-    <div class="item"> <img class="img-responsive hidden-xs" src="<?php base_url().'assets\images\banner-img-2.jpg';?>" width="1920" height="540" alt="">
-    <img class="img-responsive visible-xs" src="<?php base_url().'assets\images\banner-img-2-small.jpg';?>" width="1920" height="540" alt="">
+    <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets\images\banner-img-2.jpg';?>" width="1920" height="540" alt="">
+    <img class="img-responsive visible-xs" src="<?php echo base_url().'assets\images\banner-img-2-small.jpg';?>" width="1920" height="540" alt="">
       <div class="slider-caption">
         <div class="container">
           <div class="row">
@@ -57,7 +57,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
               <div id="countdown-one" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -84,7 +84,7 @@
           <div class="product-item-container effect-wrap effect-animate deal-end">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
               </div>
               <div id="countdown-end" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -111,7 +111,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">new item</span> <span class="label offer-label-right">64% sold</span> </div>
               <div id="countdown-two" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -138,7 +138,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-4.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-4.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">36% sold</span> </div>
               <div id="countdown-three" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -165,7 +165,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
               <div id="countdown-four" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -192,7 +192,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
               <div id="countdown-five" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -219,7 +219,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
               <div id="countdown-six" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -246,7 +246,7 @@
           <div class="product-item-container effect-wrap effect-animate deal-end">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
               <div id="countdown-end-two" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -277,8 +277,8 @@
     <section class="container">
       <div class="row">
         <div class="col-sm-12 wide-ad">
-          <figure class="effect-layla"> <img class="img-responsive hidden-xs" src="<?php base_url().'assets\images\wide-ad-img.gif';?>" width="1920" height="275" alt="">
-          <img class="img-responsive visible-xs" src="<?php base_url().'assets\images\wide-ad-img-small.png';?>" width="1920" height="275" alt="">
+          <figure class="effect-layla"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets\images\wide-ad-img.gif';?>" width="1920" height="275" alt="">
+          <img class="img-responsive visible-xs" src="<?php echo base_url().'assets\images\wide-ad-img-small.png';?>" width="1920" height="275" alt="">
             <figcaption>
               <h2>Enjoy our <span>free shipping</span> for any order</h2>
               <p>Maecenas nec odio et ante tincidunt tempus</p>
@@ -340,7 +340,7 @@
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
                       <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="<?php base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets\images\product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
                       </div>
                       <div class="product-btns  effect-content-inner">
                         <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
@@ -1637,7 +1637,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-4 ad-box-outer">
           <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="<?php base_url().'assets\images\ad-box-1.jpg';?>" width="370" height="200" alt="">
+            <figure class="effect-layla"><img class="img-responsive" src="<?php echo base_url().'assets\images\ad-box-1.jpg';?>" width="370" height="200" alt="">
               <figcaption>
                 <h3><span>men</span> collection</h3>
                 <p>Maecenas nec odio et ante tincidunt tempus </p>
@@ -1647,7 +1647,7 @@
         </div>
         <div class="col-sm-12 col-md-4 ad-box-outer">
           <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="<?php base_url().'assets\images\ad-box-2.jpg';?>" width="370" height="200" alt="">
+            <figure class="effect-layla"><img class="img-responsive" src="<?php echo base_url().'assets\images\ad-box-2.jpg';?>" width="370" height="200" alt="">
               <figcaption>
                 <h3><span>women</span> collection</h3>
                 <p>Maecenas nec odio et ante tincidunt tempus </p>
@@ -1657,7 +1657,7 @@
         </div>
         <div class="col-sm-12 col-md-4 ad-box-outer">
           <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="<?php base_url().'assets\images\ad-box-3.jpg';?>" width="370" height="200" alt="">
+            <figure class="effect-layla"><img class="img-responsive" src="<?php echo base_url().'assets\images\ad-box-3.jpg';?>" width="370" height="200" alt="">
               <figcaption>
                 <h3><span>juniors</span> collection</h3>
                 <p>Maecenas nec odio et ante tincidunt tempus </p>
@@ -1680,34 +1680,34 @@
         <!--end of big title-->
         <div id="brands" class="col-sm-12 opacity-eff wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-1.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-1.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-2.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-2.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-3.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-3.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-4.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-4.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-5.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-5.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-1.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-1.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-2.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-2.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-3.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-3.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-4.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-4.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
           <div><a href="#">
-            <figure><img src="<?php base_url().'assets\images\brand-5.jpg';?>" width="200" height="100" alt=""></figure>
+            <figure><img src="<?php echo base_url().'assets\images\brand-5.jpg';?>" width="200" height="100" alt=""></figure>
             </a></div>
         </div>
       </div>
@@ -1744,7 +1744,7 @@
               <div>
                 <div class="row">
                   <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="<?php base_url().'assets\images\s-1.jpg';?>" width="200" height="230" alt=""></figure>
+                    <figure><img class="img-responsive" src="<?php echo base_url().'assets\images\s-1.jpg';?>" width="200" height="230" alt=""></figure>
                   </div>
                   <div class="col-sm-6 col-md-8">
                     <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
@@ -1758,7 +1758,7 @@
               <div>
                 <div class="row">
                   <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="<?php base_url().'assets\images\s-2.jpg';?>" width="200" height="230" alt=""></figure>
+                    <figure><img class="img-responsive" src="<?php echo base_url().'assets\images\s-2.jpg';?>" width="200" height="230" alt=""></figure>
                   </div>
                   <div class="col-sm-6 col-md-8">
                     <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
@@ -1800,7 +1800,7 @@
               <div>
                 <div class="row">
                   <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="<?php base_url().'assets\images\s-5.jpg';?>" width="200" height="230" alt=""></figure>
+                    <figure><img class="img-responsive" src="<?php echo base_url().'assets\images\s-5.jpg';?>" width="200" height="230" alt=""></figure>
                   </div>
                   <div class="col-sm-6 col-md-8">
                     <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
@@ -1814,7 +1814,7 @@
               <div>
                 <div class="row">
                   <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="<?php base_url().'assets\images\s-6.jpg';?>" width="200" height="230" alt=""></figure>
+                    <figure><img class="img-responsive" src="<?php echo base_url().'assets\images\s-6.jpg';?>" width="200" height="230" alt=""></figure>
                   </div>
                   <div class="col-sm-6 col-md-8">
                     <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
@@ -1845,7 +1845,7 @@
           <div class="row">
             <div class="col-sm-12 col-md-4">
               <div class="thumbnail">
-                <figure><a href="post-details.html"><img class="img-responsive" src="images\general-3.jpg" width="1024" height="683" alt=""></a></figure>
+                <figure><a href="post-details.html"><img class="img-responsive" src="<?php echo base_url().'assets\images\general-3.jpg';?>" width="1024" height="683" alt=""></a></figure>
                 <div class="caption">
                   <h4 class="text-uppercase"><a href="post-details.html">Aenean imperdiet. Etiam ultricies nisi vel</a></h4>
                   <div class="blog-info">
@@ -1858,7 +1858,7 @@
             </div>
             <div class="col-sm-12 col-md-4">
               <div class="thumbnail">
-                <figure><a href="post-details.html"><img class="img-responsive" src="images\blog-img-2.jpg" width="800" height="532" alt=""></a></figure>
+                <figure><a href="post-details.html"><img class="img-responsive" src="<?php echo base_url().'assets\images\blog-img-2.jpg';?>" width="800" height="532" alt=""></a></figure>
                 <div class="caption">
                   <h4 class="text-uppercase"><a href="post-details.html">Donec pede justo, fringilla vel aliquet nec</a></h4>
                   <div class="blog-info">
@@ -1891,7 +1891,3 @@
 
   </div>
   <!--end of middle sec-->
-
-
-  <?php
-include_once("template/footer.php") ?>
