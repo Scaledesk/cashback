@@ -1,10 +1,5 @@
 <?php
 //start session
-
-
-
-
-
 ########## Google Settings.. Client ID, Client Secret from https://cloud.google.com/console #############
 $google_client_id       = '63682838275-89hv1pmfogua5tesftaosirgv6a9bbdt.apps.googleusercontent.com';
 $google_client_secret   = 'h2aV1lp9x2An0J3QS2POXP6Y';
