@@ -55,14 +55,14 @@
 <div class="switcher-container"> <a id="switcher" class="hide-panel ion-ios-settings"></a>
   <div class="colors-panel">
     <ul class="colors-list">
-     <li><a id="custom-gold" class="gold" title="switch styling" href="javascript: void(0)"></a></li>
+     <!--<li><a id="custom-gold" class="gold" title="switch styling" href="javascript: void(0)"></a></li>-->
       <li><a id="custom-red" class="red" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-green" class="green" title="switch styling" href="javascript: void(0)"></a></li>
+      <!--<li><a id="custom-green" class="green" title="switch styling" href="javascript: void(0)"></a></li>
       <li><a id="custom-blue" class="blue" title="switch styling" href="javascript: void(0)"></a></li>
       <li><a id="custom-orange" class="orange" title="switch styling" href="javascript: void(0)"></a></li>
       <li><a id="custom-purple" class="purple" title="switch styling" href="javascript: void(0)"></a></li>
       <li><a id="custom-turquoise" class="turquoise" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-pink" class="pink" title="switch styling" href="javascript: void(0)"></a></li>
+      <li><a id="custom-pink" class="pink" title="switch styling" href="javascript: void(0)"></a></li>-->
     </ul>
   </div>
 </div>
