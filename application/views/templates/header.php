@@ -52,7 +52,7 @@
   <div id="status"></div>
 </div>
 <!--end of loader--> <!--start of style switcher-->
-<div class="switcher-container"> <a id="switcher" class="hide-panel ion-ios-settings"></a>
+<div class="switcher-container"><!-- <a id="switcher" class="hide-panel ion-ios-settings"></a>-->
   <div class="colors-panel">
     <ul class="colors-list">
      <!--<li><a id="custom-gold" class="gold" title="switch styling" href="javascript: void(0)"></a></li>-->
