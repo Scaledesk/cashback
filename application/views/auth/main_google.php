@@ -13,10 +13,10 @@ $google_developer_key   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 ########## MySql details (Replace with yours) #############
 $db_username = "root"; //Database Username
-$db_password = "084222252"; //Database Password
+$db_password = "ahamad"; //Database Password
 $hostname = "localhost:3308"; //Mysql Hostname
-$db_name = 'login_cashback'; //Database Name
-$base_url='http://localhost:88/cashback';
+$db_name = 'cashback'; //Database Name
+$base_url='http://localhost:88/cashback/';
 ###################################################################
 //include google api files
 
@@ -35,7 +35,7 @@ $gClient->setDeveloperKey($google_developer_key);
 $google_oauthV2 = new Google_Oauth2Service($gClient);
 
 //If user wish to log out, we just unset Session variable
-if (isset($_REQUEST['reset'])) 
+if (isset($_REQUEST['reset']))
 {
   unset($_SESSION['token']);
   $gClient->revokeToken();
@@ -46,8 +46,8 @@ if (isset($_REQUEST['reset']))
 //Code is required to aquire Access Token from google
 //Once we have access token, assign token to session variable
 //and we can redirect user back to page and login.
-if (isset($_GET['code'])) 
-{ 
+if (isset($_GET['code']))
+{
     $gClient->authenticate($_GET['code']);
     $_SESSION['token'] = $gClient->getAccessToken();
     header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
@@ -55,13 +55,13 @@ if (isset($_GET['code']))
 }
 
 
-if (isset($_SESSION['token'])) 
-{ 
+if (isset($_SESSION['token']))
+{
     $gClient->setAccessToken($_SESSION['token']);
 }
 
 
-if ($gClient->getAccessToken()) 
+if ($gClient->getAccessToken())
 {
       //For logged in user, get details from google using access token
       $user                 = $google_oauthV2->userinfo->get();
@@ -73,7 +73,7 @@ if ($gClient->getAccessToken())
       $personMarkup         = "$email<div><img src='$profile_image_url?sz=50'></div>";
       $_SESSION['token']    = $gClient->getAccessToken();
 }
-else 
+else
 {
     //For Guest user, get google login url
     $authUrl = $gClient->createAuthUrl();
@@ -93,38 +93,38 @@ echo '<h1>Login with Google</h1>';
 if(isset($authUrl)) //user is not logged in, show login button
 {
     echo '<a class="login" href="'.$authUrl.'"><img src="'.$base_url.'/images/google-login-button.png" /></a>';
-} 
-else // user logged in 
+}
+else // user logged in
 {
    /* connect to database using mysqli */
     $mysqli = new mysqli($hostname, $db_username, $db_password, $db_name);
-    
+
     if ($mysqli->connect_error) {
         die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
     }
-    
+
     //compare user id in our database
-    $user_exist = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user_id")->fetch_object()->usercount; 
+    $user_exist = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user_id")->fetch_object()->usercount;
     if($user_exist)
     {
         echo 'Welcome back '.$user_name.'!';
-    }else{ 
+    }else{
         //user is new
         echo 'Hi '.$user_name.', Thanks for Registering!';
-        $mysqli->query("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link) 
+        $mysqli->query("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link)
         VALUES ($user_id, '$user_name','$email','$profile_url','$profile_image_url')");
     }
-    
 
-    
+
+
     echo '<br /><a href="'.$profile_url.'" target="_blank"><img src="'.$profile_image_url.'?sz=100" /></a>';
     echo '<br /><a class="logout" href="?reset=1">Logout</a>';
-    
+
     //list all user details
-    echo '<pre>'; 
+    echo '<pre>';
     print_r($user);
-    echo '</pre>';  
+    echo '</pre>';
 }
- 
+
 echo '</body></html>';
 ?>
