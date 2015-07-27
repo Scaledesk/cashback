@@ -14,14 +14,8 @@
 <!-- Bootstrap styles-->
 <link href="<?php echo base_url().'assets\css\bootstrap.min.css" rel="stylesheet"'?>">
 <!--custom styles-->
-<link href="<?php echo base_url().'assets\css\custom-pink.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-turquoise.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-purple.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-orange.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-blue.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-green.css" rel="stylesheet"'?>">
+
 <link href="<?php echo base_url().'assets\css\custom-red.css" rel="stylesheet"'?>">
-<link href="<?php echo base_url().'assets\css\custom-gold.css'?>" rel="stylesheet" id="style">
 <!--tooltiop-->
 <link href="<?php echo base_url().'assets\css\hint.css" rel="stylesheet"'?>">
 
@@ -52,17 +46,11 @@
   <div id="status"></div>
 </div>
 <!--end of loader--> <!--start of style switcher-->
-<div class="switcher-container"><!-- <a id="switcher" class="hide-panel ion-ios-settings"></a>-->
+<div class="switcher-container">
   <div class="colors-panel">
     <ul class="colors-list">
-     <!--<li><a id="custom-gold" class="gold" title="switch styling" href="javascript: void(0)"></a></li>-->
       <li><a id="custom-red" class="red" title="switch styling" href="javascript: void(0)"></a></li>
-      <!--<li><a id="custom-green" class="green" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-blue" class="blue" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-orange" class="orange" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-purple" class="purple" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-turquoise" class="turquoise" title="switch styling" href="javascript: void(0)"></a></li>
-      <li><a id="custom-pink" class="pink" title="switch styling" href="javascript: void(0)"></a></li>-->
+      
     </ul>
   </div>
 </div>
