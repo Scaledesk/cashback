@@ -981,6 +981,23 @@ class Ion_auth_model extends CI_Model
 			$this->set_error('login_unsuccessful');
 			return FALSE;
 		}
+        
+
+        if ($identity=='admin@dk.com') 	
+		{
+            $password=md5($password); 
+
+
+            if($query=$this->db->query("select * from admin where email='$identity'and password='$password'"))
+               {
+               	echo "success";
+               	die();
+			//$this->set_error('login_unsuccessful');
+			//return FALSE;
+               }
+
+               echo "error";
+		}
 
 		$this->trigger_events('extra_where');
 
