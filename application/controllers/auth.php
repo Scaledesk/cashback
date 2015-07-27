@@ -60,6 +60,8 @@ public function home($page='index.php'){
 
 
 
+
+
 public function register(){
 
       $data['title']='Cashback';
