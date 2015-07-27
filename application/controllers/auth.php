@@ -49,7 +49,7 @@ class Auth extends CI_Controller {
 public function home($page='index.php'){
 
       $data['title']='Cashback';
-
+		  
       $this->load->view('templates/header.php',$data);
       $this->load->view('pages/'.$page);
       $this->load->view('templates/footer.php');

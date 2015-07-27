@@ -2,7 +2,7 @@
 <!--start of banner-->
   <div id="banner">
     <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets\images\banner-img-1.jpg';?>" width="1920" height="550" alt="">
-    <img class="img-responsive visible-xs" src=" assets\images\banner-img-1-small.jpg" width="1920" height="550" alt="">
+    <img class="img-responsive visible-xs" src="<?php echo base_url().'assets\images\banner-img-1-small.jpg';?>" width="1920" height="550" alt="">
       <div class="slider-caption">
         <div class="container">
           <div class="row">
