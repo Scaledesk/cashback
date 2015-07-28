@@ -41,7 +41,7 @@
                 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                  <form role="form" action="<?=(base_url().'Product/add_product/')?>" enctype="multipart/form-data" method="post">
+                  <form role="form" action="<?=(base_url().'Product/add_product/'.$cg[0]->product_id)?>" enctype="multipart/form-data" method="post">
                     <div class="row"> 
                       
                       <!-- START Presonal information -->
@@ -69,7 +69,7 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Product Title</label>
-                          <input type="text" id="" name="product_title" class="form-control" placeholder="Product Title" required="">
+                          <input type="text" id="" name="product_title" class="form-control" value="<?php echo $cg[0]->product_title;?>" required="">
                         </div>
                         
                         
@@ -83,24 +83,24 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Price</label>
-                          <input type="text" id="" name="price" class="form-control" placeholder="Price" required="">
+                          <input type="text" id="" name="price" class="form-control" value="<?php echo $cg[0]->product_price;?>" required="">
                         </div>
                         
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Image</label>
-                          <input type="file"  name="product_image" class="form-control" required="">
+                          <input type="file"  name="product_image"  value="<?php echo $cg[0]->product_image;?>" class="form-control" required="">
                         </div>
                                                               
                       <!-- END Payment information--> 
                     </div>
-                    
+                   
                     <!-- Agree checkbox and Continue button -->
                     <div class="row">
                       <div class="col-sm-12">
                         <fieldset>
                           <legend>Link</legend>
-                          <textarea class="form-control" rows="5" cols="40" placeholder="Link" name="link" id="comment-body" required=""></textarea>
+                          <textarea class="form-control" rows="5" cols="40"  name="link" id="comment-body" required=""><?php echo $cg[0]->product_link;?></textarea>
                           <hr>
                         </fieldset>
                       </div>
@@ -108,7 +108,7 @@
                         
                       </div>
                       <div class="col-sm-6 text-right">
-                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " name="submit" value="Submit">
+                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " name="submit" value="Update">
                       </div>
                     </div>
                   </form>

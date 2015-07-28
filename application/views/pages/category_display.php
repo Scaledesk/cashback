@@ -42,6 +42,7 @@
                                 <div class="panel-body">
                                     <table class="table">
                                         <thead>
+                                        
                                             <tr>
                                                 <th>S.No</th>
                                                 <th>Title</th>
@@ -50,24 +51,15 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        <?php   foreach($cg->result() as $row) {?>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td><a href="#">Update</a>/<a href="#">Delete</a></td>
+                                                <td><?php echo $row->category_title; ?></td>
+                                                <td><?php echo $row->category_description; ?></td>
+                                                 <td><a href="<?=(base_url().'product/select_update_category/')?><?php echo $row->category_id; ?>">Update</a>/
+                                                 <a href="<?=(base_url().'product/delete_category/')?><?php echo $row->category_id; ?>">Delete</a></td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td><a href="#">Update</a>/<a href="#">Delete</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td><a href="#">Update</a>/<a href="#">Delete</a></td>
-                                            </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

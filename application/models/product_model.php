@@ -95,7 +95,7 @@ public function delete_product($id)
   		}		
 	}
 
-	public function show_product()
+	public function display_product()
 	{
 		
 		
@@ -104,10 +104,16 @@ public function delete_product($id)
 		// print_r($query);
 		// die();  
 		
-		return $query->result();
+		return $query;
 	}
 
-	
+	public function select_update_product($id){
+
+
+	$this->db->where("product_id",$id);
+  $query=$this->db->query(" select * from product");
+   return $query->result();	
+	}
 
 // public function update_product($id)
 // {

@@ -33,7 +33,10 @@ public function show_category(){
 
 
  $data['cg']= $this->Product_model->select_category();
- $this->load->view('pages/show_category.php',$data);
+  $data['title']='Manage Category';
+  $this->load->view('templates/header.php',$data);
+ $this->load->view('pages/category_display.php',$data);
+ $this->load->view('templates/footer.php');
  }
 
 
@@ -63,7 +66,7 @@ $this->load->view('templates/footer.php');
 
  if($this->Product_model->update_category($id)){
       echo "successful update Category";
-        
+          redirect(base_url().'product/show_category', 'refresh');
       }
 
   }
@@ -86,6 +89,11 @@ $this->load->view('templates/footer.php');
              $this->load->view('pages/dashbord');
              $this->load->view('templates/footer');
   }
+
+
+
+
+
 
 	public function add_product()
   {
@@ -113,11 +121,35 @@ $this->load->view('templates/footer.php');
 
   }
 
+  public function display_product(){
+   
+
+
+
+ $data['cg']= $this->Product_model->display_product();
+  $data['title']='Manage Category';
+  $this->load->view('templates/header.php',$data);
+ $this->load->view('pages/table_product.php',$data);
+ $this->load->view('templates/footer.php');
+
+}
+ public function select_update_product($id){
+
+$data['title']='Manage Product';
+ $data['cg']= $this->Product_model->select_update_product($id);
+
+ $this->load->view('templates/header.php',$data);
+ $this->load->view('pages/update_product.php',$data);
+$this->load->view('templates/footer.php');
+ }
+
+
    public function delete_product($id)
   {
    if($this->Product_model->delete_product($id))
     {
-    $this->employee_show();
+      echo "successful delete Product";
+     redirect(base_url().'product/display_product', 'refresh');
     }
   }
 
