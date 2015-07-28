@@ -57,18 +57,18 @@
                                                 <th scope="row">1</th>
                                                 <td>Mark</td>
                                                 <td>Otto</td>
-                                                <th>Price</th>
-                                                <th>Price</th>
-                                                <th>Price</th>
+                                                <td>Price</td>
+                                                <td>Price</td>
+                                                <td>Price</td>
                                                 <td><a href="#">Update</a>/<a href="#">Delete</a></td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
                                                 <td>Mark</td>
                                                 <td>Otto</td>
-                                                <th>Price</th>
-                                                <th>Price</th>
-                                                <th>Price</th>
+                                                <td>Price</td>
+                                                <td>Price</td>
+                                                <td>Price</td>
                                                 <td><a href="#">Update</a>/<a href="#">Delete</a></td>
                                             </tr>
                                             
