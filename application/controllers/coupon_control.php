@@ -22,19 +22,13 @@ class Coupon_control extends CI_Controller {
 
   public function do_add_coupon()
   {
-
 		$config['upload_path'] = APPPATH.'/images/coupon/';
-	  $config['allowed_types'] = 'png|jpeg|gif';
-	  $config['max_size'] = '2048000';
+	  $config['allowed_types'] = 'png|jpeg|gif|jpg';
+	  $config['max_size'] = '70000';
 	  $this->load->library('upload',$config);
-	  $ncoupon=time().$_FILES['coupon_image']['name'];
+		$ncoupon=time().$_FILES['coupon_image']['name'];
 	   $_FILES['coupon_image']['name']=$ncoupon;
-		 if ($this->upload->do_upload('coupon_image')==False)
-        {
-           echo 'upload error';
-					 //die;
-        }
-        else
+		 if ($this->upload->do_upload('coupon_image')==true)
         {
 					if( $this->Coupon_model->add_coupon($ncoupon)){
     			$data['title']='Add Coupon';
@@ -42,7 +36,13 @@ class Coupon_control extends CI_Controller {
     			$this->load->view('templates/header.php',$data);
     			$this->load->view('pages/add_coupon.php',$data);
     			$this->load->view('templates/footer.php');
-    		}
+    		  }
+			}
+        else
+        {
+					print_r($this->upload->display_errors());
+					echo 'upload error';
+
 			}
   }
 
