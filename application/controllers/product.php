@@ -128,9 +128,9 @@ $this->load->view('templates/footer.php');
 
  $data['cg']= $this->Product_model->display_product();
   $data['title']='Manage Category';
-  $this->load->view('templates/header.php',$data);
+ // $this->load->view('templates/header.php',$data);
  $this->load->view('pages/table_product.php',$data);
- $this->load->view('templates/footer.php');
+ //$this->load->view('templates/footer.php');
 
 }
  public function select_update_product($id){

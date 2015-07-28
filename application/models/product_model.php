@@ -100,9 +100,10 @@ public function delete_product($id)
 		
 		
 		$query=$this->db->query("select * from product");
-		// echo '<pre />';
-		// print_r($query);
-		// die();  
+		 echo '<pre />';
+		 print_r($query);
+		 echo "kdfjhuidf";
+		 die();  
 		
 		return $query;
 	}
