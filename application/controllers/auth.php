@@ -96,8 +96,25 @@ public function register(){
 			//check to see if the user is logging in
 			//check for "remember me"
 			$remember = (bool) $this->input->post('remember');
+        
+ //      if ($this->input->post('identity')=='admin@dk.com')
+	// {
+	
+ //      if($this->ion_auth->admin_login($this->input->post('identity'), $this->input->post('password')))
+ //      {
+ //         $this->load->view('templates/header');
+ //            $this->load->view('pages/dashbord');
+ //             $this->load->view('templates/footer');
+ // 	   }
+     
+	 // }
 
-			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
+           
+
+
+
+
+			 if  ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{
 				//if the login is successful
 				//redirect them back to the home page

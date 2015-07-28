@@ -51,10 +51,18 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="card">Select Category</label>
+
                           <select class="selectpicker" id="" name="category" required="">
-                            <option>MasterCard
-                            <option>Visa
-                            <option>Other
+                                                                       <?php 
+                                           foreach($cg->result() as $row)
+                                            {
+                                               
+                                             ?>
+                                               
+
+                            <option value="<?php echo $row['category_id'];?>"><?php echo $row['category_title'];?></option>
+                            
+                            <?php }?>
                           </select>
                         </div>
                         

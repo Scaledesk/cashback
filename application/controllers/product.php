@@ -14,8 +14,41 @@ class Product extends CI_Controller {
 
 		//$this->lang->load('auth');
 	}
+  
 
+  public function product_page(){
+
+      $data['title']='Manage Product';
+      $this->load->view('templates/header.php',$data);
+      $data['cg']= $this->Product_model->select_category();
+      $this->load->view('pages/add_product.php',$data);
+      $this->load->view('templates/footer.php');
+   
+        
+  }
 	
+
+
+
+public function add_category(){
+
+
+ if($this->Product_model->add_category()){
+      echo "successful Add Category";
+      //$this->load->view('templates/header.php',$data);
+      //$this->load->view('pages/add_employee.php');
+      //$this->load->view('templates/footer.php');  
+      }
+
+  }
+  
+
+  public function admin(){
+
+             $this->load->view('templates/header');
+             $this->load->view('pages/dashbord');
+             $this->load->view('templates/footer');
+  }
 
 	public function add_product()
   {

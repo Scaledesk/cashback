@@ -267,6 +267,28 @@ class Ion_auth_model extends CI_Model
 	 * @return void
 	 * @author Mathew
 	 **/
+
+public function admin_login($identity,$password){
+
+ 
+ $password=md5($password);
+$data=array(
+ 'email'=>$identity,
+ 'password'=>$password
+  );
+
+   $this->db->where(array('email'=>$identity));
+   $this->db->where(array('password'=> $password));
+   $this->db->select('admin',$data);
+  return true;
+//$query=$this->db->query("select * from "); 
+ }
+
+
+
+
+
+
 	public function hash_password($password, $salt=false, $use_sha1_override=FALSE)
 	{
 		if (empty($password))
@@ -990,14 +1012,16 @@ class Ion_auth_model extends CI_Model
 
             if($query=$this->db->query("select * from admin where email='$identity'and password='$password'"))
                {
-               	echo "success";
-               	die();
-			//$this->set_error('login_unsuccessful');
-			//return FALSE;
+               	redirect(base_url().'product/admin', 'refresh');
+               //	$this->product->admin();
+                //echo "success";
+                //die();
+			   //$this->set_error('login_unsuccessful');
+			   //return FALSE;
+
                }
 
-               echo "error";
-		}
+         }
 
 		$this->trigger_events('extra_where');
 

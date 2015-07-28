@@ -8,7 +8,29 @@ parent::__construct();
 }
 
 
+ public function select_category(){
 
+    $query=$this->db->query("select * from category");
+		// echo '<pre />';
+		// print_r($query);
+		// die();  
+		
+		return $query->result();
+ }
+
+
+
+public function add_category(){
+
+$data=array(
+'category_title'=>$this->input->post('category_title'),
+'category_description'=>$this->input->post('category_description')
+);
+
+$this->db->insert('category',$data);
+return true;
+
+}
 public function add_product($newimage)
 {
    $newimage_file = base_url().'application/upload/'.$newimage; 
