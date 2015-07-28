@@ -8,9 +8,7 @@ class Auth extends CI_Controller {
 		$this->load->database();
 		$this->load->library(array('ion_auth','form_validation'));
 		$this->load->helper(array('url','language'));
-
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
-
 		$this->lang->load('auth');
 	}
 
@@ -49,7 +47,6 @@ class Auth extends CI_Controller {
 public function home($page='index.php'){
 
       $data['title']='Cashback';
-		  
       $this->load->view('templates/header.php',$data);
       $this->load->view('pages/'.$page);
       $this->load->view('templates/footer.php');
@@ -96,25 +93,8 @@ public function register(){
 			//check to see if the user is logging in
 			//check for "remember me"
 			$remember = (bool) $this->input->post('remember');
-        
- //      if ($this->input->post('identity')=='admin@dk.com')
-	// {
-	
- //      if($this->ion_auth->admin_login($this->input->post('identity'), $this->input->post('password')))
- //      {
- //         $this->load->view('templates/header');
- //            $this->load->view('pages/dashbord');
- //             $this->load->view('templates/footer');
- // 	   }
-     
-	 // }
 
-           
-
-
-
-
-			 if  ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
+			if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
 			{
 				//if the login is successful
 				//redirect them back to the home page
@@ -507,10 +487,7 @@ public function register(){
 		}
 		if ($this->form_validation->run() == true && $this->ion_auth->register($username, $password, $email, $additional_data))
 		{
-             echo"register successful";
-
-			//check to see if we are creating the user
-			//redirect them back to the admin page
+      echo"register successful";
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
 			redirect("auth", 'refresh');
 		}

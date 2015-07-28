@@ -270,7 +270,7 @@ class Ion_auth_model extends CI_Model
 
 public function admin_login($identity,$password){
 
- 
+
  $password=md5($password);
 $data=array(
  'email'=>$identity,
@@ -281,7 +281,7 @@ $data=array(
    $this->db->where(array('password'=> $password));
    $this->db->select('admin',$data);
   return true;
-//$query=$this->db->query("select * from "); 
+//$query=$this->db->query("select * from ");
  }
 
 
@@ -1003,11 +1003,11 @@ $data=array(
 			$this->set_error('login_unsuccessful');
 			return FALSE;
 		}
-        
 
-        if ($identity=='admin@dk.com') 	
+
+        if ($identity=='admin@dk.com')
 		{
-            $password=md5($password); 
+            $password=md5($password);
 
 
             if($query=$this->db->query("select * from admin where email='$identity'and password='$password'"))
@@ -1071,7 +1071,6 @@ $data=array(
 
 				$this->trigger_events(array('post_login', 'post_login_successful'));
 				$this->set_message('login_successful');
-
 				return TRUE;
 			}
 		}
