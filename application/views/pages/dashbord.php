@@ -2,8 +2,8 @@
   <div class="middle-sec wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
     <div class="page-header">
       <div class="container text-center">
-        <h2 class="text-primary text-uppercase">Dashboard</h2>
-        
+        <h2 class="text-primary text-uppercase">Welcome Admin</h2>
+
       </div>
     </div>
     <section class="container">
@@ -29,13 +29,13 @@
               </div>
             </div>
             <div class="col-sm-8 col-md-9 sub-data-left main-sec">
-              <div class="row"> 
-                
-                
-                <!--end of breadcrumb--> 
-                
-                 
-                
+              <div class="row">
+
+
+                <!--end of breadcrumb-->
+
+
+
               </div>
             </div>
           </div>
@@ -43,4 +43,4 @@
       </div>
     </section>
   </div>
-  <!--end of middle sec--> 
+  <!--end of middle sec-->
