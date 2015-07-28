@@ -57,7 +57,7 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Store Link</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Store Link" required="">
+                          <textarea class="form-controle" placeholder="Store Link" required="" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea>
                         </div>
                         
                         
@@ -77,7 +77,7 @@
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Store Desciption</label>
-                          <textarea class="form-controle" placeholder="Store Desciption" style="margin: 0px; width: 407px; height: 46px;"></textarea> 
+                          <textarea class="form-controle" placeholder="Store Desciption" required="" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea> 
                         </div>
                                                               
                       <!-- END Payment information--> 
