@@ -40,8 +40,8 @@
                 <!--end of breadcrumb--> 
                 
                 <!--start of checkout-->
-                <div class="col-sm-12" action="" name="" method="Post">
-                  <form role="form">
+                <div class="col-sm-12">
+                  <form role="form" action="<?=(base_url().'Product/add_product/')?>" enctype="multipart/form-data" method="post">
                     <div class="row"> 
                       
                       <!-- START Presonal information -->
@@ -51,7 +51,7 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="card">Select Category</label>
-                          <select class="selectpicker" id="" name="" required="">
+                          <select class="selectpicker" id="" name="category" required="">
                             <option>MasterCard
                             <option>Visa
                             <option>Other
@@ -61,11 +61,11 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Product Title</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Product Title" required="">
+                          <input type="text" id="" name="product_title" class="form-control" placeholder="Product Title" required="">
                         </div>
                         
                         
-                      </fieldset>
+                      </fieldset> 
                       
                       
                       <!-- START Payment infromation -->
@@ -75,13 +75,13 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Price</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Price" required="">
+                          <input type="text" id="" name="price" class="form-control" placeholder="Price" required="">
                         </div>
                         
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Image</label>
-                          <input type="file" id="" name="" class="form-control" placeholder="Image" required="">
+                          <input type="file"  name="product_image" class="form-control" required="">
                         </div>
                                                               
                       <!-- END Payment information--> 
@@ -92,18 +92,15 @@
                       <div class="col-sm-12">
                         <fieldset>
                           <legend>Link</legend>
-                          <textarea class="form-control" rows="5" cols="40" placeholder="Link" name="comment[body]" id="comment-body" required=""></textarea>
+                          <textarea class="form-control" rows="5" cols="40" placeholder="Link" name="link" id="comment-body" required=""></textarea>
                           <hr>
                         </fieldset>
                       </div>
                       <div class="col-sm-6">
-                        <div class="checkbox small">
-                          <input type="checkbox" id="terms" value="option1" name="logincheckbox">
-                          <label for="terms">Do you agree to the <a href="#">terms and conditions?</a></label>
-                        </div>
+                        
                       </div>
                       <div class="col-sm-6 text-right">
-                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " value="Submit">
+                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " name="submit" value="Submit">
                       </div>
                     </div>
                   </form>

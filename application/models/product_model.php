@@ -9,15 +9,15 @@ parent::__construct();
 
 
 
-public function add_product()
+public function add_product($newimage)
 {
-
+   $newimage_file = base_url().'application/upload/'.$newimage; 
  $data=array(
-'product_category'=>$this->input->post(''),
-'product_link'=>$this->input->post(''),
-'product_price'=>$this->input->post(''),
-'product_title'=>$this->input->post(''),
-'product_image'=>$this->input->post('')
+'product_category'=>$this->input->post('category'),
+'product_link'=>$this->input->post('link'),
+'product_price'=>$this->input->post('price'),
+'product_title'=>$this->input->post('product_title'),
+'product_image'=>$newimage_file
 
 );
 
