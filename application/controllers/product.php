@@ -29,19 +29,56 @@ class Product extends CI_Controller {
 	
 
 
+public function show_category(){
+
+
+ $data['cg']= $this->Product_model->select_category();
+ $this->load->view('pages/show_category.php',$data);
+ }
+
 
 public function add_category(){
 
 
  if($this->Product_model->add_category()){
       echo "successful Add Category";
-      //$this->load->view('templates/header.php',$data);
-      //$this->load->view('pages/add_employee.php');
-      //$this->load->view('templates/footer.php');  
+       
       }
 
   }
+
+public function select_update_category($id){
+$data['title']='Manage Product';
+ $data['cg']= $this->Product_model->select_update_category($id);
+
+ $this->load->view('templates/header.php',$data);
+ $this->load->view('pages/update_category.php',$data);
+$this->load->view('templates/footer.php');
+
+}
+
+
+  public function update_category($id){
+
+
+ if($this->Product_model->update_category($id)){
+      echo "successful update Category";
+        
+      }
+
+  }
+
   
+
+   public function delete_category($id)
+{
+  if($this->Product_model->delete_category($id))
+  {
+    echo "successful leave delete ";
+
+    $this->show_category();
+  }
+}
 
   public function admin(){
 

@@ -15,7 +15,7 @@ parent::__construct();
 		// print_r($query);
 		// die();  
 		
-		return $query->result();
+		return $query;
  }
 
 
@@ -31,6 +31,44 @@ $this->db->insert('category',$data);
 return true;
 
 }
+
+
+public function select_update_category($id){
+$this->db->where("category_id",$id);
+$query=$this->db->query(" select * from category");
+return $query->result();	
+}
+
+
+public function update_category($id){
+
+$data=array(
+'category_title'=>$this->input->post('category_title'),
+'category_description'=>$this->input->post('category_description')
+);
+$this->db->where("category_id",$id);
+$this->db->update('category',$data);
+return true;
+
+}
+
+
+
+
+
+public function delete_category($id)
+	{
+		$this->db->where("category_id",$id);
+  		if($this->db->delete("category"))
+  		{
+  			return true;
+  		}		
+	}
+
+
+
+
+
 public function add_product($newimage)
 {
    $newimage_file = base_url().'application/upload/'.$newimage; 

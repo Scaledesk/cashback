@@ -15,9 +15,9 @@
                 <section class="col-sm-12">
                   <h5 class="sub-title text-info text-uppercase">order summary</h5>
                   <ul class="list-group summary">
-                    <li class="list-group-item text-uppercase"><strong>items:<span class="pull-right"> 4</span></strong></li>
-                    <li class="list-group-item text-uppercase"><strong>subtotal:<span class="pull-right"> $8.99</span></strong></li>
-                    <li class="list-group-item text-uppercase"><strong>taxes (5%): <span class="pull-right">$0.45</span></strong></li>
+                    <a href="<?=(base_url().'Product/product_page/')?>"><li class="list-group-item text-uppercase"><strong>Product Add</strong></li></a>
+                    <a href="<?=(base_url().'Product/update_category/')?>"><li class="list-group-item text-uppercase"><strong>Udate Category</strong></li></a>
+                    <a href="<?=(base_url().'Product/show_product/')?>"><li class="list-group-item text-uppercase"><strong>taxes (5%): <span class="pull-right">$0.45</span></strong></li>
                     <li class="list-group-item text-uppercase"><strong>shipping: <span class="pull-right">$5</span></strong></li>
                   </ul>
                 </section>
