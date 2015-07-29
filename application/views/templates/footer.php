@@ -1,16 +1,7 @@
 <!--start of btm sec-->
   <div class="btm-sec">
     <footer>
-      <div class="footer-top wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-8 col-sm-9">
-              <h4><i class="ion-android-phone-portrait icon text-info"></i><span class="text-uppercase text-primary">Royal Market - fashion & multi store HTML5 theme that fits your needs from webyzona</span></h4>
-            </div>
-            <div class="col-xs-4 col-sm-3"> <a href="#" class="btn btn-default btn-block hvr-underline-from-center-default pull-right">Download app</a> </div>
-          </div>
-        </div>
-      </div>
+      
       <div class="footer-middle wow fadeIn" data-wow-offset="40" data-wow-duration="2s">
         <div class="container">
           <div class="row">
@@ -31,46 +22,13 @@
               <hr class="hidden-md hidden-lg hidden-sm">
             </div>
             <div class="col-md-2 col-sm-3">
-              <h5 class="text-info text-uppercase">Men</h5>
-              <ul class="list-unstyled nudge">
-                <li><a href="#">T-shirts</a> </li>
-                <li><a href="#">Shirts</a> </li>
-                <li><a href="#">Accessories</a> </li>
-                <li><a href="#">Casual Dresses</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Jakets &amp; Coats</a></li>
-                <li><a href="#">Formal Shoes</a></li>
-                <li><a href="#">Belts</a></li>
-                <li><a href="#">Blouses &amp; Shirts</a></li>
-              </ul>
+              <!--footer menu1-->
             </div>
             <div class="col-md-2 col-sm-3">
-              <h5 class="text-info text-uppercase">Women</h5>
-              <ul class="list-unstyled nudge">
-                <li><a href="#">Casual Dresses</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Jakets &amp; Coats</a></li>
-                <li><a href="#">Blouses &amp; Shirts</a></li>
-                <li><a href="#">Skirts</a></li>
-                <li><a href="#">Formal Shoes</a></li>
-                <li><a href="#">Jweelery</a></li>
-                <li><a href="#">Accessories</a> </li>
-                <li><a href="#">Casual Dresses</a></li>
-              </ul>
+              <!--footer menu3-->
             </div>
             <div class="col-md-2 col-sm-3">
-              <h5 class="text-info text-uppercase">juniors</h5>
-              <ul class="list-unstyled nudge">
-                <li><a href="#">Sunglassess</a> </li>
-                <li><a href="#">Sport Shoes</a> </li>
-                <li><a href="#">T-shirts</a> </li>
-                <li><a href="#">Skirts</a> </li>
-                <li><a href="#">Pants</a> </li>
-                <li><a href="#">Accessories</a> </li>
-                <li><a href="#">Sandals</a> </li>
-                <li><a href="#">Accessories</a> </li>
-                <li><a href="#">Apparel</a></li>
-              </ul>
+              <!--footer menu3-->
             </div>
             <div class="col-sm-12 col-md-4">
               <div class="row">
@@ -103,17 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="footer-btm wow fadeIn" data-wow-offset="50" data-wow-duration="2s">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <p class="pull-left">&copy; 2015.Royal Market is a responsive template by <a class="external" href="http://www.webyzona.com">Webyzona</a>.</p>
-              <p class="pull-right"><img class="img-responsive" src="images\payments.png" width="362" height="30" alt=""></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
   </div>
   <!--end of btm sec--> 
   <!--start of login box-->

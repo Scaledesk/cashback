@@ -5,28 +5,31 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php if($title!='') echo $title; ?></title>
+<title><?php if($title!='') echo $title;
+else
+  echo 'Cashback';
+?></title>
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 <!-- Ionicons font -->
-<link href="<?php echo base_url().'assets\css\ionicons.min.css" rel="stylesheet"';?>">
+<link href="<?php echo base_url().'assets/css/ionicons.min.css" rel="stylesheet"';?>">
 <!-- Bootstrap styles-->
-<link href="<?php echo base_url().'assets\css\bootstrap.min.css" rel="stylesheet"';?>">
+<link href="<?php echo base_url().'assets/css/bootstrap.min.css" rel="stylesheet"';?>">
 <!--custom styles-->
 
-<link href="<?php echo base_url().'assets\css\custom-red.css" rel="stylesheet"';?>">
+<link href="<?php echo base_url().'assets/css/custom-red.css" rel="stylesheet"';?>">
 <!--tooltiop-->
-<link href="<?php echo base_url().'assets\css\hint.css" rel="stylesheet"';?>">
+<link href="<?php echo base_url().'assets/css/hint.css" rel="stylesheet"';?>">
 
 <!-- animation -->
-<link href="<?php echo base_url().'assets\css\animate.css" rel="stylesheet"';?>">
+<link href="<?php echo base_url().'assets/css/animate.css" rel="stylesheet"';?>">
 
 <!--select-->
-<link href="<?php echo base_url().'assets\css\bootstrap-select.min.css"';?>" rel="stylesheet">
+<link href="<?php echo base_url().'assets/css/bootstrap-select.min.css"';?>" rel="stylesheet">
 
 <!--color picker-->
-<link href="<?php echo base_url().'assets\css\jquery.simplecolorpicker.css"';?>" rel="stylesheet">
+<link href="<?php echo base_url().'assets/css/jquery.simplecolorpicker.css"';?>" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -34,11 +37,11 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 <!-- favicon -->
-<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url().'assets\favicon\apple-touch-icon-57x57.png';?>">
-<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url().'assets\favicon\apple-touch-icon-60x60.png';?>">
-<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-32x32.png';?>" sizes="32x32">
-<link rel="icon" type="image/png" href="<?php echo base_url().'assets\favicon\favicon-16x16.png';?>" sizes="16x16">
-<link rel="manifest" href="<?php echo base_url().'assets\favicon\manifest.json';?>">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url().'assets/favicon/apple-touch-icon-57x57.png';?>">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url().'assets/favicon/apple-touch-icon-60x60.png';?>">
+<link rel="icon" type="image/png" href="<?php echo base_url().'assets/favicon/favicon-32x32.png';?>" sizes="32x32">
+<link rel="icon" type="image/png" href="<?php echo base_url().'assets/favicon/favicon-16x16.png';?>" sizes="16x16">
+<link rel="manifest" href="<?php echo base_url().'assets/favicon/manifest.json';?>">
 </head>
 <body>
 <!--start of loader-->
@@ -72,30 +75,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="col-sm-8 collapse navbar-collapse navbar-right" id="line-navbar-collapse-1">
           <ul class="nav navbar-nav top-menu">
-            <li class="dropdown lnt-shopping-cart visible-lg visible-md"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="ion-bag bag-icn"></span> <span class="cart-item-quantity badge cart-badge">2</span> </a>
-              <ul role="menu" class="dropdown-menu">
-                <li>
-                  <div class="lnt-cart-products text-success"><i class="ion-android-checkmark-circle icon"></i> 2 products added. <span class="lnt-cart-total">$1300</span> </div>
-                </li>
-                <li>
-                  <div class="lnt-cart-products"> <img alt="Product title" src="images\cart-thumb-1.jpg">
-                    <p class="lnt-product-info">
-                      <button class="close"><span aria-hidden="true" class="ion-android-cancel"></span></button>
-                      <span class="lnt-product-name">Lorem ipsum dolor sit amet</span> <span class="lnt-product-price text-info">$600</span> </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="lnt-cart-products"> <img alt="Product title" src="images\cart-thumb-2.jpg">
-                    <p class="lnt-product-info">
-                      <button class="close"><span aria-hidden="true" class="ion-android-cancel"></span></button>
-                      <span class="lnt-product-name">Awesome pack of new clothes for you</span> <span class="lnt-product-price text-info">$700</span> </p>
-                  </div>
-                </li>
-                <li class="lnt-cart-actions text-center"> <a class="btn btn-default btn-lg hvr-underline-from-center-default" href="cart.html">View cart</a> <a class="btn btn-primary hvr-underline-from-center-primary" href="checkout.html">Checkout</a> </li>
-              </ul>
-            </li>
-            <li><a href="compare-list.html">Compare list</a></li>
-            <li><a href="wish-list.html">wish list</a></li>
+            
+            
+            
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
@@ -128,10 +110,10 @@
                 <li><a href="#">EUR </a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="images\uk.png"> <span class="ion-android-arrow-dropdown"></span></a>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/uk.png'; ?>" <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu">
-                <li> <a href="#"><img width="16" height="12" alt="" src="images\italy.png"></a> </li>
-                <li> <a href="#"><img width="16" height="12" alt="" src="images\turkey.png"></a> </li>
+                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/italy.png';?>"></a> </li>
+                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
               </ul>
             </li>
           </ul>
@@ -246,9 +228,9 @@
                           <li data-target="#carousel-category-home" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
@@ -285,9 +267,9 @@
                           <li data-target="#carousel-category-sports" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
@@ -321,9 +303,9 @@
                           <li data-target="#carousel-category-music" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
@@ -359,9 +341,9 @@
                           <li data-target="#carousel-category-books" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
@@ -396,9 +378,9 @@
                           <li data-target="#carousel-category-fashion" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="<?php echo base_url().'assets\images\nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
@@ -432,9 +414,9 @@
                           <li data-target="#carousel-category-movies" data-slide-to="2" class=""></li>
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                          <div class="item active"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
-                          <div class="item"> <img src="images\nav-img-1.jpg" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item active"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
+                          <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
                       </div>
                     </div>
