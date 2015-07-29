@@ -2,7 +2,7 @@
   <div class="middle-sec wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
     <div class="page-header">
       <div class="container text-center">
-        <h2 class="text-primary text-uppercase">Product Category</h2>
+        <h2 class="text-primary text-uppercase">Welcome</h2>
         
       </div>
     </div>
@@ -26,11 +26,7 @@
                     <li class="list-group-item text-uppercase"><strong>shipping: <span class="pull-right">$5</span></strong></li>
                   </ul>
                 </section>
-                <section class="col-sm-12">
-                  <h5 class="sub-title text-info text-uppercase">total price</h5>
-                  <div class=" summary sum js-total text-center"> <strong> $114.44</strong> </div>
-                  <button class="btn btn-block btn-default hvr-underline-from-center-default"><i class="rm-icon ion-arrow-return-left"></i> return to cart</button>
-                </section>
+                
               </div>
             </div>
             <div class="col-sm-8 col-md-9 sub-data-left main-sec">
