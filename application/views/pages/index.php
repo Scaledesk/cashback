@@ -2,8 +2,8 @@
  
 <!--start of banner-->
   <div id="banner">
-    <div class="item"> <img class="img-responsive hidden-xs" src="images\banner-img-1.jpg" width="1920" height="550" alt="">
-    <img class="img-responsive visible-xs" src="images\banner-img-1-small.jpg" width="1920" height="550" alt="">
+    <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets/images/banner-img-1.jpg';?>" width="1920" height="550" alt="">
+    <img class="img-responsive visible-xs" src="<?php echo base_url().'assets/images/banner-img-1-small.jpg';?>" width="1920" height="550" alt="">
       <div class="slider-caption">
         <div class="container">
           <div class="row">
@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-    <div class="item"> <img class="img-responsive hidden-xs" src="images\banner-img-2.jpg" width="1920" height="540" alt="">
-    <img class="img-responsive visible-xs" src="images\banner-img-2-small.jpg" width="1920" height="540" alt="">
+    <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets/images/banner-img-2.jpg';?>" width="1920" height="540" alt="">
+    <img class="img-responsive visible-xs" src="<?php echo base_url().'assets/images/banner-img-2-small.jpg';?>" width="1920" height="540" alt="">
       <div class="slider-caption">
         <div class="container">
           <div class="row">
@@ -85,7 +85,7 @@
           <div class="product-item-container effect-wrap effect-animate deal-end">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets/images/product-2.jpgbanner-img-2-small.jpg';?>" width="215" height="240" alt=""></a></figure>
               </div>
               <div id="countdown-end" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -112,7 +112,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets/images/product-3.jpg';?>" width="215" height="240" alt=""></a></figure>
                 <span class="label offer-label-left">new item</span> <span class="label offer-label-right">64% sold</span> </div>
               <div id="countdown-two" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
