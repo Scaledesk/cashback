@@ -5,8 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php 
-
+<title><?php
 if($title!='') echo $title;
 else
   echo 'Cashback';
@@ -78,11 +77,24 @@ else
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="col-sm-8 collapse navbar-collapse navbar-right" id="line-navbar-collapse-1">
           <ul class="nav navbar-nav top-menu">
-            
-            
-            
+
+
+            <?php
+            if(!$this->ion_auth->logged_in())
+            {
+            ?>
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
+            <?php }
+            else { ?>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">GBP</a></li>
+                  <li><a href="#">EUR </a></li>
+                </ul>
+              </li>
+          <?php } ?>
+
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
                 <li> <a href="index.html"><i class="ion-home"></i>Home Style One</a> </li>
