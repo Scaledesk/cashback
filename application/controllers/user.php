@@ -7,26 +7,32 @@ class User extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
     $this->load->model('User_model');
-		//$this->load->library(array('ion_auth','form_validation'));
 		$this->load->helper(array('url','language'));
 
-		//$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
-
-		//$this->lang->load('auth');
 	}
 
 
 
 public function show_coupon(){
    $data['title']='Manage Coupon';
-  // $this->load->view('templates/header.php',$data);
-   $data['cg']= $this->User_model->show_coupon();
-
-   
-// $this->load->view('templates/adminSidebar');
+    $data['cu']= $this->User_model->show_coupon();
+    $this->load->view('templates/header.php',$data);
+   // $this->load->view('templates/adminSidebar');
    $this->load->view('pages/coupon.php',$data);
-   //$this->load->view('templates/footer.php');
+   $this->load->view('templates/footer.php');
 
 }
 
+
+public function show_store(){
+   $data['title']='Manage Coupon';
+    $data['st']= $this->User_model->show_store();
+   //$this->load->view('templates/header.php',$data);
+   // $this->load->view('templates/adminSidebar');
+   //print_r($data['st']->result());
+   //die();
+   $this->load->view('pages/    .php');
+   $this->load->view('templates/footer.php');
+
+}
 }

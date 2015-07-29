@@ -29,19 +29,24 @@
               <ul class="item-list list-group">
                 <li class="item list-group-item  clearfix">
                   <div class="item-information">
-                    <?php foreach($cg->result() as $row) { ?>
+
+                    <?php 
+                     //print_r($cu);
+                     //die();
+                    foreach($cu as $row) { 
+                      ?>
                      
                     
                     <div class="row">
-                      <div class="item-image col-sm-2"> <img class="img-responsive" src="<?php echo $row->coupon_url; ?>" width="126" height="144" alt=""> </div>
+                      <div class="item-image col-sm-2"> <img class="img-responsive" src="<?php echo $row->coupon_url;?>" width="126" height="144" alt=""> </div>
                       <div class="item-body col-sm-8">
-                        <h5 class="item-title text-primary text-uppercase text-primary text-uppercase"><a href="#"><?php echo $row->coupon_name; ?></a></h5>
-                        <p class="item-description"> <?php echo $row->coupon_description; ?></p>
-                      </div>
+                      <h5 class="item-title text-primary text-uppercase text-primary text-uppercase"><a href="#"><?php echo $row->coupon_name; ?></a></h5>
+                      <p class="item-description"> <?php echo $row->coupon_description; ?></p>
+                     </div>
                       <div class="item-price js-item-price col-sm-2 text-info text-center" data-price="11.99"> <strong>$1199</strong> </div>
                     </div>
 
-                    <?php } ?>
+                <?php } ?> 
                   </div>
                   <div class="item-interactions">
                     <div class="row">

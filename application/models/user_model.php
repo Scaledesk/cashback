@@ -11,13 +11,16 @@ parent::__construct();
  public function show_coupon(){
 
     $query=$this->db->query("select * from coupon_details");
-		 //echo '<pre />';
-		 //print_r($query);
-		//die();  
-		
-		return $query;
+	return $query->result();
  }
 
+public function show_store()
+        {
+
+        $query=$this->db->query("select * from store_details");
+		 
+		return $query;
+        }
 
 
 // public function add_category(){
