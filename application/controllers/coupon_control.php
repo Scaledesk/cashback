@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Coupon_control extends CI_Controller {
 
 	function __construct()
@@ -16,6 +15,7 @@ class Coupon_control extends CI_Controller {
   {
     $data['title']='Add Coupon';
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_coupon.php');
     $this->load->view('templates/footer.php');
   }
@@ -34,6 +34,7 @@ class Coupon_control extends CI_Controller {
     			$data['title']='Add Coupon';
     			$data['msg']='Coupon Details Saved';
     			$this->load->view('templates/header.php',$data);
+					$this->load->view('templates/adminSidebar.php',$data);
     			$this->load->view('pages/add_coupon.php',$data);
     			$this->load->view('templates/footer.php');
     		  }
@@ -51,6 +52,7 @@ class Coupon_control extends CI_Controller {
     $data['title']='Add Coupon';
 		$data['res']=$this->Coupon_model->getCouponDetails();
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_coupon',$data);
     $this->load->view('templates/footer.php');
   }
@@ -60,6 +62,7 @@ class Coupon_control extends CI_Controller {
     $data['title']='Edit Coupon Details';
     $data['h']=$this->Coupon_model->editCoupon($id);
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_coupon.php',$data);
     $this->load->view('templates/footer.php');
   }

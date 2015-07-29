@@ -496,7 +496,6 @@ public function register(){
 			//display the create user form
 			//set the flash data error message if there is one
 			$this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
-
 			$this->data['first_name'] = array(
 				'name'  => 'first_name',
 				'id'    => 'first_name',
@@ -540,7 +539,7 @@ public function register(){
 				'value' => $this->form_validation->set_value('password_confirm'),
 			);
 
-			$this->_render_page('auth/create_user', $this->data);
+		$this->_render_page('auth/create_user', $this->data);
 		}
 	}
 
