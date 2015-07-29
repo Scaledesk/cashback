@@ -98,9 +98,10 @@ public function register(){
 			{
 				//if the login is successful
 				//redirect them back to the home page
-                echo "successful login";
-
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
+				echo '<pre/>';
+				print_r($this->session->userdata('logged_in'));
+				die;
 				redirect('/', 'refresh');
 			}
 			else

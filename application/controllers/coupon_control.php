@@ -7,9 +7,6 @@ class Coupon_control extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Coupon_model');
 		$this->load->helper(array('url','language'));
-    //$this->load->library(array('ion_auth','form_validation'));
-		//$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
-		//$this->lang->load('auth');
 	}
   public function add_coupon()
   {
