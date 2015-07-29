@@ -2,7 +2,7 @@
   <div class="row">
 
 
-    <table>
+    <table border="1">
         <tr>
           <td>S. No.</td>
           <td>Name</td>
@@ -16,7 +16,7 @@
         </tr>
 
          <?php $i=0;
-                                               foreach($s->result() as $row)
+                                               foreach($c->result() as $row)
                                                 {
                                                   $i++;
                                                  ?>

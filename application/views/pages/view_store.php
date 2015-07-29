@@ -2,13 +2,14 @@
   <div class="row">
 
 
-    <table>
+    <table border='1'>
         <tr>
           <td>S. No.</td>
           <td>Name</td>
           <td>Description</td>
           <td>Link</td>
           <td>Image</td>
+          <td>Action</td>
         </tr>
 
          <?php $i=0;
