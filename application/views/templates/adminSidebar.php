@@ -22,8 +22,9 @@
                     <a href="<?=(base_url().'Coupon_control/view_coupon/')?>"><li class="list-group-item text-uppercase"><strong>View Coupon<span class="pull-right"></span></strong></li></a>
                     <a href="<?=(base_url().'Store_control/add_store/')?>"><li class="list-group-item text-uppercase"><strong>Add Store<span class="pull-right"></span></strong></li></a>
                     <a href="<?=(base_url().'Store_control/view_store/')?>"><li class="list-group-item text-uppercase"><strong>View Store<span class="pull-right"></span></strong></li></a>
+                    <a href="<?=(base_url().'product/display_product/')?>"><li class="list-group-item text-uppercase"><strong>Display Product<span class="pull-right"></span></strong></li></a>
                   </ul>
                 </section>
-                
+
               </div>
             </div>
