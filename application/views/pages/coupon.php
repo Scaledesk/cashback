@@ -1,5 +1,5 @@
-<!--start of middle sec-->
-  <div class="middle-sec wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s;">
+<!-- start of middle sec--> 
+ <!--  <div class="middle-sec wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s;">
     <div class="page-header">
       <div class="container text-center">
         <h2 class="text-primary text-uppercase">Coupons</h2>
@@ -13,7 +13,7 @@
             <figure><img class="img-responsive" src="images\inner-ad.jpg" width="1170" height="100" alt=""></figure>
           </div>
         </div>
-        
+         -->
         <!--main sec start-->
         
         <div class="col-sm-12 main-sec">
@@ -88,4 +88,4 @@
       </div>
     </section>
   </div>
-  <!--end of middle sec-->
+  <!--end of middle sec

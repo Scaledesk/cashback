@@ -35,4 +35,17 @@ public function show_store(){
    $this->load->view('templates/footer.php');
 
 }
+
+// public function show_store(){
+//    $data['title']='Manage Coupon';
+//     $data['st']= $this->User_model->show_store();
+//    //$this->load->view('templates/header.php',$data);
+//    // $this->load->view('templates/adminSidebar');
+//    //print_r($data['st']->result());
+//    //die();
+//    $this->load->view('pages/    .php');
+//    $this->load->view('templates/footer.php');
+
+// }
+
 }
