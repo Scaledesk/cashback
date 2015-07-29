@@ -50,7 +50,7 @@ class Coupon_control extends CI_Controller {
   Public function view_coupon()
   {
     $data['title']='Add Coupon';
-		$data['res']=$this->Coupon_model->getCouponDetails();
+		$data['c']=$this->Coupon_model->getCouponDetails();
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_coupon',$data);

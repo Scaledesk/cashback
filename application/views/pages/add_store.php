@@ -38,7 +38,7 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Image</label>
-                          <input type="file" id="store_image" name="" class="form-control" placeholder="Image" required="">
+                          <input type="file" id="store_image" name="store_image" class="form-control" required="">
                         </div>
 
                         <!-- Image -->
