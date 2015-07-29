@@ -19,7 +19,6 @@ class Store_control extends CI_Controller {
   }
   public function do_add_store()
   {
-
 		$config['upload_path'] = APPPATH.'/images/store/';
 	  $config['allowed_types'] = 'png|jpeg|gif|jpg';
 	  $config['max_size'] = '2048000';
