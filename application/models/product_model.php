@@ -100,10 +100,7 @@ public function delete_product($id)
 		
 		
 		$query=$this->db->query("select * from product");
-		 echo '<pre />';
-		 print_r($query);
-		 echo "kdfjhuidf";
-		 die();  
+		   
 		
 		return $query;
 	}
@@ -112,9 +109,27 @@ public function delete_product($id)
 
 
 	$this->db->where("product_id",$id);
-  $query=$this->db->query(" select * from product");
-   return $query->result();	
+    $query=$this->db->get("product");
+    return $query->result();	
 	}
+
+public function update_product($newimage,$id)
+{
+   $newimage_file = base_url().'application/upload/'.$newimage; 
+ $data=array(
+'product_category'=>$this->input->post('category'),
+'product_link'=>$this->input->post('link'),
+'product_price'=>$this->input->post('price'),
+'product_title'=>$this->input->post('product_title'),
+'product_image'=>$newimage_file
+
+);
+
+
+$this->db->where("product_id",$id);
+$this->db->update('product',$data);
+return true;
+}
 
 // public function update_product($id)
 // {
