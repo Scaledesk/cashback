@@ -7,3 +7,9 @@
     
     padding: 0px 0px;
 }
+
+
+.summary .list-group-item:last-child {
+    
+    color: #fff;
+}
