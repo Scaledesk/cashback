@@ -86,6 +86,7 @@ $this->load->view('templates/footer.php');
   public function admin(){
 
              $this->load->view('templates/header');
+             $this->load->view('templates/adminSidebar');
              $this->load->view('pages/dashbord');
              $this->load->view('templates/footer');
   }
