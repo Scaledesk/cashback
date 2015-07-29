@@ -43,7 +43,7 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>S.No</th>
+                                                
                                                 <th>Product Category</th>
                                                 <th>Link</th>
                                                 <th>Price</th>
@@ -53,24 +53,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>Price</td>
-                                                <td>Price</td>
-                                                <td>Price</td>
-                                                <td><a href="#">Update</a>/<a href="#">Delete</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>Price</td>
-                                                <td>Price</td>
-                                                <td>Price</td>
-                                                <td><a href="#">Update</a>/<a href="#">Delete</a></td>
-                                            </tr>
+                                            <?php 
+
+                                foreach($cg->result() as $row) {?>
+                              
+
+                          <tr>
+                          <td><?php echo $row->product_category; ?></td>
+                          <td><a href='<?php echo $row->product_link; ?>'>click me</a></td>
+                           <td><?php echo $row->product_price; ?></td>
+                          <td><?php echo $row->product_title; ?></td>
+                          <td><img src="<?php echo $row->product_image; ?>"style="height:100px;width=100px" ></td>
+                                                
+                          
+  <td><a href="<?=(base_url().'product/select_update_product/')?><?php echo $row->product_id; ?>">Update</a>/<a href="<?=(base_url().'product/delete_product/')?><?php echo $row->product_id; ?>">Delete</a></td>
+      </tr>
+        <?php } ?>
+
+                                            
                                             
                                         </tbody>
                                     </table>

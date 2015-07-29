@@ -11,7 +11,7 @@ class Store_control extends CI_Controller {
 	}
   public function add_store()
   {
-    $data['title']='Add Coupon';
+    $data['title']='Add Store Details';
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_store.php');
@@ -19,7 +19,6 @@ class Store_control extends CI_Controller {
   }
   public function do_add_store()
   {
-
 		$config['upload_path'] = APPPATH.'/images/store/';
 	  $config['allowed_types'] = 'png|jpeg|gif|jpg';
 	  $config['max_size'] = '2048000';
@@ -47,7 +46,7 @@ class Store_control extends CI_Controller {
   Public function view_store()
   {
     $data['title']='View Store Details';
-		$data['res']=$this->Store_model->getStoreDetails();
+		$data['s']=$this->Store_model->getStoreDetails();
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_store',$data);

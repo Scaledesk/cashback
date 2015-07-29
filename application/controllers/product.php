@@ -100,10 +100,10 @@ $this->load->view('templates/footer.php');
   {
       
    $config['upload_path'] = APPPATH.'/upload/'; 
-  $config['allowed_types'] = 'png|jpeg|gif';
+  $config['allowed_types'] = 'png|jpeg|gif|jpg';
   $config['max_size'] = '2048000';
   $this->load->library('upload',$config);
- // echo APPPATH;
+   //echo APPPATH;
   //echo '<pre/>';
   //print_r($_FILES);
   //echo($this->input->post('product_title'));
@@ -113,37 +113,70 @@ $this->load->view('templates/footer.php');
    
    $_FILES['product_image']['name']=$newimage;
 
+   if($this->upload->do_upload('product_image')==true)
+   {
      if( $this->Product_model->add_product($newimage)){
       echo "successful Add product";
+      redirect(base_url().'product/display_product','refresh');
       //$this->load->view('templates/header.php',$data);
       //$this->load->view('pages/add_employee.php');
       //$this->load->view('templates/footer.php');  
       }
-
+    }
   }
 
   public function display_product(){
    
 
-
-
- $data['cg']= $this->Product_model->display_product();
+  $data['cg']= $this->Product_model->display_product();
   $data['title']='Manage Category';
- // $this->load->view('templates/header.php',$data);
- $this->load->view('pages/table_product.php',$data);
- //$this->load->view('templates/footer.php');
+  $this->load->view('templates/header.php',$data);
+  $this->load->view('pages/product_display.php',$data);
+  $this->load->view('templates/footer.php');
 
 }
  public function select_update_product($id){
 
-$data['title']='Manage Product';
- $data['cg']= $this->Product_model->select_update_product($id);
 
- $this->load->view('templates/header.php',$data);
- $this->load->view('pages/update_product.php',$data);
-$this->load->view('templates/footer.php');
+
+  $data['title']='Manage Product';
+  $this->load->view('templates/header.php',$data);
+   $data['cg']= $this->Product_model->select_category();
+   $data['show']= $this->Product_model->select_update_product($id);
+   $this->load->view('pages/update_product.php',$data);
+   $this->load->view('templates/footer.php');
  }
 
+
+
+public function update_product($id)
+  {
+      
+   $config['upload_path'] = APPPATH.'/upload/'; 
+  $config['allowed_types'] = 'png|jpeg|gif|jpg';
+  $config['max_size'] = '2048000';
+  $this->load->library('upload',$config);
+   //echo APPPATH;
+  //echo '<pre/>';
+  //print_r($_FILES);
+  //echo($this->input->post('product_title'));
+ // die;
+ // echo $_FILES['product_image']['name'];
+  $newimage=time().$_FILES['product_image']['name'];
+   
+   $_FILES['product_image']['name']=$newimage;
+
+   if($this->upload->do_upload('product_image')==true)
+   {
+     if( $this->Product_model->update_product($newimage,$id)){
+      echo "successful Add product";
+      redirect(base_url().'product/display_product','refresh');
+      //$this->load->view('templates/header.php',$data);
+      //$this->load->view('pages/add_employee.php');
+      //$this->load->view('templates/footer.php');  
+      }
+    }
+  }
 
    public function delete_product($id)
   {

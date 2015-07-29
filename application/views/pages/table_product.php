@@ -1,8 +1,7 @@
 <table>
 
 
-     <?php echo "<pre>"; 
-            print_r($cg);
+     <?php 
 
      foreach($cg->result() as $row) {?>
                               
