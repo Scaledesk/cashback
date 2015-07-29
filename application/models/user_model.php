@@ -8,12 +8,12 @@ parent::__construct();
 }
 
 
- public function show_coupan(){
+ public function show_coupon(){
 
     $query=$this->db->query("select * from coupon_details");
-		// echo '<pre />';
-		// print_r($query);
-		// die();  
+		 //echo '<pre />';
+		 //print_r($query);
+		//die();  
 		
 		return $query;
  }

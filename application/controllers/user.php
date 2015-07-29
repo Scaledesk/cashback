@@ -17,14 +17,15 @@ class User extends CI_Controller {
 
 
 
-public function show_coupan(){
-   $data['title']='Manage Product';
-   $data['cg']= $this->User_model->show_coupan();
+public function show_coupon(){
+   $data['title']='Manage Coupon';
+  // $this->load->view('templates/header.php',$data);
+   $data['cg']= $this->User_model->show_coupon();
 
-   $this->load->view('templates/header.php',$data);
+   
 // $this->load->view('templates/adminSidebar');
-   $this->load->view('pages/update_category.php',$data);
-   $this->load->view('templates/footer.php');
+   $this->load->view('pages/coupon.php',$data);
+   //$this->load->view('templates/footer.php');
 
 }
 
