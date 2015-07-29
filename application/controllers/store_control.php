@@ -13,6 +13,7 @@ class Store_control extends CI_Controller {
   {
     $data['title']='Add Coupon';
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_store.php');
     $this->load->view('templates/footer.php');
   }
@@ -20,7 +21,7 @@ class Store_control extends CI_Controller {
   {
 
 		$config['upload_path'] = APPPATH.'/images/store/';
-	  $config['allowed_types'] = 'png|jpeg|gif';
+	  $config['allowed_types'] = 'png|jpeg|gif|jpg';
 	  $config['max_size'] = '2048000';
 	  $this->load->library('upload',$config);
 	  $nstore=time().$_FILES['store_image']['name'];
@@ -36,6 +37,7 @@ class Store_control extends CI_Controller {
     			$data['title']='Add Store';
     			$data['msg']='Store Details Saved';
     			$this->load->view('templates/header.php',$data);
+					$this->load->view('templates/adminSidebar.php',$data);
     			$this->load->view('pages/add_store.php',$data);
     			$this->load->view('templates/footer.php');
     		}
@@ -47,6 +49,7 @@ class Store_control extends CI_Controller {
     $data['title']='View Store Details';
 		$data['res']=$this->Store_model->getStoreDetails();
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_store',$data);
     $this->load->view('templates/footer.php');
   }
@@ -56,6 +59,7 @@ class Store_control extends CI_Controller {
     $data['title']='Update Store Details';
     $data['h']=$this->Store_model->editStore($id);
     $this->load->view('templates/header.php',$data);
+		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_Store.php',$data);
     $this->load->view('templates/footer.php');
   }
