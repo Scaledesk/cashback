@@ -20,7 +20,8 @@ class Product extends CI_Controller {
 
       $data['title']='Manage Product';
       $this->load->view('templates/header.php',$data);
-				$this->load->view('templates/adminSidebar.php',$data);
+      $this->load->view('templates/adminSidebar');
+				
       $data['cg']= $this->Product_model->select_category();
       $this->load->view('pages/add_product.php',$data);
       $this->load->view('templates/footer.php');
@@ -36,9 +37,20 @@ public function show_category(){
  $data['cg']= $this->Product_model->select_category();
   $data['title']='Manage Category';
   $this->load->view('templates/header.php',$data);
+  $this->load->view('templates/adminSidebar');
  $this->load->view('pages/category_display.php',$data);
  $this->load->view('templates/footer.php');
  }
+
+public function category(){
+
+  $data['title']='Manage Category';
+  $this->load->view('templates/header.php',$data);
+  $this->load->view('templates/adminSidebar.php');
+  $this->load->view('pages/add_category.php',$data);
+  $this->load->view('templates/footer.php');
+}
+
 
 
 public function add_category(){
@@ -56,6 +68,7 @@ $data['title']='Manage Product';
  $data['cg']= $this->Product_model->select_update_category($id);
 
  $this->load->view('templates/header.php',$data);
+ $this->load->view('templates/adminSidebar');
  $this->load->view('pages/update_category.php',$data);
 $this->load->view('templates/footer.php');
 
@@ -132,6 +145,7 @@ $this->load->view('templates/footer.php');
   $data['cg']= $this->Product_model->display_product();
   $data['title']='Manage Product';
   $this->load->view('templates/header.php',$data);
+  $this->load->view('templates/adminSidebar');
   $this->load->view('pages/product_display.php',$data);
   $this->load->view('templates/footer.php');
 
@@ -142,6 +156,7 @@ $this->load->view('templates/footer.php');
 
   $data['title']='Manage Product';
   $this->load->view('templates/header.php',$data);
+  $this->load->view('templates/adminSidebar');
    $data['cg']= $this->Product_model->select_category();
    $data['show']= $this->Product_model->select_update_product($id);
    $this->load->view('pages/update_product.php',$data);
