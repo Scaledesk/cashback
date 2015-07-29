@@ -18,7 +18,10 @@
                     <a href="<?=(base_url().'Product/product_page/')?>"><li class="list-group-item text-uppercase"><strong>Product Add</strong></li></a>
                     <a href="<?=(base_url().'Product/update_category/')?>"><li class="list-group-item text-uppercase"><strong>Udate Category</strong></li></a>
                     <a href="<?=(base_url().'Product/show_product/')?>"><li class="list-group-item text-uppercase"><strong>taxes (5%): <span class="pull-right">$0.45</span></strong></li></a>
-                    <li class="list-group-item text-uppercase"><strong>shipping: <span class="pull-right">$5</span></strong></li>
+                    <a href="<?=(base_url().'Coupon_control/add_coupon/')?>"><li class="list-group-item text-uppercase"><strong>Add Coupon<span class="pull-right"></span></strong></li></a>
+                    <a href="<?=(base_url().'Coupon_control/view_coupon/')?>"><li class="list-group-item text-uppercase"><strong>View Coupon<span class="pull-right"></span></strong></li></a>
+                    <a href="<?=(base_url().'Store_control/add_store/')?>"><li class="list-group-item text-uppercase"><strong>Add Store<span class="pull-right"></span></strong></li></a>
+                    <a href="<?=(base_url().'Store_control/view_store/')?>"><li class="list-group-item text-uppercase"><strong>View Store<span class="pull-right"></span></strong></li></a>
                   </ul>
                 </section>
                 <section class="col-sm-12">

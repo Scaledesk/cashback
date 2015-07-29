@@ -80,3 +80,4 @@ class Store_control extends CI_Controller {
       redirect(base_url().'Store_control/view_store');
     }
   }
+}

@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Coupon_control extends CI_Controller {
 
 	function __construct()
