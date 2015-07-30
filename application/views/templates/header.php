@@ -87,7 +87,7 @@ else
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
             <?php }
             else { ?>
-              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?> <span class="ion-android-arrow-dropdown"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">GBP</a></li>
                   <li><a href="#">EUR </a></li>
