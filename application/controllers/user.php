@@ -14,12 +14,12 @@ class User extends CI_Controller {
 
 
 public function show_coupon(){
-   $data['title']='Manage Coupon';
+   //$data['title']='Manage Coupon';
     $data['cu']= $this->User_model->show_coupon();
-    $this->load->view('templates/header.php',$data);
+    //$this->load->view('templates/header.php',$data);
    // $this->load->view('templates/adminSidebar');
    $this->load->view('pages/coupon.php',$data);
-   $this->load->view('templates/footer.php');
+  // $this->load->view('templates/footer.php');
 
 }
 
