@@ -71,7 +71,7 @@
               <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title; ?></a></h3>
             </div>
             <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?></strong></span></span> <span class="old-price">Rs <?php echo $row->product_price; ?></span> </div>
-            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="<?php echo $row->product_link; ?>" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BY NOW</span> </a> </div>
+            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="<?php echo $row->product_link ?>" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BY NOW</span> </a> </div>
           </div>
 
         <?php  } ?>
