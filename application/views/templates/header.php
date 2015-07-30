@@ -440,7 +440,7 @@ else
         </ul>
         <ul class="nav navbar-nav main-nav">
           <li class="active"><a href="index.html" class="ion-ios-home"></a></li>
-          <li><a href="products.html">NEW ARRIVALS</a></li>  <li><a href="products.html">BEST SELLER</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">hot sale</a></li>  <li><a href="blog-standard.html">BLOG</a></li>
+          <li><a href="products.html">STORE</a></li>  <li><a href="products.html">PRODUCTS</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">Company</a></li>  
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
@@ -452,9 +452,9 @@ else
               <div class="input-group-btn lnt-search-category">
                 <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false"> <span class="selected-category-text">All </span> <span class="ion-android-arrow-dropdown"></span> </button>
                 <ul class="dropdown-menu " role="menu">
-                  <li><a href="#">Fashion</a></li>
-                  <li><a href="#">Sport</a></li>
-                  <li><a href="#">Electronics</a></li>
+                  <li><a href="#">STORE</a></li>
+                  <li><a href="#">COUPON</a></li>
+                  <li><a href="#">PRODUCTS</a></li>
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Toys</a></li>
                   <li><a href="#">Motors</a></li>
