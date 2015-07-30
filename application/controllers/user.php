@@ -50,7 +50,7 @@ public function display_product(){
    $data['title']='Display Product Details';
     $data['p']= $this->User_model->display_product();
    $this->load->view('templates/header.php',$data);
-   $this->load->view('pages/display_user_product.php',$data);
+   $this->load->view('pages/user_product_display.php',$data);
   $this->load->view('templates/footer.php');
 
 }
