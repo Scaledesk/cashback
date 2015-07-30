@@ -71,7 +71,7 @@ public function delete_category($id)
 
 public function add_product($newimage)
 {
- $newimage_file = base_url().'application/upload/'.$newimage;
+ $newimage_file = 'application/upload/'.$newimage;
  $data=array(
 'product_category_id'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
