@@ -31,9 +31,9 @@
                   <div class="item-information">
 
                     <?php 
-                    echo "<pre>";
-                     print_r($cu->result());
-                     die();
+          //          echo "<pre>";
+            //         print_r($cu->result());
+        //             die();
                     foreach($cu->result() as $row) { 
                       ?>
                      

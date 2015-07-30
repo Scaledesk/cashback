@@ -5,11 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php
-if($title!='') echo $title;
+<title>
+<?php
+if($title!=''){ echo $title;}
 else
-  echo 'Cashback';
-?></title>
+  {echo 'Cashback';}
+?>
+</title>
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -79,21 +81,16 @@ else
           <ul class="nav navbar-nav top-menu">
 
 
-            <?php
-            if(!$this->ion_auth->logged_in())
-            {
-            ?>
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
-            <?php }
-            else { ?>
-              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?> <span class="ion-android-arrow-dropdown"></span></a>
+            
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">GBP</a></li>
                   <li><a href="#">EUR </a></li>
                 </ul>
               </li>
-          <?php } ?>
+          
 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
