@@ -27,19 +27,21 @@
             <div class="col-sm-12">
               <h4 class="sub-title text-primary text-uppercase">Coupons</h4>
               <ul class="item-list list-group">
-                <li class="item list-group-item  clearfix">
-                  <div class="item-information">
 
                     <?php 
           //          echo "<pre>";
             //         print_r($cu->result());
         //             die();
                     foreach($cu->result() as $row) { 
+
                       ?>
+                <li class="item list-group-item  clearfix">
+                  <div class="item-information">
+
                      
                     
                     <div class="row">
-                      <div class="item-image col-sm-2"> <img class="img-responsive" src="<?php echo $row->coupon_url;?>" width="126" height="144" alt=""> </div>
+                      <div class="item-image col-sm-2"> <img class="img-responsive" src='<?php echo $row->coupon_url;?>' width="126" height="144" alt=""> </div>
                       <div class="item-body col-sm-8">
                       <h5 class="item-title text-primary text-uppercase text-primary text-uppercase"><a href="#"><?php echo $row->coupon_name; ?></a></h5>
                       <p class="item-description"> <?php echo $row->coupon_description; ?></p>
@@ -47,10 +49,10 @@
                       <div class="item-price js-item-price col-sm-2 text-info text-center" data-price="11.99"> <strong>$1199</strong> </div>
                     </div>
 
-                    <?php } ?>
+                    
                       
-                    </div>
-                  </div>
+                    
+                  
                   <div class="item-interactions">
                     <div class="row">
                       <div class="col-sm-2 text-info text-center right-bordered"> </div>
@@ -60,10 +62,14 @@
                       <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary">See Coupon</a> </div>
                     </div>
                   </div>
+
                 </li>
-                
+                <?php } ?>
                 
               </ul>
+
+            </div>
+            </div>
             </div>
             
             <!--start of pagination-->
