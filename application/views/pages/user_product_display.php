@@ -38,7 +38,7 @@
                       </div>
                     </div>
                     <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">src="<?php echo $row->product_title;?>"</a></h3>
+                      <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title;?>"</a></h3>
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?> </strong></span></span> <span class="old-price">Rs <?php echo $row->product_price; ?></span> </div>
                   </div>
@@ -94,7 +94,7 @@
                   <!--end of product item container-->
 
 
-                  
+
 
                   <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
