@@ -83,14 +83,14 @@ else
 
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
-            
+
               <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">GBP</a></li>
                   <li><a href="#">EUR </a></li>
                 </ul>
               </li>
-          
+
 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
@@ -440,7 +440,7 @@ else
         </ul>
         <ul class="nav navbar-nav main-nav">
           <li class="active"><a href="index.html" class="ion-ios-home"></a></li>
-          <li><a href="products.html">STORE</a></li>  <li><a href="products.html">PRODUCTS</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">Company</a></li>  
+          <li><a href="products.html">STORE</a></li>  <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">Company</a></li>
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
