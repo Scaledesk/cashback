@@ -10,8 +10,8 @@
                       
                       <div class="col-sm-8">
                         <fieldset>
-                          <legend>Categories Title</legend>
-                          <input type="text" maxlength="60" name="" id="ccv" class="form-control" required="">
+                          <legend>Category Title</legend>
+                          <input type="text" maxlength="60" placeholder="Category Title" name="" id="ccv" class="form-control" required="">
                           <hr>
                         </fieldset>
                       </div>
@@ -19,7 +19,7 @@
                       <div class="col-sm-8">
                         <fieldset>
                           <legend>Categories Descritpion</legend>
-                          <textarea class="form-control" rows="5" cols="100" name="" id="" required=""></textarea>
+                          <textarea class="form-control" placeholder="Categories Descritpion" rows="5" cols="100" name="" id="" required=""></textarea>
                           <hr>
                         </fieldset>
                       </div>
