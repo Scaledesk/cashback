@@ -38,8 +38,8 @@
               </div>
             </div>
             <div class="col-sm-8 col-md-9 col-lg-9 main-sec">
-              <div class="row"> 
-                
+              <div class="row">
+
                 <!--start of breadcrumb-->
                 <div class="col-sm-12">
                   <ol class="breadcrumb dashed-border row">
@@ -48,13 +48,13 @@
                     <li class="active">Register</li>
                   </ol>
                 </div>
-                <!--end of breadcrumb--> 
-                
+                <!--end of breadcrumb-->
+
                 <!--start of checkout-->
                 <div class="col-sm-12">
                 <form role="form" action="" method="Post">
-                    <div class="row"> 
-                      
+                    <div class="row">
+
                       <!-- START Presonal information -->
                       <fieldset class="col-md-6">
                         <legend>Personal information</legend>
@@ -71,11 +71,11 @@
                           <input type="text" id="mail" class="form-control" placeholder="We promise not to share your email with anyone." required="">
                         </div>
                         </fieldset>
-                      <!-- END Personal information--> 
-                      
+                      <!-- END Personal information-->
+
                       <!-- START Payment infromation -->
                       <fieldset class="col-md-6">
-            
+
                         <legend>address</legend>
                         <div class="form-group">
                           <label class="control-label" for="address-one">address one <span class="req">*</span></label>
@@ -90,7 +90,7 @@
                           <input type="text" id="postal-code" class="form-control" placeholder="Enter your Compnay Name" required="">
                         </div>
                       </fieldset>
-                      <!-- END Payment information--> 
+                      <!-- END Payment information-->
                     </div>
                     <div class="row">
                       <div class="col-sm-12">
@@ -115,9 +115,9 @@
                     </div>
                 </form>
                 </div>
-                
-                <!--end of checkout--> 
-                
+
+                <!--end of checkout-->
+
               </div>
             </div>
           </div>
@@ -126,6 +126,3 @@
     </section>
   </div>
   <!--end of middle sec-->
-
-
-
