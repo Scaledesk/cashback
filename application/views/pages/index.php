@@ -57,7 +57,7 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""></a></figure>
               </div>
               <div id="countdown-one" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>

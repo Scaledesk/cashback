@@ -28,7 +28,7 @@
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrasp effect-animate">
                     <div class="product-main">
                       <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""></a></figure>
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""></a></figure>
                         <span class="label offer-label-left">polo shirts</span> </div>
                       <div class="product-btns  effect-content-inner">
                         <p class="effect-icon"> <a href="<?php echo $row->product_link; ?>" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
