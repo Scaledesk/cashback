@@ -8,7 +8,7 @@ class Auth extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Product_model');
 		$this->load->library(array('ion_auth','form_validation'));
-		$this->load->helper(array('url','language'));
+			$this->load->helper(array('form','url','language'));
 		$this->load->library('session');
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 		$this->lang->load('auth');
@@ -50,7 +50,7 @@ public function home(){
       $data['title']='Cashback';
       $this->load->view('templates/header.php',$data);
 		  $data['h']=$this->Product_model->getProductDetails();
-      $this->load->view('pages/index.php');
+      $this->load->view('pages/index.php',$data);
       $this->load->view('templates/footer.php');
     }
 

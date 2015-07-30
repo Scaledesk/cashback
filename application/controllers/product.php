@@ -8,7 +8,8 @@ class Product extends CI_Controller {
 		$this->load->database();
     $this->load->model('Product_model');
 		//$this->load->library(array('ion_auth','form_validation'));
-		$this->load->helper(array('url','language'));
+		//$this->load->helper(array('url','language'));
+		$this->load->helper(array('form','url','language'));
 
 		//$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 
@@ -21,7 +22,7 @@ class Product extends CI_Controller {
       $data['title']='Manage Product';
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar');
-				
+
       $data['cg']= $this->Product_model->select_category();
       $this->load->view('pages/add_product.php',$data);
       $this->load->view('templates/footer.php');

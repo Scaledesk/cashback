@@ -1,5 +1,4 @@
- 
- 
+
 <!--start of banner-->
   <div id="banner">
     <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets/images/banner-img-1.jpg';?>" width="1920" height="550" alt="">
@@ -33,32 +32,32 @@
       </div>
     </div>
   </div>
-  <!--end of banner--> 
+  <!--end of banner-->
 
 
 
  <!--start of middle sec-->
 
-  <div class="middle-se"> 
-    
-    <!--start of best deals-->
+  <div class="middle-se">
+  --start of best deals-->
     <section class="container">
-      <div class="row"> 
-        <!--start of big title-->
+      <div class="row">
+       <!--start of big title-->
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">today's deals</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
           <p><span class="ion-android-star-outline"></span></p>
         </div>
         <!--end of big title-->
-        
-        <div id="best-deals" class="col-sm-12 wow fadeIn" data-wow-offset="10" data-wow-duration="2s"> 
-          
-          <!--start of product item container-->
+
+
+        <div id="best-deals" class="col-sm-12 wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
+          <?php foreach ($h->result() as $row) { ?>
+
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets/images/product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets\images\product-1.jpg';?>" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo $row->product_image;?>" width="215" height="240" alt=""></a></figure>
               </div>
               <div id="countdown-one" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -66,209 +65,22 @@
                 <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
                 <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
               </div>
-              
+
             </div>
             <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+              <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title; ?></a></h3>
             </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="#" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BY NOW</span> </a> </div>
+            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?></strong></span></span> <span class="old-price">Rs <?php echo $row->product_price; ?></span> </div>
+            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="<?php echo $row->product_link ?>" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BY NOW</span> </a> </div>
           </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate deal-end">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets/images/product-2.jpgbanner-img-2-small.jpg';?>" width="215" height="240" alt=""></a></figure>
-              </div>
-              <div id="countdown-end" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
+
+        <?php  } ?>
           </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets/images/product-3.jpg';?>" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">new item</span> <span class="label offer-label-right">64% sold</span> </div>
-              <div id="countdown-two" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-4.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">36% sold</span> </div>
-              <div id="countdown-three" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i><i class="ion-android-star-outline"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
-              <div id="countdown-four" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
-              <div id="countdown-five" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
-              <div id="countdown-six" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-          <!--start of product item container-->
-          <div class="product-item-container effect-wrap effect-animate deal-end">
-            <div class="product-main">
-              <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
-              <div id="countdown-end-two" class="deal-counter">
-                <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
-                <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
-                <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
-                <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
-              </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-            </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i><i class="ion-android-star-outline"></i> </div>
-          </div>
-          <!--end of product item container--> 
-          
-        </div>
+          <!--end of product item container-->
+
       </div>
     </section>
-    <!--end of best deals--> 
+    <!--end of best deals-->
     <!--start of wide ad-->
     <section class="container">
       <div class="row">
@@ -283,12 +95,12 @@
         </div>
       </div>
     </section>
-    <!--end of wide ad--> 
+    <!--end of wide ad-->
     <!--start of new arrivals-->
     <section class="container">
-      <div class="row"> 
+      <div class="row">
         <!--start of big title-->
-        
+
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">new arrivals</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
@@ -297,8 +109,8 @@
         <!--end of big title-->
         <div class="col-sm-12">
           <div id="new-arrivals" class="col-sm-12 accordion wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-            <div role="tabpanel"> 
-              
+            <div role="tabpanel">
+
               <!-- Nav tabs -->
               <div class="centered-pills">
                 <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
@@ -308,10 +120,10 @@
                   <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">accessories</a></li>
                 </ul>
               </div>
-              
+
               <!-- Tab panes -->
               <div class="tab-content">
-                <div role="tabpanel" class=" row tab-pane fade in active clearfix" id="men"> 
+                <div role="tabpanel" class=" row tab-pane fade in active clearfix" id="men">
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -330,8 +142,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -350,268 +162,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-4.jpg" width="215" height="240" alt=""></a></figure>
-                        <span class="label offer-label-left">flipflops</span> </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-8.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-7.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -631,7 +183,267 @@
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
                   <!--end of product item container-->
-                  
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-4.jpg" width="215" height="240" alt=""></a></figure>
+                        <span class="label offer-label-left">flipflops</span> </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-8.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-7.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
                   <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
                   </div>
@@ -657,8 +469,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -677,268 +489,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-7.jpg" width="215" height="240" alt=""></a></figure>
-                        <span class="label offer-label-left">flipflops</span> </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-8.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -958,7 +510,267 @@
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
                   <!--end of product item container-->
-                  
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-7.jpg" width="215" height="240" alt=""></a></figure>
+                        <span class="label offer-label-left">flipflops</span> </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-8.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
                   <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
                   </div>
@@ -984,8 +796,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1004,8 +816,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1024,8 +836,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1044,8 +856,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1064,8 +876,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1084,8 +896,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1104,8 +916,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1124,8 +936,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1144,8 +956,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1164,8 +976,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1184,8 +996,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1204,8 +1016,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1224,8 +1036,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1244,8 +1056,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1264,8 +1076,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1285,7 +1097,7 @@
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
                   <!--end of product item container-->
-                  
+
                   <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
                   </div>
@@ -1311,8 +1123,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1331,8 +1143,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1351,9 +1163,9 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  
-                  <!--end of product item container--> 
-                  
+
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1372,8 +1184,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1392,8 +1204,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1412,8 +1224,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1432,168 +1244,8 @@
                     </div>
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
-                        <span class="label offer-label-left">polo shirts</span> </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
-                  <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
-                    <div class="product-main">
-                      <div class="product-view">
-                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
-                      </div>
-                      <div class="product-btns  effect-content-inner">
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
-                    </div>
-                    <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
-                    </div>
-                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-                  </div>
-                  <!--end of product item container--> 
-                  
+                  <!--end of product item container-->
+
                   <!--start of product item container-->
                   <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
                     <div class="product-main">
@@ -1613,7 +1265,167 @@
                     <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
                   </div>
                   <!--end of product item container-->
-                  
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-5.jpg" width="215" height="240" alt=""></a></figure>
+                        <span class="label offer-label-left">polo shirts</span> </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-2.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
+                  <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrap effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-3.jpg" width="215" height="240" alt=""></a></figure>
+                      </div>
+                      <div class="product-btns  effect-content-inner">
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
+                        <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
+                        <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
+                      </div>
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
+                    </div>
+                    <div class="product-price"><span class="real-price text-primary"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                  </div>
+                  <!--end of product item container-->
+
                   <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
                   </div>
@@ -1627,7 +1439,7 @@
         </div>
       </div>
     </section>
-    <!--end of new arrivals--> 
+    <!--end of new arrivals-->
     <!--start of ad-boxes-->
     <section class="container">
       <div class="row">
@@ -1663,10 +1475,10 @@
         </div>
       </div>
     </section>
-    <!--end of ad-boxes--> 
+    <!--end of ad-boxes-->
     <!--start of brands-->
     <section class="container" data-speed="6">
-      <div class="row"> 
+      <div class="row">
         <!--start of big title-->
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">our brands</h3>
@@ -1708,8 +1520,8 @@
         </div>
       </div>
     </section>
-    <!--end of brands--> 
-    
+    <!--end of brands-->
+
     <!--start of parallax subscribtion-->
     <div id="parallax" class="" data-speed="4">
       <section class="container">
@@ -1721,12 +1533,12 @@
         </div>
       </section>
     </div>
-    
-    <!--end of parallax subscribtion--> 
-    
+
+    <!--end of parallax subscribtion-->
+
     <!--start of best selling-->
     <section class="container" data-speed="2">
-      <div class="row"> 
+      <div class="row">
         <!--start of big title-->
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">best selling</h3>
@@ -1824,12 +1636,12 @@
         </div>
       </div>
     </section>
-    <!--end of best selling--> 
-    
+    <!--end of best selling-->
+
     <!--start of latest from the blog-->
-    
+
     <section class="container">
-      <div class="row"> 
+      <div class="row">
         <!--start of big title-->
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">from the blog</h3>
@@ -1882,9 +1694,8 @@
         </div>
       </div>
     </section>
-    
-    <!--end of blatest from the blogs--> 
-    
+
+    <!--end of blatest from the blogs-->
+
   </div>
   <!--end of middle sec-->
-
