@@ -73,7 +73,7 @@ public function add_product($newimage)
 {
  $newimage_file = base_url().'application/upload/'.$newimage;
  $data=array(
-'product_category'=>$this->input->post('category'),
+'product_category_id'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
 'product_price'=>$this->input->post('price'),
 'product_title'=>$this->input->post('product_title'),
@@ -97,11 +97,7 @@ public function delete_product($id)
 
 	public function display_product()
 	{
-
-
 		$query=$this->db->query("select * from product");
-
-
 		return $query;
 	}
 
@@ -133,10 +129,13 @@ return true;
 public function getProductDetails()
 {
 	$q=$this->db->query("select count(*) as count from product");
-	print_r($q->result());
-	die;
+	//print_r($q->result_array());
+	//die;
 	$query=$this->db->get("product");
 	return $query;
+	//print_r($query->result_ar;
+
+
 }
 
 // public function update_product($id)
