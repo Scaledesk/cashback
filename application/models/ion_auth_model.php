@@ -997,28 +997,22 @@ $data=array(
 	public function login($identity, $password, $remember=FALSE)
 	{
 		$this->trigger_events('pre_login');
-
 		if (empty($identity) || empty($password))
 		{
 			$this->set_error('login_unsuccessful');
 			return FALSE;
 		}
-
-
         if ($identity=='admin@dk.com')
-		{
+		    {
             $password=md5($password);
-
-
             if($query=$this->db->query("select * from admin where email='$identity'and password='$password'"))
                {
                	redirect(base_url().'product/admin', 'refresh');
                //	$this->product->admin();
-                //echo "success";
-                //die();
-			   //$this->set_error('login_unsuccessful');
-			   //return FALSE;
-
+               //echo "success";
+               //die();
+			        //$this->set_error('login_unsuccessful');
+			        //return FALSE;
                }
 
          }
@@ -1035,10 +1029,8 @@ $data=array(
 		{
 			//Hash something anyway, just to take up time
 			$this->hash_password($password);
-
 			$this->trigger_events('post_login_unsuccessful');
 			$this->set_error('login_timeout');
-
 			return FALSE;
 		}
 
@@ -1054,7 +1046,6 @@ $data=array(
 				{
 					$this->trigger_events('post_login_unsuccessful');
 					$this->set_error('login_unsuccessful_not_active');
-
 					return FALSE;
 				}
 
@@ -1072,6 +1063,7 @@ $data=array(
 				$this->trigger_events(array('post_login', 'post_login_successful'));
 				$this->set_message('login_successful');
 				return TRUE;
+
 			}
 		}
 

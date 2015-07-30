@@ -13,8 +13,8 @@ parent::__construct();
     $query=$this->db->query("select * from category");
 		// echo '<pre />';
 		// print_r($query);
-		// die();  
-		
+		// die();
+
 		return $query;
  }
 
@@ -36,7 +36,7 @@ return true;
 public function select_update_category($id){
 $this->db->where("category_id",$id);
 $query=$this->db->query(" select * from category");
-return $query->result();	
+return $query->result();
 }
 
 
@@ -62,7 +62,7 @@ public function delete_category($id)
   		if($this->db->delete("category"))
   		{
   			return true;
-  		}		
+  		}
 	}
 
 
@@ -71,7 +71,7 @@ public function delete_category($id)
 
 public function add_product($newimage)
 {
-   $newimage_file = base_url().'application/upload/'.$newimage; 
+ $newimage_file = base_url().'application/upload/'.$newimage;
  $data=array(
 'product_category'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
@@ -92,16 +92,16 @@ public function delete_product($id)
   		if($this->db->delete("product"))
   		{
   			return true;
-  		}		
+  		}
 	}
 
 	public function display_product()
 	{
-		
-		
+
+
 		$query=$this->db->query("select * from product");
-		   
-		
+
+
 		return $query;
 	}
 
@@ -110,12 +110,12 @@ public function delete_product($id)
 
 	$this->db->where("product_id",$id);
     $query=$this->db->get("product");
-    return $query->result();	
+    return $query->result();
 	}
 
 public function update_product($newimage,$id)
 {
-   $newimage_file = base_url().'application/upload/'.$newimage; 
+   $newimage_file = base_url().'application/upload/'.$newimage;
  $data=array(
 'product_category'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
@@ -129,6 +129,14 @@ public function update_product($newimage,$id)
 $this->db->where("product_id",$id);
 $this->db->update('product',$data);
 return true;
+}
+public function getProductDetails()
+{
+	$q=$this->db->query("select count(*) as count from product");
+	print_r($q->result());
+	die;
+	$query=$this->db->get("product");
+	return $query;
 }
 
 // public function update_product($id)
@@ -150,6 +158,6 @@ return true;
 
 
 
-	
+
 
 }
