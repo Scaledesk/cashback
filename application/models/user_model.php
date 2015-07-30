@@ -18,9 +18,17 @@ public function show_store()
         {
 
         $query=$this->db->query("select * from store_details");
-		 
+
 		return $query;
         }
+
+	public function display_product()
+	{
+		//$q=$this->db->query("select count(*) as count from product");
+		$query=$this->db->get("product");
+		return $query;
+
+	}
 
 
 // public function add_category(){
@@ -39,7 +47,7 @@ public function show_store()
 // public function select_update_category($id){
 // $this->db->where("category_id",$id);
 // $query=$this->db->query(" select * from category");
-// return $query->result();	
+// return $query->result();
 // }
 
 
@@ -65,7 +73,7 @@ public function show_store()
 //   		if($this->db->delete("category"))
 //   		{
 //   			return true;
-//   		}		
+//   		}
 // 	}
 
 
@@ -74,7 +82,7 @@ public function show_store()
 
 // public function add_product($newimage)
 // {
-//    $newimage_file = base_url().'application/upload/'.$newimage; 
+//    $newimage_file = base_url().'application/upload/'.$newimage;
 //  $data=array(
 // 'product_category'=>$this->input->post('category'),
 // 'product_link'=>$this->input->post('link'),
@@ -95,16 +103,16 @@ public function show_store()
 //   		if($this->db->delete("product"))
 //   		{
 //   			return true;
-//   		}		
+//   		}
 // 	}
 
 // 	public function display_product()
 // 	{
-		
-		
+
+
 // 		$query=$this->db->query("select * from product");
-		   
-		
+
+
 // 		return $query;
 // 	}
 
@@ -113,12 +121,12 @@ public function show_store()
 
 // 	$this->db->where("product_id",$id);
 //     $query=$this->db->get("product");
-//     return $query->result();	
+//     return $query->result();
 // 	}
 
 // public function update_product($newimage,$id)
 // {
-//    $newimage_file = base_url().'application/upload/'.$newimage; 
+//    $newimage_file = base_url().'application/upload/'.$newimage;
 //  $data=array(
 // 'product_category'=>$this->input->post('category'),
 // 'product_link'=>$this->input->post('link'),
@@ -153,6 +161,6 @@ public function show_store()
 
 
 
-	
+
 
 }

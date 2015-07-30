@@ -46,5 +46,14 @@ public function show_store(){
 //    $this->load->view('templates/footer.php');
 
 // }
+public function display_product(){
+   $data['title']='Display Product Details';
+    $data['p']= $this->User_model->display_product();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/display_user_product.php',$data);
+  $this->load->view('templates/footer.php');
+
+}
+
 
 }
