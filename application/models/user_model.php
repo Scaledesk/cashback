@@ -3,7 +3,7 @@ class User_model extends CI_Model {
 public function __construct()
 {
 parent::__construct();
-//$this->load->library('session');
+$this->load->library('session');
 	$this->load->database();
 }
 
@@ -11,7 +11,7 @@ parent::__construct();
  public function show_coupon(){
 
     $query=$this->db->query("select * from coupon_details");
-	return $query->result();
+	return $query;
  }
 
 public function show_store()
