@@ -58,26 +58,21 @@
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="images\product-1-h.jpg" width="215" height="240" alt=""> <img class="top-img" src="images\product-1.jpg" width="215" height="240" alt=""></a></figure>
-                <span class="label offer-label-left">big deal</span> <span class="label offer-label-right">10% sold</span> </div>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().'assets/images/product-1-h.jpg';?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().'assets\images\product-1.jpg';?>" width="215" height="240" alt=""></a></figure>
+              </div>
               <div id="countdown-one" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
                 <p><span class="hours">00</span> <span class="timeRefHours">hours</span></p>
                 <p><span class="minutes">00</span> <span class="timeRefMinutes">min</span></p>
                 <p><span class="seconds">00</span> <span class="timeRefSeconds">sec</span></p>
               </div>
-              <div class="product-btns  effect-content-inner">
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
-                <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
-                <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-              </div>
+              
             </div>
             <div class="product-info">
               <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
             </div>
             <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
-            <div class="product-evaluate text-info"> <i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star"></i><i class="ion-android-star-half"></i> </div>
+            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="#" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BY NOW</span> </a> </div>
           </div>
           <!--end of product item container--> 
           
