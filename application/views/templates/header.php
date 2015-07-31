@@ -81,14 +81,14 @@ else
           <ul class="nav navbar-nav top-menu">
 
 
-            <?php if($this->ion_auth->logged_in())
+       <?php if($this->ion_auth->logged_in())
        { ?>
 
          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
            <ul class="dropdown-menu" role="menu">
-             <li><a href="#">My Acount</a></li>
-             <li><a href="#">Setting</a></li>
-             <li><a href="<?php echo base_url().'Auth/logout' ?>">Logout</a></li>
+             <li><a href="<?php echo base_url().'User/user_account'; ?>">My Acount</a></li>
+             <li><a href="<?php echo base_url().'User/change_password'; ?>">Setting</a></li>
+             <li><a href="<?php echo base_url().'Auth/logout'; ?>">Logout</a></li>
            </ul>
          </li>
 
