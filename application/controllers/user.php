@@ -7,6 +7,7 @@ class User extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
     $this->load->model('User_model');
+    $this->load->model('Product_model');
 		$this->load->library(array('ion_auth','form_validation'));
       $this->load->helper(array('form','url','language'));
 
@@ -53,6 +54,17 @@ public function display_product(){
   $this->load->view('templates/header.php',$data);
   $this->load->view('pages/user_product_display.php',$data);
   $this->load->view('templates/footer.php');
+
+}
+public function add_wallet()
+{
+  if($this->User_model->add_wallet())
+  {
+      $this->load->view('templates/header.php',$data);
+      $data['h']=$this->Product_model->getProductDetails();
+      $this->load->view('pages/index.php',$data);
+      $this->load->view('templates/footer.php');
+  }
 
 }
 
