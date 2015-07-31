@@ -439,8 +439,8 @@ else
           </li>
         </ul>
         <ul class="nav navbar-nav main-nav">
-          <li class="active"><a href="index.html" class="ion-ios-home"></a></li>
-                    <li><a href="<?php echo base_url().'user/show_store/'?>">STORE</a></li> 
+          <li class="active"><a href="<?php echo base_url(); ?>" class="ion-ios-home"></a></li>
+          <li><a href="<?php echo base_url().'user/show_store/'?>">STORE</a></li>
           <li><a href="<?php echo base_url().'user/show_coupon/'?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">Company</a></li>
           <li><a href="contact.html">CONTACT</a></li>
