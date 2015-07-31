@@ -1,8 +1,8 @@
-start of middle sec-->
+<!-- start of middle sec -->
   <div class="middle-sec wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s;">
     <div class="page-header">
       <div class="container text-center">
-        <h2 class="text-primary text-uppercase">Coupons</h2>
+        <h2 class="text-primary text-uppercase">STORE</h2>
         
       </div>
     </div>
@@ -29,6 +29,7 @@ start of middle sec-->
               <ul class="item-list list-group">
                 
                     <?php 
+                    echo base_url();
           //          echo "<pre>";
             //         print_r($cu->result());
         //             die();
@@ -41,7 +42,7 @@ start of middle sec-->
                      
                     
                     <div class="row">
-                      <div class="item-image col-sm-2"> <img class="img-responsive" src='<?php echo $row->store_image;?>' width="126" height="144" alt=""> </div>
+                      <div class="item-image col-sm-2"> <img class="img-responsive" src="<?php echo base_url().$row->store_image;?>" width="126" height="144" alt=""> </div>
                       <div class="item-body col-sm-8">
                       <h5 class="item-title text-primary text-uppercase text-primary text-uppercase"><a href="#"><?php echo $row->store_name; ?></a></h5>
                       <p class="item-description"> <?php echo $row->store_description; ?></p>

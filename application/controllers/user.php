@@ -7,7 +7,8 @@ class User extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
     $this->load->model('User_model');
-		$this->load->helper(array('url','language'));
+		$this->load->library(array('ion_auth','form_validation'));
+      $this->load->helper(array('form','url','language'));
 
 	}
 

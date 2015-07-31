@@ -286,7 +286,7 @@ $data=array(
 
 
 
-
+ 
 
 
 	public function hash_password($password, $salt=false, $use_sha1_override=FALSE)

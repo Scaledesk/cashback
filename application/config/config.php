@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:88/cashback/';
+$config['base_url'] = 'http://localhost/cashback/';
 
 
 // login auth config
@@ -61,13 +61,13 @@ $config['error_end_delimiter']='';
 ########## Google Settings.. Client ID, Client Secret from https://cloud.google.com/console #############
 $google_client_id       = '63682838275-89hv1pmfogua5tesftaosirgv6a9bbdt.apps.googleusercontent.com';
 $google_client_secret   = 'h2aV1lp9x2An0J3QS2POXP6Y';
-$google_redirect_url    = 'http://localhost:88/cashback'; //path to your script
+$google_redirect_url    = 'http://localhost/cashback'; //path to your script
 $google_developer_key   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 ########## MySql details (Replace with yours) #############
 $db_username = "root"; //Database Username
-$db_password = "ahamad"; //Database Password
-$hostname = "localhost:3308"; //Mysql Hostname
+$db_password = "084222252"; //Database Password
+$hostname = "localhost:3306"; //Mysql Hostname
 $db_name = 'cashback'; //Database Name
 ###################################################################
 /*

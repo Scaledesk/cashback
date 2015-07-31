@@ -7,7 +7,8 @@ class Store_control extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('Store_model');
-		$this->load->helper(array('url','language'));
+		$this->load->library(array('ion_auth','form_validation'));
+      $this->load->helper(array('form','url','language'));
 	}
   public function add_store()
   {

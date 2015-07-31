@@ -12,7 +12,9 @@ class Fbci extends CI_Controller {
 
    public function __construct(){
 	    parent::__construct();
-	    $this->load->library('session');  //Load the Session 
+	    $this->load->library('session');
+	    $this->load->library(array('ion_auth','form_validation'));
+		$this->load->helper(array('form','url','language'));  //Load the Session 
 		$this->config->load('facebook'); //Load the facebook.php file which is located in config directory
     }
 	public function index()
