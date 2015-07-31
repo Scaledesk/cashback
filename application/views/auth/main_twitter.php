@@ -1,6 +1,6 @@
 <?php
 //start session
-$base_url='http://localhost:88/cashback/';
+$base_url='http://localhost/cashback/';
 
 // Include config file and twitter PHP Library by Abraham Williams (abraham@abrah.am)
 include_once("/twitter_src/config.php");
