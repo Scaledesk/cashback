@@ -84,12 +84,7 @@ else
             <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
             <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
 
-              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">GBP</a></li>
-                  <li><a href="#">EUR </a></li>
-                </ul>
-              </li>
+              
 
 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
@@ -116,18 +111,8 @@ else
                 <li> <a class="soon" href="javascript:void(0)"><i class="ion-android-radio-button-on"></i>Extra Pages Soon</a> </li>
               </ul>
             </li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">GBP</a></li>
-                <li><a href="#">EUR </a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/uk.png'; ?>" <span class="ion-android-arrow-dropdown"></span></a>
-              <ul class="dropdown-menu">
-                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/italy.png';?>"></a> </li>
-                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
-              </ul>
-            </li>
+            
+            
           </ul>
           <form class="navbar-form navbar-left lno-search-form visible-xs" role="search">
             <div class="form-group">
