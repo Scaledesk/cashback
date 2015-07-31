@@ -1005,11 +1005,11 @@ $data=array(
         if ($identity=='admin@dk.com')
 		    {
             $password=md5($password);
-            if($query=$this->db->query("select * from admin where email='$identity'and password='$password'"))
+            if($query=$this->db->query("select * from admin where email='$identity' and password='$password'"))
                {
                	redirect(base_url().'product/admin', 'refresh');
                //	$this->product->admin();
-               //echo "success";
+               echo "success";
                //die();
 			        //$this->set_error('login_unsuccessful');
 			        //return FALSE;
