@@ -483,7 +483,8 @@ public function register(){
 		{
       echo"register successful";
 			$this->session->set_flashdata('message', $this->ion_auth->messages());
-			redirect("auth", 'refresh');
+			//redirect("Auth/home", 'refresh');
+			redirect(base_url().'Auth/home', 'refresh');
 		}
 		else
 		{
