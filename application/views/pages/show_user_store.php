@@ -1,8 +1,8 @@
-start of middle sec-->
+<!-- start of middle sec -->
   <div class="middle-sec wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s;">
     <div class="page-header">
       <div class="container text-center">
-        <h2 class="text-primary text-uppercase">Coupons</h2>
+        <h2 class="text-primary text-uppercase">STORE</h2>
         
       </div>
     </div>
