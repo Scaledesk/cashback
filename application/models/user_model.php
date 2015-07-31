@@ -157,7 +157,11 @@ public function show_store()
 // // return true;
 // // }
 
-
+public function getWallet()
+{
+	$query=$this->db->query("select * from wallet_details where user_id='$id'");
+	return $query();
+}
 
 
 

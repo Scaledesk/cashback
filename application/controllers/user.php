@@ -67,6 +67,20 @@ public function add_wallet()
   }
 
 }
-
+public function change_password()
+{
+	$data['title']='Change Password';
+	$this->load->view('templates/header.php',$data)
+	$this->load->view('pages/index.php',$data);
+	$this->load->view('templates/footer.php');
+}
+public function my_account()
+{
+	$data['title']='User Account';
+	$data['w']=$this->User_model->getWallet();
+	$this->load->view('templates/header.php',$data)
+	$this->load->view('pages/myaccount.php',$data);
+	$this->load->view('templates/footer.php');
+}
 
 }
