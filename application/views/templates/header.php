@@ -81,15 +81,22 @@ else
           <ul class="nav navbar-nav top-menu">
 
 
-            <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
-            <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
+            <?php if($this->ion_auth->logged_in())
+       { ?>
 
-              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">GBP</a></li>
-                  <li><a href="#">EUR </a></li>
-                </ul>
-              </li>
+         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
+           <ul class="dropdown-menu" role="menu">
+             <li><a href="#">My Acount</a></li>
+             <li><a href="#">Setting</a></li>
+             <li><a href="<?php echo base_url().'Auth/logout' ?>">Logout</a></li>
+           </ul>
+         </li>
+
+    <?php    }
+       else { ?>
+         <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
+         <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
+       <?php } ?>
 
 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
