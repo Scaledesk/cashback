@@ -51,7 +51,3 @@ application/config/database.php
 application/config/database.php
 application/config/database.php
 application/config/config.php
-*.php
-*.php
-application/views/auth/main_twitter.php
-application/config/config.php

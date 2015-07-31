@@ -80,25 +80,16 @@ else
         <div class="col-sm-8 collapse navbar-collapse navbar-right" id="line-navbar-collapse-1">
           <ul class="nav navbar-nav top-menu">
 
- <?php if($this->ion_auth->logged_in())
-       { ?>
 
-         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
-           <ul class="dropdown-menu" role="menu">
-             <li><a href="#">My Acount</a></li>
-             <li><a href="#">Setting</a></li>
-             <li><a href="<?php echo base_url().'Auth/logout' ?>">Logout</a></li>
-           </ul>
-         </li>
+            <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
+            <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
 
-    <?php    }
-       else { ?>
-         <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
-         <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
-       <?php } ?>
-
-
-
+              <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">GBP</a></li>
+                  <li><a href="#">EUR </a></li>
+                </ul>
+              </li>
 
 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
@@ -448,10 +439,11 @@ else
           </li>
         </ul>
         <ul class="nav navbar-nav main-nav">
-          <li class="active"><a href="<?php echo base_url(); ?>" class="ion-ios-home"></a></li>
-          <li><a href="<?php echo base_url().'user/show_store/'?>">STORE</a></li>
-          <li><a href="<?php echo base_url().'user/show_coupon/'?>">COUPON</a></li>
-           <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li> <li><span class="nav-span hot-sale">20% OFF</span><a href="products.html">Company</a></li>
+          <li class="active"><a href="index.html" class="ion-ios-home"></a></li>
+            <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li> 
+            <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li> 
+           
+           <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li> 
           <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
