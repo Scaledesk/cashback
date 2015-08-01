@@ -437,7 +437,7 @@ else
                           <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                           <div class="item"> <img src="<?php echo base_url().'assets/images/nav-img-1.jpg';?>" width="296" height="400" alt="Slide image"> </div>
                         </div>
-                      </div>
+                      </div>s
                     </div>
                   </div>
                 </div>
@@ -446,12 +446,11 @@ else
           </li>
         </ul>
         <ul class="nav navbar-nav main-nav">
-          <li class="active"><a href="index.html" class="ion-ios-home"></a></li>
-            <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li> 
-            <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li> 
-           
-           <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li> 
-          <li><a href="contact.html">CONTACT</a></li>
+          <li class="active"><a href="<?php echo base_url(); ?>" class="ion-ios-home"></a></li>
+            <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
+            <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
+           <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#">Home</a></li>
@@ -462,10 +461,10 @@ else
               <div class="input-group-btn lnt-search-category">
                 <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false"> <span class="selected-category-text">All </span> <span class="ion-android-arrow-dropdown"></span> </button>
                 <ul class="dropdown-menu " role="menu">
-                  <li><a href="#">STORE</a></li>
-                  <li><a href="#">COUPON</a></li>
-                  <li><a href="#">PRODUCTS</a></li>
-                  <li><a href="#">Home</a></li>
+                  <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
+                  <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
+                  <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
+                  <li><a href="<?php echo base_url(); ?>">Home</a></li>
                   <li><a href="#">Toys</a></li>
                   <li><a href="#">Motors</a></li>
                 </ul>
