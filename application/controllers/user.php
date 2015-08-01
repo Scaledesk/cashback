@@ -56,13 +56,13 @@ public function display_product(){
   $this->load->view('templates/footer.php');
 
 }
-public function add_wallet()
+public function do_add_wallet()
 {
   if($this->User_model->add_wallet())
   {
       $this->load->view('templates/header.php',$data);
-      $data['h']=$this->Product_model->getProductDetails();
-      $this->load->view('pages/index.php',$data);
+      $this->load->view('templates/adminSidebar.php');
+      $this->load->view('pages/dashboard.php');
       $this->load->view('templates/footer.php');
   }
 
@@ -81,6 +81,15 @@ public function my_account()
 	$data['user']=$this->User_model->getUserDetails();
 	$this->load->view('templates/header.php',$data);
 	$this->load->view('pages/myaccount.php',$data);
+	$this->load->view('templates/footer.php');
+}
+public function add_wallet()
+{
+	$data['title']='Add Wallet';
+	$this->load->view('templates/header.php',$data);
+	$this->load->view('templates/adminSidebar.php');
+	$data['user']=$this->User_model->getUserDetails();
+	$this->load->view('pages/add_wallet.php',$data);
 	$this->load->view('templates/footer.php');
 }
 

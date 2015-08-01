@@ -17,10 +17,10 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="card">User Name</label>
-                          <select class="selectpicker" id="card">
-                            <option>user1
-                            <option>user2
-                            <option>user3
+                          <select class="selectpicker" id="card" name="user_id">
+                            <?php foreach ($user->result() as $row) { ?>
+                            <option value="<?php echo $row->id; ?>"><?php echo $row->username; ?></option>
+                            <?php } ?>
                           </select>
                         </div>
 

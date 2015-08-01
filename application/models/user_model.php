@@ -157,12 +157,13 @@ public function show_store()
 
 public function getUserDetails()
 {
-	$id=$this->session->userdata('user_id');
-	$query=$this->db->query("select * from wallet_details where user_id='$id'");
-	return $query();
+	$query=$this->db->query("select * from users");
+	return $query;
 }
+
 public function getWallet()
 {
+	$id=$this->session->userdata('user_id');
 	$query=$this->db->query("select * from wallet_details where user_id='$id'");
 	return $query();
 }
