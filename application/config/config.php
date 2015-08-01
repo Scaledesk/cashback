@@ -66,8 +66,8 @@ $google_developer_key   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 ########## MySql details (Replace with yours) #############
 $db_username = "root"; //Database Username
-$db_password = "084222252"; //Database Password
-$hostname = "localhost:3306"; //Mysql Hostname
+$db_password = "ahamad"; //Database Password
+$hostname = "localhost:3308"; //Mysql Hostname
 $db_name = 'cashback'; //Database Name
 ###################################################################
 /*
