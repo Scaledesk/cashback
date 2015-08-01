@@ -7,6 +7,7 @@ class Auth extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('Product_model');
+		$this->load->model('User_model');
 		$this->load->library(array('ion_auth','form_validation'));
 			$this->load->helper(array('form','url','language'));
 		$this->load->library('session');
@@ -50,6 +51,7 @@ public function home(){
       $data['title']='Cashback';
       $this->load->view('templates/header.php',$data);
 		  $data['h']=$this->Product_model->getProductDetails();
+			$data['s']=$this->User_model->show_store();
       $this->load->view('pages/index.php',$data);
       $this->load->view('templates/footer.php');
     }

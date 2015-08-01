@@ -6,8 +6,6 @@ parent::__construct();
 $this->load->library('session');
 	$this->load->database();
 }
-
-
  public function show_coupon(){
 
     $query=$this->db->query("select * from coupon_details");
@@ -15,12 +13,12 @@ $this->load->library('session');
  }
 
 public function show_store()
-        {
+{
 
         $query=$this->db->query("select * from store_details");
 
-		return $query;
-        }
+	     	return $query;
+}
 
 	public function display_product()
 	{
