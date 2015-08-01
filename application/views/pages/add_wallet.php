@@ -7,7 +7,7 @@
 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                  <form role="form" action="" name="" method="Post">
+                  <form role="form" action="<?=(base_url().'User/do_add_wallet')?>" name="WalletForm" method="Post">
                     <div class="row">
 
                       <!-- START Presonal information -->
@@ -27,7 +27,7 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Awailable Ammount</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Name" required="">
+                          <input type="text" id="" name="available_amount" class="form-control" placeholder="" required="">
                         </div>
 
 
@@ -41,13 +41,13 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Add Ammount<label>
-                          <input type="file" id="" name="" class="form-control" placeholder="Image" required="">
+                          <input type="text" id="" name="add_amount" class="form-control" placeholder="" required="">
                         </div>
 
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Total Ammount</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Name" required="">
+                          <input type="text" id="" name="total_amount" class="form-control" placeholder="total amount" required="">
                         </div>
 
                       <!-- END Payment information-->
