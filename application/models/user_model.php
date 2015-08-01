@@ -8,7 +8,7 @@ $this->load->library('session');
 }
  public function show_coupon(){
 
-    $query=$this->db->query("select * from coupon_details");
+  $query=$this->db->query("select * from coupon_details");
 	return $query;
  }
 

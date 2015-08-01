@@ -44,7 +44,7 @@
       <div class="row">
        <!--start of big title-->
         <div class="col-sm-12 big-title text-uppercase text-center">
-          <h3 class="text-primary">today's deals</h3>
+          <h3 class="text-primary">Top Coupons and Deals</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
           <p><span class="ion-android-star-outline"></span></p>
         </div>
@@ -52,12 +52,12 @@
 
 
         <div id="best-deals" class="col-sm-12 wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-          <?php foreach ($h->result() as $row) { ?>
+          <?php foreach ($c->result() as $row) { ?>
 
           <div class="product-item-container effect-wrap effect-animate">
             <div class="product-main">
               <div class="product-view">
-                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""></a></figure>
+                <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""></a></figure>
               </div>
               <div id="countdown-one" class="deal-counter">
                 <p><span class="days">00</span> <span class="timeRefDays">days</span></p>
@@ -68,10 +68,9 @@
 
             </div>
             <div class="product-info">
-              <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title; ?></a></h3>
+              <h3 class="product-name"><a href="<?php echo base_url().'Product/display_coupon' ?>"><?php echo $row->coupon_name; ?></a></h3>
             </div>
-            <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?></strong></span></span> <span class="old-price">Rs <?php echo $row->product_price; ?></span> </div>
-            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="<?php echo $row->product_link; ?>" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>BUY NOW</span> </a> </div>
+            <div class="product-evaluate text-info"> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs animated animated" href="<?php echo base_url().'Product/seeCouponCode'; ?>" style="visibility: visible;"> <i class="rm-icon ion-android-star"></i> <span>See Coupon Code</span> </a> </div>
           </div>
 
         <?php  } ?>

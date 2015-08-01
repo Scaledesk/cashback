@@ -52,6 +52,7 @@ public function home(){
       $this->load->view('templates/header.php',$data);
 		  $data['h']=$this->Product_model->getProductDetails();
 			$data['s']=$this->User_model->show_store();
+			$data['c']=$this->User_model->show_coupon();
       $this->load->view('pages/index.php',$data);
       $this->load->view('templates/footer.php');
     }
