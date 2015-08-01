@@ -24,7 +24,7 @@ public function show_store()
 
 	public function display_product()
 	{
-		//$q=$this->db->query("select count(*) as count from product");
+		//$q=$this->db->query("select count(*) as count from product");s
 		$query=$this->db->get("product");
 		return $query;
 
@@ -157,6 +157,12 @@ public function show_store()
 // // return true;
 // // }
 
+public function getUserDetails()
+{
+	$id=$this->session->userdata('user_id');
+	$query=$this->db->query("select * from wallet_details where user_id='$id'");
+	return $query();
+}
 public function getWallet()
 {
 	$query=$this->db->query("select * from wallet_details where user_id='$id'");

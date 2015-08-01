@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
 class User extends CI_Controller {
 
 	function __construct()
@@ -8,6 +7,7 @@ class User extends CI_Controller {
 		$this->load->database();
     $this->load->model('User_model');
     $this->load->model('Product_model');
+		$this->load->library('session');
 		$this->load->library(array('ion_auth','form_validation'));
       $this->load->helper(array('form','url','language'));
 
@@ -70,15 +70,16 @@ public function add_wallet()
 public function change_password()
 {
 	$data['title']='Change Password';
-	$this->load->view('templates/header.php',$data)
-	$this->load->view('pages/index.php',$data);
+	$this->load->view('templates/header.php',$data);
+	$this->load->view('pages/index.php');
 	$this->load->view('templates/footer.php');
 }
 public function my_account()
 {
 	$data['title']='User Account';
 	$data['w']=$this->User_model->getWallet();
-	$this->load->view('templates/header.php',$data)
+	$data['user']=$this->User_model->getUserDetails();
+	$this->load->view('templates/header.php',$data);
 	$this->load->view('pages/myaccount.php',$data);
 	$this->load->view('templates/footer.php');
 }
