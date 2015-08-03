@@ -60,9 +60,11 @@ public function do_add_wallet()
 {
   if($this->User_model->add_wallet())
   {
+		echo 'wallet added';
+		$data['title']='welcome admin';
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar.php');
-      $this->load->view('pages/dashboard.php');
+      $this->load->view('pages/dashbord.php');
       $this->load->view('templates/footer.php');
   }
 
@@ -91,6 +93,14 @@ public function add_wallet()
 	$data['user']=$this->User_model->getUserDetails();
 	$this->load->view('pages/add_wallet.php',$data);
 	$this->load->view('templates/footer.php');
+}
+public function getWallet()
+{
+	$id=$this->input->post('id');
+	$data['w']=$this->User_model->getWallet($id);
+	$a=$data['w'][0]->available_amount;
+	echo json_encode($a);
+
 }
 
 }
