@@ -161,22 +161,21 @@ public function getUserDetails()
 	return $query;
 }
 
-public function getWallet()
+public function getWallet($id)
 {
-	$id=$this->session->userdata('user_id');
 	$query=$this->db->query("select * from wallet_details where user_id='$id'");
-	return $query();
+	return $query->result();
 }
 
 public function add_wallet()
 {
-	$d=array(
-		$user_id=$this->input->post('user_id'),
-		$available_amount=$this->input->post('available_amount'),
-		$add_amount=$this->input->post('add_amount'),
-		$total_amount=$this->input->post('total_amount')
-	)
-	if($this->db->insert('wallet_details',$d))
+	 $d=array(
+		'user_id'=>$this->input->post('user_id'),
+		'available_amount'=>$this->input->post('available_amount'),
+		'add_amount'=>$this->input->post('add_amount'),
+		'total_amount'=>$this->input->post('total_amount')
+	);
+	$this->db->insert('wallet_details',$d);
 	  return true;
 
 }
