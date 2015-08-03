@@ -60,11 +60,11 @@ public function do_add_wallet()
 {
   if($this->User_model->add_wallet())
   {
-		echo 'wallet added';
+		$data['msg']="wallet Added";
 		$data['title']='welcome admin';
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar.php');
-      $this->load->view('pages/dashbord.php');
+      $this->load->view('pages/dashbord.php',$data);
       $this->load->view('templates/footer.php');
   }
 

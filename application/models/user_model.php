@@ -175,13 +175,18 @@ public function add_wallet()
 		'add_amount'=>$this->input->post('add_amount'),
 		'total_amount'=>$this->input->post('total_amount')
 	);
-	$this->db->insert('wallet_details',$d);
-	  return true;
-
+	$id=$this->input->post('user_id');
+	$q=$this->db->query("select * from wallet_details where user_id='$id'");
+  if($q->num_rows() > 0)
+  {
+    $this->db->where("user_id",$id);
+		$this->db->update('wallet_details',$d);
+		return true;
+  }
+  else {
+		$this->db->insert('wallet_details',$d);
+		  return true;
+  }
 }
-
-
-
-
 
 }

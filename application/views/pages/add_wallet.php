@@ -1,8 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <div class="col-sm-8 col-md-9 sub-data-left main-sec">
               <div class="row">
-
-
                 <!--end of breadcrumb-->
 
                 <!--start of checkout-->
@@ -40,13 +38,13 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Add Ammount<label>
-                          <input type="text" id="" name="add_amount" class="form-control" placeholder="" required="">
+                          <input type="text" id="add_amount" name="add_amount" class="form-control" placeholder="" onchange="tAmount(this)" required="">
                         </div>
 
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Total Ammount</label>
-                          <input type="text" id="" name="total_amount" class="form-control" placeholder="total amount" required="">
+                          <input type="text" id="total_amount" name="total_amount" class="form-control" placeholder="total amount" required="">
                         </div>
 
                       <!-- END Payment information-->
@@ -88,5 +86,12 @@
                      //alert(a);
                   }
                   });
+              }
+
+              function tAmount(obj)
+              {
+                var add_amount=parseInt(obj.value);
+                var available_amount=parseInt(document.getElementById('amt').value);
+                document.getElementById('total_amount').value=add_amount+available_amount;
               }
 </script>
