@@ -268,21 +268,21 @@ class Ion_auth_model extends CI_Model
 	 * @author Mathew
 	 **/
 
-public function admin_login($identity,$password){
+// public function admin_login($identity,$password){
 
 
- $password=md5($password);
-$data=array(
- 'email'=>$identity,
- 'password'=>$password
-  );
+//  $password=md5($password);
+// $data=array(
+//  'email'=>$identity,
+//  'password'=>$password
+//   );
 
-   $this->db->where(array('email'=>$identity));
-   $this->db->where(array('password'=> $password));
-   $this->db->select('admin',$data);
-  return true;
-//$query=$this->db->query("select * from ");
- }
+//    $this->db->where(array('email'=>$identity));
+//    $this->db->where(array('password'=> $password));
+//    $this->db->select('admin',$data);
+//   return true;
+// //$query=$this->db->query("select * from ");
+//  }
 
 
 
@@ -1002,20 +1002,20 @@ $data=array(
 			$this->set_error('login_unsuccessful');
 			return FALSE;
 		}
-        if ($identity=='admin@dk.com')
-		    {
-            $password=md5($password);
-            if($query=$this->db->query("select * from admin where email='$identity' and password='$password'"))
-               {
-               	redirect(base_url().'product/admin', 'refresh');
-               //	$this->product->admin();
-               echo "success";
-               //die();
-			        //$this->set_error('login_unsuccessful');
-			        //return FALSE;
-               }
+      //   if ($identity=='admin@dk.com')
+		    // {
+      //       $password=md5($password);
+      //       if($query=$this->db->query("select * from admin where email='$identity' and password='$password'"))
+      //          {
+      //          	redirect(base_url().'product/admin', 'refresh');
+      //          //	$this->product->admin();
+      //          echo "success";
+      //          //die();
+			   //      //$this->set_error('login_unsuccessful');
+			   //      //return FALSE;
+      //          }
 
-         }
+      //    }
 
 		$this->trigger_events('extra_where');
 
