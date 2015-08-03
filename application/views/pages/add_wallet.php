@@ -13,7 +13,6 @@
                       <!-- START Presonal information -->
                       <fieldset class="col-md-6">
                         <legend>User Name And Ammount</legend>
-
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="card">User Name</label>
