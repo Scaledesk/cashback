@@ -1,4 +1,4 @@
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <div class="col-sm-8 col-md-9 sub-data-left main-sec">
               <div class="row">
 
@@ -17,7 +17,7 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="card">User Name</label>
-                          <select class="selectpicker" id="card" name="user_id">
+                          <select class="selectpicker" id="card" name="user_id" onchange="loadamount(this)">
                             <?php foreach ($user->result() as $row) { ?>
                             <option value="<?php echo $row->id; ?>"><?php echo $row->username; ?></option>
                             <?php } ?>
@@ -27,7 +27,7 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Awailable Ammount</label>
-                          <input type="text" id="" name="available_amount" class="form-control" placeholder="" required="">
+                          <input type="text" id="amt" name="available_amount" class="form-control" placeholder="" required="">
                         </div>
 
 
@@ -72,3 +72,22 @@
     </section>
   </div>
   <!--end of middle sec-->
+<script>
+              function loadamount(obj)
+              {
+                 //alert(obj.value);
+                   $.ajax({
+                  'url' : "<?php echo base_url().'User/getWallet'; ?>",
+                  'type' : 'POST',  //the way you want to send data to your URL
+                  dataType: "json",
+                  'data' : {'id' : obj.value},
+                  'success' : function(data){
+                    //alert(data);
+                    var amount=data;
+                    document.getElementById('amt').value = amount;
+                    //$('#available_amount').value=a; //jquery selector (get element by id)
+                     //alert(a);
+                  }
+                  });
+              }
+</script>
