@@ -154,7 +154,6 @@ public function show_store()
 // // $this->db->update('product',$data);
 // // return true;
 // // }
-
 public function getUserDetails()
 {
 	$query=$this->db->query("select * from users");

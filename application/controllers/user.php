@@ -73,7 +73,7 @@ public function change_password()
 {
 	$data['title']='Change Password';
 	$this->load->view('templates/header.php',$data);
-	$this->load->view('pages/index.php');
+	$this->load->view('pages/change_password.php.php');
 	$this->load->view('templates/footer.php');
 }
 public function my_account()
