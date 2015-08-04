@@ -199,5 +199,24 @@ public function getWalletDetails()
 	$query=$this->db->query("select * from wallet_details where user_id='$id'");
 	return $query->result();
 }
+public function add_personal_info()
+{
+	$dob=$this->input->post('date').'/'.$this->input->post('month').'/'.$this->input->post('year');
+	$d=array(
+	 'user_gender'=>$this->input->post('user_gender'),
+	 'user_dob'=>$dob,
+	 'user_marital'=>$this->input->post('user_marital'),
+	 'user_country'=>$this->input->post('user_country'),
+	 'user_state'=>$this->input->post('user_state'),
+	 'user_city'=>$this->input->post('user_city'),
+	 'user_pincode'=>$this->input->post('user_pincode'),
+	 'user_address'=>$this->input->post('user_address')
+ );
+ $id=$this->session->userdata('user_id');
+ $this->db->where("id",$id);
+ $this->db->update('users',$d);
+	return true;
+
+}
 
 }

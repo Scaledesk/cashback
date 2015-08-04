@@ -102,5 +102,18 @@ public function getWallet()
 	echo json_encode($a);
 
 }
+public function add_personal_info()
+{
+	if($this->User_model->add_personal_info())
+  {
+		$data['msg']="personal information saved";
+		$data['title']='My Account';
+		$data['w']=$this->User_model->getWalletDetails();
+		$data['user']=$this->User_model->getUser();
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('pages/myaccount.php',$data);
+		$this->load->view('templates/footer.php');
+  }
+}
 
 }

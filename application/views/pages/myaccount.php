@@ -173,7 +173,7 @@
                 <div class="col-sm-12">
                   <form role="form">
                     <div class="row">
-					<form role="form" action="<?=(base_url().'User/add_personal_info')?>" method="Post">
+					<form role="form" action="<?=(base_url().'User/add_personal_info')?>" name="personalInfo" method="post">
 
                       <!-- START Presonal information -->
                       <fieldset class="col-md-6">
@@ -198,7 +198,7 @@
 
 						<div class="col-sm-4 form-group">
                             <label class="control-label" for="year">Date</label>
-                            <select class="selectpicker" id="year" name="d" required>
+                            <select class="selectpicker" id="year" name="date" required>
                               <option value=''>Date</option>
                               <?php
                               for ($i=1; $i < 32 ; $i++) { ?>
@@ -209,7 +209,7 @@
                           </div>
                           <div class="col-sm-5 form-group">
                             <label class="control-label" for="month">Month</label>
-                            <select class="selectpicker" id="month" required>
+                            <select class="selectpicker" id="month" name="month" required>
                               <option value=''>Month</option>
                               <option value="January" <?php if($dob[1]=='January') echo 'selected'; ?>>January</option>
                               <option value="February" <?php if($dob[1]=='February') echo 'selected'; ?>>February</option>
@@ -228,7 +228,7 @@
 
                           <div class="col-sm-3 form-group">
                             <label class="control-label" for="year">Year</label>
-                            <select class="selectpicker" id="year" required>
+                            <select class="selectpicker" id="year" name="year" required>
                               <option>Year</option>
                             <?php
                             for ($i=1985; $i < (date('Y',time()))-10 ; $i++) { ?>
@@ -339,7 +339,7 @@
 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                  <form role="form" action="" name="" method="Post">
+                  <form role="form" action="<?=(base_url().'Auth/change_password')?>" name="changePassword" method="post">
                     <div class="row">
 
                       <!-- START Presonal information -->
@@ -349,13 +349,13 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="address">Current Password</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Current Password" required="">
+                          <input type="text" id="" name="old_password" class="form-control" placeholder="Current Password" required="">
                         </div>
 
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Confirm Password</label>
-                          <input type="text" id="" name="" class="form-control"  placeholder="Confirm Password" required="">
+                          <input type="text" id="" name="new_password_confirm" class="form-control"  placeholder="Confirm Password" required="">
                         </div>
 
 
@@ -369,7 +369,7 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">New Password</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="New Password" required="">
+                          <input type="text" id="" name="new_password" class="form-control" placeholder="New Password" required="">
                         </div>
 
                         <!-- Image -->
