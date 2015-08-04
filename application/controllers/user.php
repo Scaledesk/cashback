@@ -79,8 +79,8 @@ public function change_password()
 public function my_account()
 {
 	$data['title']='User Account';
-	$data['w']=$this->User_model->getWallet();
-	$data['user']=$this->User_model->getUserDetails();
+	$data['w']=$this->User_model->getWalletDetails();
+	$data['user']=$this->User_model->getUser();
 	$this->load->view('templates/header.php',$data);
 	$this->load->view('pages/myaccount.php',$data);
 	$this->load->view('templates/footer.php');

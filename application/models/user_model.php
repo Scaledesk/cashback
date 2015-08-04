@@ -159,6 +159,12 @@ public function getUserDetails()
 	$query=$this->db->query("select * from users");
 	return $query;
 }
+public function getUser()
+{
+	$id=$this->session->userdata('user_id');
+	$query=$this->db->query("select * from users where id='$id'");
+	return $query->result();
+}
 
 public function getWallet($id)
 {
@@ -186,6 +192,12 @@ public function add_wallet()
 		$this->db->insert('wallet_details',$d);
 		  return true;
   }
+}
+public function getWalletDetails()
+{
+	$id=$this->session->userdata('user_id');
+	$query=$this->db->query("select * from wallet_details where user_id='$id'");
+	return $query->result();
 }
 
 }
