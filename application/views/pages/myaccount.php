@@ -246,11 +246,11 @@
                           <div class="form-group">
                           <label class="control-label" for="card">Select Any State</label>
                           <select class="selectpicker" id="card" name="user_state" required>
-                            <option>select</option>
-                            <option value="U.P." <?php if($user[0]->user_state=='U.P.') echo 'selected'; ?>>U.P.</option>
-							              <option value="M.P." <?php if($user[0]->user_state=='M.P.') echo 'selected'; ?>>M.P.</option>
-                            <option value="H.P." <?php if($user[0]->user_state=='H.P.') echo 'selected'; ?>>H.P.</option>
-							              <option value="A.P." <?php if($user[0]->user_state=='A.P.') echo 'selected'; ?>>A.P.</option>
+                          <option>select</option>
+                          <option value="U.P." <?php if($user[0]->user_state=='U.P.') echo 'selected'; ?>>U.P.</option>
+							            <option value="M.P." <?php if($user[0]->user_state=='M.P.') echo 'selected'; ?>>M.P.</option>
+                          <option value="H.P." <?php if($user[0]->user_state=='H.P.') echo 'selected'; ?>>H.P.</option>
+							            <option value="A.P." <?php if($user[0]->user_state=='A.P.') echo 'selected'; ?>>A.P.</option>
                           </select>
 
 
@@ -410,7 +410,7 @@
                                 <h6 id="payment">Your Account Balance</h6>
                                 <div class="row">
                                     <div class=" txtcenter approved-cb">
-                                        <span class="font-rupee"></span><span><center><h1>Rs,0</h1></center></span>
+                                        <span class="font-rupee"></span><span><center><h1><?php echo 'Rs,'.$w[0]->available_amount; ?></h1></center></span>
                                     </div>
                                     <div class="txtcenter">
                                         <center>Approved Cashback</center></div>
