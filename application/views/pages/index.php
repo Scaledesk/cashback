@@ -139,7 +139,7 @@
                       </div>
                     </div>
                     <div class="product-info">
-                      <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title; ?></a></h3>
+                      <h3 class="product-name"><?php echo $row->product_link;  ?></h3>
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong><?php echo $row->product_price; ?></strong></span></span> <span class="old-price"><?php echo $row->product_price; ?></span> </div>
                   </div>
