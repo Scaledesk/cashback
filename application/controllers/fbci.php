@@ -143,18 +143,187 @@ if (!isset($_GET['code'])) {
 public function google_login(){
 
 
-	  $this->load->view('auth/main_google.php'); //load the main.php file for view
+	  //$this->load->view('auth/main_google.php'); //load the main.php file for view
 
-   }
+   
+
+########## Google Settings.. Client ID, Client Secret from https://cloud.google.com/console #############
+$google_client_id       = '63682838275-89hv1pmfogua5tesftaosirgv6a9bbdt.apps.googleusercontent.com';
+$google_client_secret   = 'h2aV1lp9x2An0J3QS2POXP6Y';
+$google_redirect_url    = 'http://localhost:88/cashback/fbci/google_login'; //path to your script
+$google_developer_key   = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+
+########## MySql details (Replace with yours) #############
+$db_username = "root"; //Database Username
+$db_password = "084222252"; //Database Password
+$hostname = "localhost:3306"; //Mysql Hostname
+$db_name = 'cashback'; //Database Name
+$base_url='http://localhost:88/cashback';
+###################################################################
+//include google api files
+
+require_once '/google_src/Google_Client.php';
+require_once '/google_src/config.php';
+require_once '/google_src/Google_Oauth2Service.php';
+
+
+$gClient = new Google_Client();
+$gClient->setApplicationName('Login to Sanwebe.com');
+$gClient->setClientId($google_client_id);
+$gClient->setClientSecret($google_client_secret);
+$gClient->setRedirectUri($google_redirect_url);
+$gClient->setDeveloperKey($google_developer_key);
+
+$google_oauthV2 = new Google_Oauth2Service($gClient);
+
+//If user wish to log out, we just unset Session variable
+if (isset($_REQUEST['reset'])) 
+{
+  unset($_SESSION['token']);
+  $gClient->revokeToken();
+  header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL)); //redirect user back to page
+}
+
+//If code is empty, redirect user to google authentication page for code.
+//Code is required to aquire Access Token from google
+//Once we have access token, assign token to session variable
+//and we can redirect user back to page and login.
+if (isset($_GET['code'])) 
+{ 
+    $gClient->authenticate($_GET['code']);
+    $_SESSION['token'] = $gClient->getAccessToken();
+    header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
+    return;
+}
+
+
+if (isset($_SESSION['token'])) 
+{ 
+    $gClient->setAccessToken($_SESSION['token']);
+}
+
+
+if ($gClient->getAccessToken()) 
+{
+      //For logged in user, get details from google using access token
+      $user                 = $google_oauthV2->userinfo->get();
+      $user_id              = $user['id'];
+      $user_name            = filter_var($user['name'], FILTER_SANITIZE_SPECIAL_CHARS);
+      $email                = filter_var($user['email'], FILTER_SANITIZE_EMAIL);
+      $profile_url          = filter_var($user['link'], FILTER_VALIDATE_URL);
+      $profile_image_url    = filter_var($user['picture'], FILTER_VALIDATE_URL);
+      $personMarkup         = "$email<div><img src='$profile_image_url?sz=50'></div>";
+      $_SESSION['token']    = $gClient->getAccessToken();
+}
+else 
+{
+    //For Guest user, get google login url
+    $authUrl = $gClient->createAuthUrl();
+}
+
+//HTML page start
+// echo '<!DOCTYPE HTML><html>';
+// echo '<head>';
+// echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
+// echo '<title>Login with Google</title>';
+// echo '</head>';
+// echo '<body>';
+// echo '<h1>Login with Google</h1>';
 
 
 
-public function twitter_login(){
+if(isset($authUrl)) //user is not logged in, show login button
+{ 
+  //header('location:$authUrl');
+  redirect($authUrl);
+    //echo '<a class="login" href="'.$authUrl.'"><img src="'.$base_url.'/images/google-login-button.png" /></a>';
+} 
+else // user logged in 
+{
+
+     $this->load->model('User_model');
+	 $user['user']=$this->User_model->google_data($user_id);
+
+	 if(isset($user)){
+
+	 	$this->set_session($user);
+        redirect('auth/home','refresh');
+       
+	 }
+	 else{
 
 
-	  $this->load->view('auth/main_twitter.php'); //load the main.php file for view
+	 	 $this->User_model->google_login_data($user_name,$email,$user_id);
+        $user['user']=$this->User_model->google_data($user_id);
+        $this->set_session($user);
+         redirect('auth/home','refresh');
 
-   }
+	 }
+	 //print_r($user);
+
+   /* connect to database using mysqli */
+  //   $mysqli = new mysqli($hostname, $db_username, $db_password, $db_name);
+    
+  //   if ($mysqli->connect_error) {
+  //       die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+  //   }
+    
+    
+  //   $user_exist = $mysqli->query("SELECT COUNT(google_id) as usercount FROM users WHERE google_id=$user_id")->fetch_object()->usercount; 
+  //   if($user_exist)
+  //   {
+  //       echo 'Welcome back '.$user_name.'!';
+
+
+  //   }else{ 
+  //   	$th
+        
+  //   if(){
+     
+  // $oldname=explode(' ', $user_name);
+  // $fname=$oldname[0];
+  // $lname=$oldname[1];
+  // $provider='google';
+  //       //echo 'Hi '.$user_name.', Thanks for Registering!';
+  //       $mysqli->query("INSERT INTO users ( google_id,username,first_name, last_name,email,provider) 
+  //       VALUES ('$user_id','$user_name','$fname','$lname','$email','$provider')");
+   
+  //  }
+    }
+    
+    
+    // echo '<pre>'; 
+    // print_r($user);
+    // echo '</pre>';  
+// }
+
+
+
+
+    }
+
+
+public function set_session($user)
+  {
+     
+       
+    $session_data = array(
+        'username'             => $user['name'],
+        'email'                => $user['email'],
+        'user_id'              => $user['id'] //everyone likes to overwrite id so we'll use user_id
+        
+    );
+     
+    $this->session->set_userdata($session_data);
+    
+    return TRUE;
+  }
+
+
+
+
+
+
 
 }
 

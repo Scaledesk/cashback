@@ -219,4 +219,89 @@ public function add_personal_info()
 
 }
 
+public function facebook_data($name,$email){
+
+   $name;
+   $email;
+  $oldname=explode(' ', $name);
+  $fname=$oldname[0];
+  $lname=$oldname[1];
+  
+
+  
+
+    $this->db->where(array('email'=>$email));
+     $query=$this->db->get('users');
+    $result=$query->row_array();
+
+	if($result='1'){
+
+		
+     return true;
+     }
+ 
+  else{
+  $data=array(
+  'username'=>$name,
+  'email'=>$email,
+  'first_name'=>$fname,
+  'last_name'=>$lname,
+  'provider'=>'Facebook'
+ );  
+    $this->db->where(array('email'=>$email));
+  	$this->db->insert('users',$data);
+   
+   //echo "insert";
+  return true;
+}
+
+}
+// 
+
+
+public function select_user($email){
+	
+
+
+	$this->db->where('email',$email);
+	$query=$this->db->get('users');
+	return $query->result(); 
+
+}
+
+
+
+public function google_data($id){
+   $this->load->database();
+
+   $this->db->where('google_id',$id);
+   $query=$this->db->get('users');
+   return $query->result();
+}
+
+public function google_login_data($name,$email,$id){
+   
+   $name;
+   $email;
+  $oldname=explode(' ', $name);
+  $fname=$oldname[0];
+  $lname=$oldname[1];
+  
+  $data=array(
+  'google_id'=>$id,
+  'username'=>$name,
+  'email'=>$email,
+  'first_name'=>$fname,
+  'last_name'=>$lname,
+  'provider'=>'Google'
+ );  
+    $this->db->where(array('google_id'=>$id));
+  	$this->db->insert('users',$data);
+   
+   //echo "insert";
+  return true;
+
+
+}
+//
 }

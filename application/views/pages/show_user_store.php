@@ -21,15 +21,15 @@
             <div class="col-sm-12">
               <ol class="breadcrumb  dashed-border">
                 <li><a href="#">Home</a></li>
-                <li class="active">Coupons</li>
+                <li class="active">Store</li>
               </ol>
             </div>
             <div class="col-sm-12">
-              <h4 class="sub-title text-primary text-uppercase">Coupons</h4>
+              <h4 class="sub-title text-primary text-uppercase">Store</h4>
               <ul class="item-list list-group">
                 
                     <?php 
-                    echo base_url();
+                    //echo base_url();
           //          echo "<pre>";
             //         print_r($cu->result());
         //             die();

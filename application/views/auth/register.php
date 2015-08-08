@@ -3,20 +3,21 @@
 
 
 <!--start of middle sec-->
-  <div class="middle-sec wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-    <div class="page-header">
+<div class="inner-ad" style="height:0px;"></div>
+  <div class="middle-sec wow fadeIn " data-wow-offset="10" data-wow-duration="2s">
+    <div class="page-header ">
       <div class="container text-center">
-        <h2 class="text-primary text-uppercase">register new user</h2>
-        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+        <h2 class="text-primary text-uppercase ">register new user</h2>
+        
       </div>
     </div>
     <section class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <div class="inner-ad">
+        <!-- <div class="col-sm-12 ">
+           <div class="inner-ad">
             <figure><img class="img-responsive" src="images\inner-ad.jpg" width="1170" height="100" alt=""></figure>
-          </div>
-        </div>
+          </div> 
+        </div> --> 
         <div class="col-sm-12 equal-height-container">
           <div class="row">
             <div class="col-sm-4 col-md-3 col-lg-3 sub-data-left sub-equal">
@@ -40,13 +41,13 @@
               <div class="row"> 
                 
                 <!--start of breadcrumb-->
-                <div class="col-sm-12">
+                <!-- <div class="col-sm-12">
                   <ol class="breadcrumb dashed-border row">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Account</a></li>
                     <li class="active">Register</li>
                   </ol>
-                </div>
+                </div> -->
                 <!--end of breadcrumb--> 
                 
                 <!--start of checkout-->
@@ -69,41 +70,47 @@
                           <label class="control-label" for="email">mail <span class="req">*</span></label>
                           <input type="text" id="mail" name="email" class="form-control" placeholder="We promise not to share your email with anyone." required="">
                         </div>
+                        
+                          <div class="form-group">
+                            <label class="control-label" for="password">choose password<span class="req">*</span></label>
+                            <input type="password" id="card-number" name="password"class="form-control" placeholder="Use at least one lowercase letter, one numeral, and seven characters" required="">
+                          </div>
                         </fieldset>
                       <!-- END Personal information--> 
                       
                       <!-- START Payment infromation -->
                       <fieldset class="col-md-6">
             
-                        <legend>address</legend>
-                        <div class="form-group">
-                          <label class="control-label" for="address-one">address one <span class="req">*</span></label>
-                          <input type="text" id="address-one" class="form-control" placeholder="This will be your shipping address" required="">
-                        </div>
-                        <div class="form-group">
+                          <div class="form-group">
                           <label class="control-label" for="phone">phone <span class="req">*</span></label>
                           <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your Phone" required="">
                         </div>
+                        <legend>address</legend>
                         <div class="form-group">
-                          <label class="control-label" for="company">Compnay Name <span class="req">*</span></label>
-                          <input type="text" id="postal-code" name="company"class="form-control" placeholder="Enter your Compnay Name" required="">
+                          <label class="control-label" for="address">address one <span class="req">*</span></label>
+                          
+                          <input type="text" id="address-one" name="address" class="form-control" placeholder="Enter your Address" required="">
+                          
+                          
                         </div>
+          
+                        <div class="form-group">
+                          <label class="control-label" for="city">City <span class="req">*</span></label>
+                          <input type="text" id="postal-code" name="city"class="form-control" placeholder="Enter your City Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password_confirm">password confirm</label>
+                            <input type="password" id="password-confirm" name="password_confirm" class="form-control" placeholder="Confirm Password" required="">
+                          </div>
                       </fieldset>
                       <!-- END Payment information--> 
                     </div>
                     <div class="row">
                       <div class="col-sm-12">
-                        <fieldset>
-                          <legend>choose password</legend>
-                          <div class="form-group">
-                            <label class="control-label" for="password">password <span class="req">*</span></label>
-                            <input type="text" id="card-number" name="password"class="form-control" placeholder="Use at least one lowercase letter, one numeral, and seven characters" required="">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label" for="password_confirm">password confirm</label>
-                            <input type="text" id="password-confirm" name="password_confirm" class="form-control" placeholder="Confirm Password" required="">
-                          </div>
-                        </fieldset>
+                        
+                          
+                          
+                        
                       </div>
                       <div class="col-sm-12">
                        <div class="col-sm-12">

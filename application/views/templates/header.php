@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +36,7 @@ else
 <!--color picker-->
 <link href="<?php echo base_url().'assets/css/jquery.simplecolorpicker.css"';?>" rel="stylesheet">
 <link href="<?php echo base_url().'assets/css\mycss.css"';?>" rel="stylesheet">
+<link href="<?php echo base_url().'assets/css\custom.css"';?>" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -103,13 +106,23 @@ else
            </li>
     <?php  }
         }
-       else { ?>
+       else { 
+
+        if($this->session->userdata('username')!='')
+        { ?>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
+             <ul class="dropdown-menu" role="menu">
+               <li><a href="<?php echo base_url().'User/user_account'; ?>">My Acount</a></li>
+               <li><a href="<?php echo base_url().'Auth/logout'; ?>">Logout</a></li>
+             </ul>
+           </li>
+<?php } else{ ?>
          <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a></li>
          <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
-       <?php } ?>
+       <?php }} ?>
 
 
-            <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
+            <!-- <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
                 <li> <a href="index.html"><i class="ion-home"></i>Home Style One</a> </li>
                 <li> <a href="products.html"><i class="ion-android-done-all"></i>Products Catalogue </a> </li>
@@ -132,8 +145,8 @@ else
                 <li> <a href="shortcodes.html"><i class="ion-ios-briefcase"></i>Shortcodes</a> </li>
                 <li> <a class="soon" href="javascript:void(0)"><i class="ion-android-radio-button-on"></i>Extra Pages Soon</a> </li>
               </ul>
-            </li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
+            </li> -->
+            <!-- <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">USD <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">GBP</a></li>
                 <li><a href="#">EUR </a></li>
@@ -141,6 +154,20 @@ else
             </li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/uk.png'; ?>" <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu">
+                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/italy.png';?>"></a> </li>
+                <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
+              </ul>
+            </li> -->
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">INR <span class="ion-android-arrow-dropdown"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">USD</a></li>
+                <li><a href="#">GBP</a></li>
+                <li><a href="#">EUR </a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/inr.png'; ?>" <span class="ion-android-arrow-dropdown"></span></a>
+              <ul class="dropdown-menu">
+              <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/uk.png'; ?>"></a> </li>
                 <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/italy.png';?>"></a> </li>
                 <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
               </ul>
@@ -163,6 +190,8 @@ else
     </ul>
   </div>
 </div>
+
+
 <!--end of top sec-->
 
 <!--start of content wrap (This is necessary for the menu effect)-->
@@ -207,6 +236,10 @@ else
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="line-navbar-collapse-2">
         <ul class="nav navbar-nav lnt-nav-mega">
+          <li><a href="<?php echo base_url();?>" class="ion-ios-home"></a></li>
+        </ul>
+        <ul class="nav navbar-nav lnt-nav-mega">
+
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="fa fa-dot-circle-o"></span> Categories <span class="ion-android-arrow-dropdown"></span> </a>
             <div class="dropdown-menu" role="menu">
               <div class="lnt-dropdown-mega-menu">
@@ -456,11 +489,12 @@ else
           </li>
         </ul>
         <ul class="nav navbar-nav main-nav">
-          <li class="active"><a href="<?php echo base_url(); ?>" class="ion-ios-home"></a></li>
+          
             <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
             <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
           <li><a href="#">CONTACT</a></li>
+          <li><a href="#" class="active_nav">How It Works?</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#">Home</a></li>
