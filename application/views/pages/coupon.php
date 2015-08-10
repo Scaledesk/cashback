@@ -33,6 +33,7 @@
             //         print_r($cu->result());
         //             die();
                     foreach($cu->result() as $row) { 
+                    
 
                       ?>
                 <li class="item list-group-item  clearfix">
@@ -59,7 +60,7 @@
                       <div class="col-sm-8">
                         
                       </div>
-                      <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary login" href="javascript:void(0)" data-toggle="modal"data-target="#model_box">See Coupon</a> </div>
+                      <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary login" href="javascript:void(0)" data-toggle="modal"data-target="#<?php echo $row->coupon_id; ?>">See Coupon</a> </div>
                     </div>
                   </div>
 
@@ -69,7 +70,7 @@
 
 
   <!--start of model box-->
-  <div class="modal fade" id="model_box" tabindex="-1" role="dialog" aria-labelledby="loginboxLabel" aria-hidden="true">
+  <div class="modal fade" id="<?php echo $row->coupon_id; ?>" tabindex="-1" role="dialog" aria-labelledby="loginboxLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -77,9 +78,10 @@
           <h4 class="modal-title text-primary text-uppercase" id="loginboxLabel">Coupon</h4>
         </div>
         <div class="modal-body">
-          
+          <h5>Coupon Name:-<?php echo $row->coupon_name; ?></h5>
           <hr>
-          <?php echo $row->coupon_name; ?>
+          <h3>Coupon Code:-<?php echo $row->coupon_code; ?></h3>
+           
           <p class="item-description"> <?php echo $row->coupon_description; ?></p>
           
         </div>
