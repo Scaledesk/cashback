@@ -154,9 +154,54 @@ public function getProductDetails()
 // }
 
 
+public function logo_banner($logo,$banner_image)
+{
+ $logo = 'application/upload/'.$logo;
+ $banner_image = 'application/upload/'.$banner_image;
+ $data=array(
+'logo'=>$logo,
+'banner'=>$banner_image
 
+);
 
+$this->db->insert('logo_banner',$data);
+return true;
+}
+  
 
+public function slider_image($slider_image)
+{
+ $slider_image = 'application/upload/'.$slider_image;
 
+ $data=array(
+'slider'=>$slider_image
+
+);
+
+$this->db->insert('slider_image',$data);
+return true;
+}
+
+public function image($image)
+{
+ $image = 'application/upload/'.$image;
+
+ $data=array(
+'image'=>$image
+);
+
+$this->db->insert('slider_image',$data);
+return true;
+}
+
+public function logo_banner_display(){
+
+$query=$this->db->get("logo_banner");
+		// echo '<pre />';
+		// print_r($query);
+		// die();
+
+		return $query->result();	
+}
 
 }

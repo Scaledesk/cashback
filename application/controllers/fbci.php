@@ -71,7 +71,7 @@ class Fbci extends CI_Controller {
 	function google_login1(){
 
      $data['title']='Cashback';
-
+       $data['logo']= $this->Product_model->logo_banner_display();
        $this->load->library('Google_Client.php');
        $this->load->library('Google_Oauth2Service.php');
       $this->load->view('templates/header.php');

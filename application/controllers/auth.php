@@ -48,19 +48,19 @@ class Auth extends CI_Controller {
 
 public function home(){
       $data['title']='Cashback';
+      $data['logo']= $this->Product_model->logo_banner_display();
       $data['cg']= $this->Product_model->select_category();
       $this->load->view('templates/header.php',$data);
 		  $data['h']=$this->Product_model->getProductDetails();
 			$data['s']=$this->User_model->show_store();
-			$data['c']=$this->User_model->show_coupon();
-
-           
+			$data['c']=$this->User_model->show_coupon(); 
           $this->load->view('pages/index.php',$data);
           $this->load->view('templates/footer.php');
     }
 
 public function register(){
       $data['title']='Cashback';
+      $data['logo']= $this->Product_model->logo_banner_display();
       $this->load->view('templates/header_reg.php',$data);
       $this->load->view('auth/register.php');
       $this->load->view('templates/footer.php');
@@ -71,6 +71,7 @@ public function register(){
   public function login_view(){
 
       $data['title']='Login';
+      $data['logo']= $this->Product_model->logo_banner_display();
   $data['cg']= $this->Product_model->select_category();
 
       $this->load->view('templates/header.php',$data);

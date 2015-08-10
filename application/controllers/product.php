@@ -13,12 +13,15 @@ class Product extends CI_Controller {
 		//$this->lang->load('auth');
 	}
 
-
+  public function logo_banner_display(){
+   $data['logo']= $this->Product_model->logo_banner_display(); 
+   
+  }
   public function product_page(){
 
       $data['title']='Manage Product';
       $data['cg']= $this->Product_model->select_category();
-
+       $data['logo']= $this->Product_model->logo_banner_display();
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar');
 
@@ -36,7 +39,7 @@ public function show_category(){
 
  $data['cg']= $this->Product_model->select_category();
  $data['cg']= $this->Product_model->select_category();
-
+  $data['logo']= $this->Product_model->logo_banner_display();
   $data['title']='Manage Category';
   $this->load->view('templates/header.php',$data);
   $this->load->view('templates/adminSidebar');
@@ -48,7 +51,7 @@ public function category(){
 
   $data['title']='Manage Category';
   $data['cg']= $this->Product_model->select_category();
-
+  $data['logo']= $this->Product_model->logo_banner_display();
   $this->load->view('templates/header.php',$data);
   $this->load->view('templates/adminSidebar.php');
   $this->load->view('pages/add_category.php',$data);
@@ -70,7 +73,7 @@ public function add_category(){
 public function select_update_category($id){
 $data['title']='Manage Product';
 $data['cg']= $this->Product_model->select_category();
-
+$data['logo']= $this->Product_model->logo_banner_display();
  $data['cg']= $this->Product_model->select_update_category($id);
 
  $this->load->view('templates/header.php',$data);
@@ -111,7 +114,7 @@ $this->load->view('templates/footer.php');
   public function admin(){
         $data['title']='Welcome Admin';
         $data['cg']= $this->Product_model->select_category();
-
+        $data['logo']= $this->Product_model->logo_banner_display();
              $this->load->view('templates/header',$data);
              $this->load->view('templates/adminSidebar');
              $this->load->view('pages/dashbord');
@@ -155,7 +158,7 @@ $this->load->view('templates/footer.php');
   public function display_product(){
 
 $data['cg']= $this->Product_model->select_category();
-
+$data['logo']= $this->Product_model->logo_banner_display();
   $data['cg']= $this->Product_model->display_product();
   $data['title']='Manage Product';
   $this->load->view('templates/header.php',$data);
@@ -168,7 +171,7 @@ $data['cg']= $this->Product_model->select_category();
 
 
 $data['cg']= $this->Product_model->select_category();
-
+$data['logo']= $this->Product_model->logo_banner_display();
   $data['title']='Manage Product';
   $this->load->view('templates/header.php',$data);
   $this->load->view('templates/adminSidebar');
@@ -221,4 +224,74 @@ public function update_product($id)
 
 
 
+public function logo_banner()
+  {
+
+   $config['upload_path'] = APPPATH.'/upload/';
+  $config['allowed_types'] = 'png|jpeg|gif|jpg';
+  $config['max_size'] = '2048000';
+  $this->load->library('upload',$config);
+   //echo APPPATH;
+  //echo '<pre/>';
+  //print_r($_FILES);
+  //echo($this->input->post('product_title'));
+ // die;
+ // echo $_FILES['product_image']['name'];
+  $logo=time().$_FILES['logo']['name'];
+ $banner_image=time().$_FILES['banner_image']['name'];
+
+   $_FILES['logo']['name']=$logo;
+   $_FILES['banner_image']['name']=$banner_image;
+
+   if($this->upload->do_upload('logo') && $this->upload->do_upload('banner_image'))
+   {
+     if( $this->Product_model->logo_banner($logo,$banner_image)){
+      echo "successful Add Logo and Banner";
+      redirect(base_url().'product/home_page_setting','refresh');
+      //$this->load->view('templates/header.php',$data);
+      //$this->load->view('pages/add_employee.php');
+      //$this->load->view('templates/footer.php');
+      }
+    }
+  }
+public function home_page_setting(){
+
+ $data['title']='Welcome Admin';
+        $data['cg']= $this->Product_model->select_category();
+            $data['logo']= $this->Product_model->logo_banner_display();
+             $this->load->view('templates/header',$data);
+             $this->load->view('templates/adminSidebar');
+             $this->load->view('pages/update_index.php');
+             $this->load->view('templates/footer');
+
+}
+  public function slider_image(){
+
+ $config['upload_path'] = APPPATH.'/upload/';
+  $config['allowed_types'] = 'png|jpeg|gif|jpg';
+  $config['max_size'] = '2048000';
+  $this->load->library('upload',$config);
+  
+     for($i=0; $i<count($_FILES['slider_image']['name']); $i++) 
+        {
+          $slider_image=$_FILES['slider_image']['name'];
+          $_FILES['slider_image']['name']=$slider_image;
+         $this->upload->do_upload('slider_image');
+          $this->Product_model->slider_image($slider_image);
+        }
+    
+   for($i=0; $i<count($_FILES['image']['name']); $i++) 
+        {
+          $image=$_FILES['image']['name'];
+          $_FILES['slider_image']['name']=$slider_image;
+         $this->upload->do_upload('image');
+          $this->Product_model->image($image);
+        }
+
+  
+      echo "successful Add Slider and Image";
+      redirect(base_url().'product/home_page_setting','refresh');
+      
+     
+  }
 }

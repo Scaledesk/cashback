@@ -15,6 +15,7 @@
                 <section class="col-sm-12">
                   <h5 class="sub-title text-info text-uppercase">order summary</h5>
                   <ul class="list-group summary">
+                  <a href="<?=(base_url().'Product/home_page_setting/')?>"><li class="list-group-item text-uppercase"><strong>Home pages Setting </strong></li></a>
                     <a href="<?=(base_url().'Product/product_page/')?>"><li class="list-group-item text-uppercase"><strong> Add Product </strong></li></a>
                     <a href="<?=(base_url().'Product/display_product/')?>"><li class="list-group-item text-uppercase"><strong> Show Product </strong></li></a>
                     <a href="<?=(base_url().'Product/category/')?>"><li class="list-group-item text-uppercase"><strong>Add Category</strong></li></a>

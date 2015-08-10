@@ -83,17 +83,25 @@
     <!--start of wide ad-->
     <section class="container">
       <div class="row">
-        <div class="col-sm-12 wide-ad">
-          <figure class="effect-layla"> <img class="img-responsive hidden-xs" src="images\wide-ad-img.gif" width="1920" height="275" alt="">
-          <img class="img-responsive visible-xs" src="images\wide-ad-img-small.png" width="1920" height="275" alt="">
-            <figcaption>
+         <div class="col-sm-12 wide-ad"> 
+           <figure> 
+         <?php 
+             
+         foreach ($logo as $logo_image) {
+             
+          ?>
+          <img class="img-responsive" src="<?php echo base_url().$logo_image->banner;?>" width="1920" height="275" alt="">
+            <?php echo base_url().$logo_image->banner;?>
+            <?php } ?>
+            <!-- <figcaption>
               <h2>Enjoy our <span>free shipping</span> for any order</h2>
               <p>Maecenas nec odio et ante tincidunt tempus</p>
-              <a href="#">View more</a> </figcaption>
-          </figure>
-        </div>
+              <a href="#">View more</a> </figcaption> -->
+          </figure> 
+         </div> 
       </div>
     </section>
+
     <!--end of wide ad-->
     <!--start of new arrivals-->
     <section class="container">
@@ -378,16 +386,16 @@
 
     <!--end of parallax subscribtion-->
 
-    <!--start of best selling-->
+    <!--start of best selling--
     <section class="container" data-speed="2">
       <div class="row">
-        <!--start of big title-->
+        <!--start of big title--
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">best selling</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
           <p><span class="ion-android-star-outline"></span></p>
         </div>
-        <!--end of big title-->
+        <!--end of big title--
         <div class="col-sm-12">
           <ul class="row list-inline best-selling wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
             <li class="col-sm-6 col-md-4">
@@ -480,17 +488,17 @@
     </section>
     <!--end of best selling-->
 
-    <!--start of latest from the blog-->
+    <!--start of latest from the blog--
 
     <section class="container">
       <div class="row">
-        <!--start of big title-->
+        <!--start of big title--
         <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">from the blog</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
           <p><span class="ion-android-star-outline"></span></p>
         </div>
-        <!--end of big title-->
+        <!--end of big title--
         <div class="col-sm-12">
           <div class="row">
             <div class="col-sm-12 col-md-4">

@@ -200,8 +200,14 @@ else
   <!--start of header-->
   <header>
     <div class="container">
+
+    
       <div class="row"> <!--start of logo-->
-        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" class="navbar-brand"></a></div>
+           <?php foreach ($logo as $logo_image) {
+             
+          ?>
+        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" ><img class="navbar-brand" src="<?php echo base_url().$logo_image->logo;?>"> </a></div>
+        <?php   } ?>
         <!--end of logo--> <!--start of features-->
         <div class="col-xs-12 col-sm-9 col-md-8 feature hidden-xs">
           <div class="row">
@@ -506,7 +512,7 @@ else
             <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
           <li><a href="#">CONTACT</a></li>
-          <li><a href="#" class="active_nav">How It Works?</a></li>
+          <li><a href="#" class="active_nav nemu_hover">How It Works?</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#">Home</a></li>
