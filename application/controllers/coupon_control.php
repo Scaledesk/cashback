@@ -12,6 +12,8 @@ class Coupon_control extends CI_Controller {
   public function add_coupon()
   {
     $data['title']='Add Coupon';
+    $data['cg']= $this->Product_model->select_category();
+
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_coupon.php');
@@ -48,6 +50,8 @@ class Coupon_control extends CI_Controller {
   Public function view_coupon()
   {
     $data['title']='Add Coupon';
+    $data['cg']= $this->Product_model->select_category();
+
 		$data['c']=$this->Coupon_model->getCouponDetails();
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
@@ -58,6 +62,8 @@ class Coupon_control extends CI_Controller {
   {
     $this->load->database();
     $data['title']='Edit Coupon Details';
+    $data['cg']= $this->Product_model->select_category();
+
     $data['h']=$this->Coupon_model->editCoupon($id);
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);

@@ -17,6 +17,8 @@ class Product extends CI_Controller {
   public function product_page(){
 
       $data['title']='Manage Product';
+      $data['cg']= $this->Product_model->select_category();
+
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar');
 
@@ -33,6 +35,8 @@ public function show_category(){
 
 
  $data['cg']= $this->Product_model->select_category();
+ $data['cg']= $this->Product_model->select_category();
+
   $data['title']='Manage Category';
   $this->load->view('templates/header.php',$data);
   $this->load->view('templates/adminSidebar');
@@ -43,6 +47,8 @@ public function show_category(){
 public function category(){
 
   $data['title']='Manage Category';
+  $data['cg']= $this->Product_model->select_category();
+
   $this->load->view('templates/header.php',$data);
   $this->load->view('templates/adminSidebar.php');
   $this->load->view('pages/add_category.php',$data);
@@ -63,6 +69,8 @@ public function add_category(){
 
 public function select_update_category($id){
 $data['title']='Manage Product';
+$data['cg']= $this->Product_model->select_category();
+
  $data['cg']= $this->Product_model->select_update_category($id);
 
  $this->load->view('templates/header.php',$data);
@@ -71,6 +79,11 @@ $data['title']='Manage Product';
 $this->load->view('templates/footer.php');
 
 }
+
+
+
+
+
 
 
   public function update_category($id){
@@ -97,6 +110,8 @@ $this->load->view('templates/footer.php');
 
   public function admin(){
         $data['title']='Welcome Admin';
+        $data['cg']= $this->Product_model->select_category();
+
              $this->load->view('templates/header',$data);
              $this->load->view('templates/adminSidebar');
              $this->load->view('pages/dashbord');
@@ -139,6 +154,7 @@ $this->load->view('templates/footer.php');
 
   public function display_product(){
 
+$data['cg']= $this->Product_model->select_category();
 
   $data['cg']= $this->Product_model->display_product();
   $data['title']='Manage Product';
@@ -151,6 +167,7 @@ $this->load->view('templates/footer.php');
  public function select_update_product($id){
 
 
+$data['cg']= $this->Product_model->select_category();
 
   $data['title']='Manage Product';
   $this->load->view('templates/header.php',$data);

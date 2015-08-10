@@ -59,11 +59,38 @@
                       <div class="col-sm-8">
                         
                       </div>
-                      <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary">See Coupon</a> </div>
+                      <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary login" href="javascript:void(0)" data-toggle="modal"data-target="#model_box">See Coupon</a> </div>
                     </div>
                   </div>
 
                 </li>
+
+
+
+
+  <!--start of model box-->
+  <div class="modal fade" id="model_box" tabindex="-1" role="dialog" aria-labelledby="loginboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-primary text-uppercase" id="loginboxLabel">Coupon</h4>
+        </div>
+        <div class="modal-body">
+          
+          <hr>
+          <?php echo $row->coupon_name; ?>
+          <p class="item-description"> <?php echo $row->coupon_description; ?></p>
+          
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end model -->
+
                 <?php } ?>
                 
               </ul>
@@ -98,3 +125,6 @@
     </section>
   </div>
   <!--end of middle sec-->
+
+
+  <!-- end model box -->

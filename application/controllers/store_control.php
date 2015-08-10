@@ -12,6 +12,8 @@ class Store_control extends CI_Controller {
 	}
   public function add_store()
   {
+    $data['cg']= $this->Product_model->select_category();
+
     $data['title']='Add Store Details';
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
@@ -34,6 +36,8 @@ class Store_control extends CI_Controller {
         else
         {
 					if( $this->Store_model->add_store($nstore)){
+            $data['cg']= $this->Product_model->select_category();
+
     			$data['title']='Add Store';
     			$data['msg']='Store Details Saved';
     			$this->load->view('templates/header.php',$data);
@@ -47,6 +51,8 @@ class Store_control extends CI_Controller {
   Public function view_store()
   {
     $data['title']='View Store Details';
+    $data['cg']= $this->Product_model->select_category();
+
 		$data['s']=$this->Store_model->getStoreDetails();
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
@@ -58,6 +64,8 @@ class Store_control extends CI_Controller {
     $this->load->database();
     $data['title']='Update Store Details';
     $data['h']=$this->Store_model->editStore($id);
+    $data['cg']= $this->Product_model->select_category();
+
     $this->load->view('templates/header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_Store.php',$data);

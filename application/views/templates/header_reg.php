@@ -120,7 +120,7 @@ else
          <li><a href="<?php echo base_url().'auth/register';?>">Register</a></li>
        <?php }} ?>
 
-
+<!-- 
             <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Features <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu theme-features menu-nudge" role="menu">
                 <li> <a href="index.html"><i class="ion-home"></i>Home Style One</a> </li>
@@ -145,7 +145,7 @@ else
                 <li> <a class="soon" href="javascript:void(0)"><i class="ion-android-radio-button-on"></i>Extra Pages Soon</a> </li>
               </ul>
             </li>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">INR <span class="ion-android-arrow-dropdown"></span></a>
+ -->            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">INR <span class="ion-android-arrow-dropdown"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">USD</a></li>
                 <li><a href="#">GBP</a></li>

@@ -17,6 +17,8 @@ class User extends CI_Controller {
 
 public function show_coupon(){
    $data['title']='Manage Coupon';
+   $data['cg']= $this->Product_model->select_category();
+
     $data['cu']= $this->User_model->show_coupon();
    $this->load->view('templates/header.php',$data);
    $this->load->view('pages/coupon.php',$data);
@@ -27,6 +29,8 @@ public function show_coupon(){
 
 public function show_store(){
    $data['title']='Manage Coupon';
+   $data['cg']= $this->Product_model->select_category();
+
     $data['st']= $this->User_model->show_store();
    $this->load->view('templates/header.php',$data);
     //$this->load->view('templates/adminSidebar');
@@ -50,6 +54,8 @@ public function show_store(){
 // }
 public function display_product(){
  $data['title']='Display Product Details';
+ $data['cg']= $this->Product_model->select_category();
+
   $data['p']= $this->User_model->display_product();
   $this->load->view('templates/header.php',$data);
   $this->load->view('pages/user_product_display.php',$data);
@@ -62,6 +68,8 @@ public function do_add_wallet()
   {
 		$data['msg']="wallet Added";
 		$data['title']='welcome admin';
+		$data['cg']= $this->Product_model->select_category();
+
       $this->load->view('templates/header.php',$data);
       $this->load->view('templates/adminSidebar.php');
       $this->load->view('pages/dashbord.php',$data);
@@ -72,6 +80,8 @@ public function do_add_wallet()
 public function change_password()
 {
 	$data['title']='Change Password';
+	$data['cg']= $this->Product_model->select_category();
+
 	$this->load->view('templates/header.php',$data);
 	$this->load->view('pages/change_password.php.php');
 	$this->load->view('templates/footer.php');
@@ -79,6 +89,8 @@ public function change_password()
 public function my_account()
 {
 	$data['title']='User Account';
+	$data['cg']= $this->Product_model->select_category();
+
 	$data['w']=$this->User_model->getWalletDetails();
 	$data['user']=$this->User_model->getUser();
 	$this->load->view('templates/header.php',$data);
@@ -88,6 +100,8 @@ public function my_account()
 public function add_wallet()
 {
 	$data['title']='Add Wallet';
+	$data['cg']= $this->Product_model->select_category();
+
 	$this->load->view('templates/header.php',$data);
 	$this->load->view('templates/adminSidebar.php');
 	$data['user']=$this->User_model->getUserDetails();
@@ -108,6 +122,8 @@ public function add_personal_info()
   {
 		$data['msg']="personal information saved";
 		$data['title']='My Account';
+		$data['cg']= $this->Product_model->select_category();
+
 		$data['w']=$this->User_model->getWalletDetails();
 		$data['user']=$this->User_model->getUser();
 		$this->load->view('templates/header.php',$data);

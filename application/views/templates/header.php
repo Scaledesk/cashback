@@ -245,12 +245,24 @@ else
               <div class="lnt-dropdown-mega-menu">
                 <!-- List of categories -->
                 <ul class="lnt-category list-unstyled">
-                  <li class="active"><a href="#subcategory-home">All pages</a></li>
-                  <li><a href="#subcategory-sports">Sports and outdoors</a></li>
+              <li class="active"><a href="#subcategory-home">All pages</a></li>
+               <?php  
+
+                foreach($cg->result() as $row)
+                                             {?>
+                            
+                                   
+                                  <li><a href="#subcategory-sports"><?php echo $row->category_title; ?></a></li>
+                                    
+                                <?php  }?>
+                  <!-- 
+                  
                   <li><a href="#subcategory-music">Digital music</a></li>
                   <li><a href="#subcategory-books">Books <span class="label label-danger">Hot</span></a></li>
                   <li><a href="#subcategory-fashion">Fashion and beauty</a></li>
                   <li><a href="#subcategory-movies">Movies and games</a></li>
+ -->
+
                 </ul>
                 <!-- Subcategory and carousel wrap -->
                 <div class="lnt-subcategroy-carousel-wrap container-fluid">
