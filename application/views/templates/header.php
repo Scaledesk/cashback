@@ -90,8 +90,8 @@ else
           { ?>
          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
            <ul class="dropdown-menu" role="menu">
-             <li><a href="<?php echo base_url().'Product/admin'; ?>">Manage user</a></li>
-             <li><a href="<?php echo base_url().'User/change_password'; ?>">Setting</a></li>
+             <li><a href="<?php echo base_url().'Product/admin'; ?>">Setting</a></li>
+             <!-- <li><a href="<?php echo base_url().'User/change_password'; ?>">Setting</a></li> -->
              <li><a href="<?php echo base_url().'Auth/logout'; ?>">Logout</a></li>
            </ul>
          </li>

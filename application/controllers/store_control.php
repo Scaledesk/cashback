@@ -16,7 +16,7 @@ class Store_control extends CI_Controller {
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
     $data['title']='Add Store Details';
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_store.php');
     $this->load->view('templates/footer.php');
@@ -41,7 +41,7 @@ class Store_control extends CI_Controller {
 
     			$data['title']='Add Store';
     			$data['msg']='Store Details Saved';
-    			$this->load->view('templates/header.php',$data);
+    			$this->load->view('templates/admin_header.php',$data);
 					$this->load->view('templates/adminSidebar.php',$data);
     			$this->load->view('pages/add_store.php',$data);
     			$this->load->view('templates/footer.php');
@@ -55,7 +55,7 @@ class Store_control extends CI_Controller {
     $data['cg']= $this->Product_model->select_category();
      $data['logo']= $this->Product_model->logo_banner_display();
 		$data['s']=$this->Store_model->getStoreDetails();
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_store',$data);
     $this->load->view('templates/footer.php');
@@ -67,7 +67,7 @@ class Store_control extends CI_Controller {
     $data['h']=$this->Store_model->editStore($id);
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_Store.php',$data);
     $this->load->view('templates/footer.php');

@@ -154,11 +154,21 @@ public function show_store()
 // // $this->db->update('product',$data);
 // // return true;
 // // }
+
+
+  public function wallet_show($id)
+{
+  $this->db->where("user_id",$id);
+  $query=$this->db->get("wallet_description");
+  return $query->result();
+}
 public function getUserDetails()
 {
 	$query=$this->db->query("select * from users");
 	return $query;
 }
+
+
 public function getUser()
 {
 	$id=$this->session->userdata('user_id');
@@ -174,18 +184,25 @@ public function getWallet($id)
 
 public function add_wallet()
 {
+  $wallet_date=date('Y-m-d');
+  $data=array('user_id'=>$this->input->post('user_id'),
+             'add_amount'=>$this->input->post('add_amount'),
+             'wallet_date'=>$wallet_date,
+             'wallet_description'=>$this->input->post('description')
+    );
 	 $d=array(
 		'user_id'=>$this->input->post('user_id'),
-		'available_amount'=>$this->input->post('available_amount'),
-		'add_amount'=>$this->input->post('add_amount'),
 		'total_amount'=>$this->input->post('total_amount')
 	);
 	$id=$this->input->post('user_id');
-	$q=$this->db->query("select * from wallet_details where user_id='$id'");
+
+	  $q=$this->db->query("select * from wallet_details where user_id='$id'");
+    $this->db->insert('wallet_description',$data);
   if($q->num_rows() > 0)
   {
     $this->db->where("user_id",$id);
 		$this->db->update('wallet_details',$d);
+
 		return true;
   }
   else {

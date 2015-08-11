@@ -15,7 +15,7 @@ class Coupon_control extends CI_Controller {
     $data['title']='Add Coupon';
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_coupon.php');
     $this->load->view('templates/footer.php');
@@ -34,7 +34,7 @@ class Coupon_control extends CI_Controller {
 					if( $this->Coupon_model->add_coupon($ncoupon)){
     			$data['title']='Add Coupon';
     			$data['msg']='Coupon Details Saved';
-    			$this->load->view('templates/header.php',$data);
+    			$this->load->view('templates/admin_header.php',$data);
 					$this->load->view('templates/adminSidebar.php',$data);
     			$this->load->view('pages/add_coupon.php',$data);
     			$this->load->view('templates/footer.php');
@@ -54,7 +54,7 @@ class Coupon_control extends CI_Controller {
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
 		$data['c']=$this->Coupon_model->getCouponDetails();
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_coupon',$data);
     $this->load->view('templates/footer.php');
@@ -66,7 +66,7 @@ class Coupon_control extends CI_Controller {
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
     $data['h']=$this->Coupon_model->editCoupon($id);
-    $this->load->view('templates/header.php',$data);
+    $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/add_coupon.php',$data);
     $this->load->view('templates/footer.php');

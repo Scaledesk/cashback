@@ -494,6 +494,9 @@
                                     <li>
                                         <label>
                                             <a href="#changepwd">Change Password</a></label></li>
+                                    <li>
+                                        <label>
+                                            <a href="<?php echo base_url().'User/wallet_show/'.$user[0]->id;?>">Wallet Details</a></label></li>
                                 </ul>
                             </div><hr>
 

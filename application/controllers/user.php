@@ -20,7 +20,7 @@ public function show_coupon(){
    $data['cg']= $this->Product_model->select_category();
    $data['logo']= $this->Product_model->logo_banner_display();
     $data['cu']= $this->User_model->show_coupon();
-   $this->load->view('templates/header.php',$data);
+   $this->load->view('templates/admin_header.php',$data);
    $this->load->view('pages/coupon_show.php',$data);
   $this->load->view('templates/footer.php');
 
@@ -32,7 +32,7 @@ public function show_store(){
    $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
     $data['st']= $this->User_model->show_store();
-   $this->load->view('templates/header.php',$data);
+   $this->load->view('templates/admin_header.php',$data);
     //$this->load->view('templates/adminSidebar');
    //print_r($data['st']->result());
    //die();
@@ -70,7 +70,7 @@ public function do_add_wallet()
 		$data['title']='welcome admin';
 		$data['cg']= $this->Product_model->select_category();
       $data['logo']= $this->Product_model->logo_banner_display();
-      $this->load->view('templates/header.php',$data);
+      $this->load->view('templates/admin_header.php',$data);
       $this->load->view('templates/adminSidebar.php');
       $this->load->view('pages/dashbord.php',$data);
       $this->load->view('templates/footer.php');
@@ -102,7 +102,7 @@ public function add_wallet()
 	$data['title']='Add Wallet';
 	$data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
-	$this->load->view('templates/header.php',$data);
+	$this->load->view('templates/admin_header.php',$data);
 	$this->load->view('templates/adminSidebar.php');
 	$data['user']=$this->User_model->getUserDetails();
 	$this->load->view('pages/add_wallet.php',$data);
@@ -112,7 +112,7 @@ public function getWallet()
 {
 	$id=$this->input->post('id');
 	$data['w']=$this->User_model->getWallet($id);
-	$a=$data['w'][0]->available_amount;
+	$a=$data['w'][0]->total_amount;
 	echo json_encode($a);
 
 }
@@ -132,4 +132,16 @@ public function add_personal_info()
   }
 }
 
+
+public function wallet_show($id){
+$data['title']='Show Wallet';
+	$data['cg']= $this->Product_model->select_category();
+    $data['logo']= $this->Product_model->logo_banner_display();
+	$this->load->view('templates/header.php',$data);
+	//$this->load->view('templates/adminSidebar.php');
+	$data['wallet_data']=$this->User_model->wallet_show($id);
+	$this->load->view('pages/show_wallet_details.php',$data);
+	$this->load->view('templates/footer.php');
+
+}
 }

@@ -24,38 +24,43 @@
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Awailable Ammount</label>
-                          <input type="text" id="amt" name="available_amount" class="form-control" placeholder="" required="">
+                          <input type="text" id="amt" readonly name="available_amount" class="form-control" placeholder="" required="">
                         </div>
-
+                         <!-- Price -->
+                        <div class="form-group">
+                          <label class="control-label" for="address">Add Ammount</label>
+                          <input type="text" id="add_amount" name="add_amount" class="form-control" placeholder="" onchange="tAmount(this)" required="">
+                        </div>
 
                       </fieldset>
 
 
                       <!-- START Payment infromation -->
                       <fieldset class="col-md-6">
-                        <legend>Add Ammount And Total Ammount</legend>
-
-                        <!-- Price -->
-                        <div class="form-group">
-                          <label class="control-label" for="address">Add Ammount<label>
-                          <input type="text" id="add_amount" name="add_amount" class="form-control" placeholder="" onchange="tAmount(this)" required="">
-                        </div>
-
+                        <legend> Total Ammount</legend>
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Total Ammount</label>
                           <input type="text" id="total_amount" name="total_amount" class="form-control" placeholder="total amount" required="">
                         </div>
-
-                      <!-- END Payment information-->
-                    </div>
-
-                    <!-- Agree checkbox and Continue button -->
-                    <div class="row">
+                        <!-- Price -->
+                        <div class="form-group">
+                          <label class="control-label" for="address">Description</label>
+                          <input type="text" id="add_amount" name="description" class="form-control" placeholder=""  required="">
+                        </div>
+                        </br></br>
+                        <div class="row">
                        <div class="col-sm-6 text-right">
                         <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " value="Submit">
                       </div>
                     </div>
+                        
+                         </fieldset>  
+                      <!-- END Payment information-->
+                    </div>
+
+                    <!-- Agree checkbox and Continue button -->
+                    
                   </form>
                 </div>
 
