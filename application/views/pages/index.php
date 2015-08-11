@@ -1,7 +1,8 @@
 
 <!--start of banner-->
   <div id="banner">
-    <div class="item"> <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets/images/banner-img-1.jpg';?>" width="1920" height="550" alt="">
+    <div class="item">
+     <img class="img-responsive hidden-xs" src="<?php echo base_url().'assets/images/banner-img-1.jpg';?>" width="1920" height="550" alt="">
     <img class="img-responsive visible-xs" src="<?php echo base_url().'assets/images/banner-img-1-small.jpg';?>" width="1920" height="550" alt="">
       <div class="slider-caption">
         <div class="container">
@@ -316,36 +317,47 @@
     <!--start of ad-boxes-->
     <section class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 ad-box-outer">
+      <?php foreach ($slider_image as  $image) {
+           
+           ?>
+        <div class="col-sm-12 col-md-4 ">
           <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="images\ad-box-1.jpg" width="370" height="200" alt="">
+          
+            <figure><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
+              
               <figcaption>
-                <h3><span>men</span> collection</h3>
-                <p>Maecenas nec odio et ante tincidunt tempus </p>
+                
+                <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
+            </figure>
+          </div>
+        </div>
+        <?php } ?>
+<!--         <div class="col-sm-12 col-md-4 ad-box-outer">
+          <div class="small-ad">
+          <?php foreach ($slider_image as  $image) {
+           
+           ?>
+            <figure ><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
+              <?php } ?>
+              <figcaption>
+                
                 <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
             </figure>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 ad-box-outer">
           <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="images\ad-box-2.jpg" width="370" height="200" alt="">
+          <?php foreach ($slider_image as  $image) {
+           
+           ?>
+            <figure ><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
+              <?php } ?>
               <figcaption>
-                <h3><span>women</span> collection</h3>
-                <p>Maecenas nec odio et ante tincidunt tempus </p>
+                
                 <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
             </figure>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 ad-box-outer">
-          <div class="small-ad">
-            <figure class="effect-layla"><img class="img-responsive" src="images\ad-box-3.jpg" width="370" height="200" alt="">
-              <figcaption>
-                <h3><span>juniors</span> collection</h3>
-                <p>Maecenas nec odio et ante tincidunt tempus </p>
-                <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
-            </figure>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!--end of ad-boxes-->

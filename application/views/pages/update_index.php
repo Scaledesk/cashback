@@ -38,13 +38,13 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Slider Image</label>
-                          <input type="file" id="" name="slider_image" multiple class="form-control" placeholder="Image" required="">
+                          <input type="file" id="" name="slider_image"  class="form-control" placeholder="Image" required="">
                         </div>
 
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Images</label>
-                          <input type="file" id="" name="image" multiple class="form-control" placeholder="Image" required="">
+                          <input type="file" id="" name="image"  class="form-control" placeholder="Image" required="">
                         </div>
                           <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " value="Submit">
                       <!-- END Payment information-->

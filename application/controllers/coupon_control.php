@@ -5,6 +5,7 @@ class Coupon_control extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+    $this->load->model('Product_model');
 		$this->load->model('Coupon_model');
     $this->load->library(array('ion_auth','form_validation'));
       $this->load->helper(array('form','url','language'));

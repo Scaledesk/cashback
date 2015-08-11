@@ -169,30 +169,19 @@ return true;
 }
   
 
-public function slider_image($slider_image)
+public function slider_image($slider_image,$image)
 {
  $slider_image = 'application/upload/'.$slider_image;
-
- $data=array(
-'slider'=>$slider_image
-
-);
-
-$this->db->insert('slider_image',$data);
-return true;
-}
-
-public function image($image)
-{
  $image = 'application/upload/'.$image;
-
  $data=array(
+'slider'=>$slider_image,
 'image'=>$image
 );
 
 $this->db->insert('slider_image',$data);
 return true;
 }
+
 
 public function logo_banner_display(){
 
@@ -204,4 +193,17 @@ $query=$this->db->get("logo_banner");
 		return $query->result();	
 }
 
+public function home_page_image(){
+	
+	
+	$this->db->order_by("UPPER(image)","desc");
+	
+	$this->db->limit(3);
+	$query=$this->db->get("slider_image");
+		// echo '<pre />';
+		// print_r($query);
+		// die();
+
+		return $query->result();
+}
 }

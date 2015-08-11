@@ -272,21 +272,21 @@ public function home_page_setting(){
   $config['max_size'] = '2048000';
   $this->load->library('upload',$config);
   
-     for($i=0; $i<count($_FILES['slider_image']['name']); $i++) 
-        {
+           $image=$_FILES['image']['name'];
+          $_FILES['image']['name']=$image;
+         $this->upload->do_upload('image');
+         
           $slider_image=$_FILES['slider_image']['name'];
           $_FILES['slider_image']['name']=$slider_image;
          $this->upload->do_upload('slider_image');
-          $this->Product_model->slider_image($slider_image);
-        }
+
+          
+          $this->Product_model->slider_image($slider_image,$image);
+        
     
-   for($i=0; $i<count($_FILES['image']['name']); $i++) 
-        {
-          $image=$_FILES['image']['name'];
-          $_FILES['slider_image']['name']=$slider_image;
-         $this->upload->do_upload('image');
-          $this->Product_model->image($image);
-        }
+   
+          //$this->Product_model->image($image);
+        
 
   
       echo "successful Add Slider and Image";

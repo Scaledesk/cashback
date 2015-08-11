@@ -48,6 +48,7 @@ class Auth extends CI_Controller {
 
 public function home(){
       $data['title']='Cashback';
+      $data['slider_image']= $this->Product_model->home_page_image();
       $data['logo']= $this->Product_model->logo_banner_display();
       $data['cg']= $this->Product_model->select_category();
       $this->load->view('templates/header.php',$data);
