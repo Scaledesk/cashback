@@ -3,7 +3,7 @@
                 <div class="centered-pills">
 
                 <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
-                <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">All Cash Back</a></li>
+                <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">Wallet Details</a></li>
                 <li role="presentation"><a href="#women" aria-controls="women" role="tab" data-toggle="tab">Pending</a></li>
                 <li role="presentation"><a href="#children" aria-controls="children" role="tab" data-toggle="tab">Available</a></li>
                 <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">In Progress</a></li>
@@ -24,7 +24,7 @@
                    
                 <!-- wallet details start -->
              
-
+               <div class="show_wallet_details">
                <h2> Wallet Details</h2>
                 <!--end of breadcrumb-->
 
@@ -65,7 +65,7 @@
                 <!-- wallet details end -->
 
 
-            
+            </div>
           </div>
 
                   <!--end of product item container-->

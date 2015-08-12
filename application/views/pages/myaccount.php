@@ -107,7 +107,7 @@
                       
 
       <div class="col-sm-12 myaccount_margin">
-            <h3>Personal Details</h3>
+            <h3 class="myaccount_margin1">Personal Details</h3>
             <!--start of checkout-->
                 <!-- <div class="col-sm-12"> -->
                  <!--  <form role="form"> -->
@@ -117,7 +117,7 @@
 
                       <!-- START Presonal information -->
                        <fieldset class="col-md-6 myaccount_margin"> 
-                        <legend>Personal information</legend>
+                        <legend class="myaccount_margin1">Personal information</legend>
 
                         <!-- Name -->
                         <div class="form-group">
@@ -223,7 +223,8 @@
                         <!-- Card type -->
                         <div class="form-group">
                           <label class="control-label" for="card-number">Country</label>
-                          <input type="text" id="card-number" name="user_country" disabled="disabled" Value="India" placeholder="India" class="form-control" required="">
+                          <input type="text" id="card-number" name="user_country" readonly Value="India" placeholder="India" class="form-control" required="">
+                          <input type="hidden" value="India">
                         </div>
 
                         <!-- Card number -->

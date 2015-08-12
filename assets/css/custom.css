@@ -1,8 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
 
-.active_nav{
-	background-color:#e74c3c!important;}
-.nemu_hover:hover{color:black!important;}
-.button_coupon{margin-left:50px;} 
-.myaccount_margin{padding-left:0px!important;}
+.active_nav
+{
+	background-color:#e74c3c!important;
+    }
+
+
+.nemu_hover:hover
+{
+	color:black!important;
+}
+
+
+.button_coupon
+{
+	margin-left:50px;
+} 
+
+
+.myaccount_margin
+{
+	padding-left:0px!important;
+}
+
+
+.myaccount_margin1 {
+	margin-left:14px;
+}
+.show_wallet_details
+{
+
+margin: 0px auto;
+width: 40%;
+}
+.show_wallet_details  table tr td{
+	text-align: left;
+}

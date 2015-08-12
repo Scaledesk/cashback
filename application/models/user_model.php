@@ -225,7 +225,7 @@ public function add_personal_info()
 	 'user_marital'=>$this->input->post('user_marital'),
 	 'user_country'=>$this->input->post('user_country'),
 	 'user_state'=>$this->input->post('user_state'),
-	 'user_city'=>$this->input->post('user_city'),
+	 'city'=>$this->input->post('user_city'),
 	 'user_pincode'=>$this->input->post('user_pincode'),
 	 'user_address'=>$this->input->post('user_address')
  );
