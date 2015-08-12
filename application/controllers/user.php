@@ -144,4 +144,12 @@ $data['title']='Show Wallet';
 	$this->load->view('templates/footer.php');
 
 }
+
+public function edit_contact(){
+	if($this->User_model->edit_contact()){
+
+		 echo "Successful ";
+     redirect(base_url().'User/my_account', 'refresh');
+	}
+}
 }

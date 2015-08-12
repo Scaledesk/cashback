@@ -1,16 +1,33 @@
 
-            <div class="col-sm-12 col-md-12 sub-data-left main-sec">
-              <div class="row">
+                 <!-- Nav tabs -->
+                <div class="centered-pills">
+
+                <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">All Cash Back</a></li>
+                <li role="presentation"><a href="#women" aria-controls="women" role="tab" data-toggle="tab">Pending</a></li>
+                <li role="presentation"><a href="#children" aria-controls="children" role="tab" data-toggle="tab">Available</a></li>
+                <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">In Progress</a></li>
+                <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Paid</a></li>
+                </ul>
+                </div>
+
+                          <!-- Tab panes -->
+              <div class="tab-content">
+
+                <div role="tabpanel" class=" row tab-pane fade in active clearfix" id="men">
+                  <!--start of product item container-->
+
+            
+
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
+                   
+                <!-- wallet details start -->
+             
 
                <h2> Wallet Details</h2>
                 <!--end of breadcrumb-->
 
-                 <div class="col-md-12">
-                            <div class="panel panel-white">
-                                <div class="panel-heading clearfix">
-
-                                </div>
-                                <div class="panel-body">
                                     <table class="table">
                                     
                                         <thead>
@@ -44,19 +61,83 @@
 
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
+                                
+                <!-- wallet details end -->
 
 
-                        </div>
+            
+          </div>
 
+                  <!--end of product item container-->
+                  <div class="col-xs-12">
+                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="row tab-pane fade in clearfix" id="women"> <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
+
+
+          <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+
+
+          </div>
+                  <!--end of product item container-->
+
+
+                  <div class="col-xs-12">
+                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="row tab-pane fade in clearfix" id="children"> <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
+
+          <h3>It is a long established fact that a reader will be distracted by the readable content of a page </h3>
+          </div>
+                  <!--end of product item container-->
+
+
+
+                  <div class="col-xs-12">
+                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="row tab-pane fade in clearfix" id="accessories"> <!--start of product item container-->
+                   <!--start of product item container-->
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
+
+            <h3>It is a long established fact that a reader will be distracted by the readable content of a page </h3>
+
+
+          </div>
+                  <!--end of product item container-->
+
+
+
+                  <div class="col-xs-12">
+                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
       </div>
-    </section>
-  </div>
+      </div>
+
+
+
+
+
 
 
   <!--end of middle sec-->

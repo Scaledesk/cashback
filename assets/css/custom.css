@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 
-.active_nav{background-color:#e74c3c!important;}
+.active_nav{
+	background-color:#e74c3c!important;}
 .nemu_hover:hover{color:black!important;}
 .button_coupon{margin-left:50px;} 
-
+.myaccount_margin{padding-left:0px!important;}

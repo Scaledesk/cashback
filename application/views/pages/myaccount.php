@@ -10,126 +10,65 @@
           <p><span class="ion-android-star-outline"></span></p>
         </div>
         <!--end of big title-->
-		<div class="col-sm-8">
-			<div class="col-sm-12">
-					<div id="new-arrivals" class="col-sm-12 accordion wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-						<div role="tabpanel">
-							<h3>Cashback Summary</h3></br>
-								<!-- Nav tabs -->
-								<div class="centered-pills">
+    <div class="col-sm-8">
+      
 
-								<ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
-								<li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">All Cash Back</a></li>
-								<li role="presentation"><a href="#women" aria-controls="women" role="tab" data-toggle="tab">Pending</a></li>
-								<li role="presentation"><a href="#children" aria-controls="children" role="tab" data-toggle="tab">Available</a></li>
-								<li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">In Progress</a></li>
-                <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Paid</a></li>
-								</ul>
-								</div>
-
-
-              <!-- Tab panes -->
-              <div class="tab-content">
-
-                <div role="tabpanel" class=" row tab-pane fade in active clearfix" id="men">
-                  <!--start of product item container-->
-
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
-						<h3>It is a long established fact that a reader will be distracted by the readable content of a page </h3>
-
-					</div>
-
-                  <!--end of product item container-->
-                  <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="row tab-pane fade in clearfix" id="women"> <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
-
-
-					<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
-
-					</div>
-                  <!--end of product item container-->
-
-
-                  <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="row tab-pane fade in clearfix" id="children"> <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
-
-					<h3>It is a long established fact that a reader will be distracted by the readable content of a page </h3>
-					</div>
-                  <!--end of product item container-->
-
-
-
-                  <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="row tab-pane fade in clearfix" id="accessories"> <!--start of product item container-->
-                   <!--start of product item container-->
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 product-item-container effect-wrap effect-animate">
-
-						<h3>It is a long established fact that a reader will be distracted by the readable content of a page </h3>
-
-
-					</div>
-                  <!--end of product item container-->
-
-
-
-                  <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-			</div>
-			</div>
-
-			<div class="col-sm-12">
-						<h3>Refer Friend History</h3>
-							<div class="full-width">
+      <div class="col-sm-12">
+          <h3>Refer Friend History</h3>
+                         <div class="full-width">
                                 <div class="table_container">
                                         <div class="table_content full-width">
                                             <div>
-												<table cellspacing="0" id="ContentPlaceHolder1_gvFriend" style="border-collapse:collapse;">
-													<tbody><tr><td>No data has been found</td></tr>
-													</tbody>
-												</table>
-											</div>
+                                               <table cellspacing="0" id="ContentPlaceHolder1_gvFriend" style="border-collapse:collapse;">
+                                                   <tbody><tr><td>No data has been found</td></tr>
+                                                   </tbody>
+                                                  </table>
+                                            </div>
                                         </div>
                                     </div>
-                                </div><hr>
+                                </div>
 
 
-			</div>
-			<div class="col-sm-12">
-						<h3>Click tracking Summary</h3><hr>
+      </div> 
+      <div class="col-sm-12">
+            <h3>Click tracking Summary</h3> 
 
 
 
 
-			</div>
-			<div class="col-sm-12">
+      </div> 
+          <form name="formselct" action="<?=(base_url().'User/edit_contact/')?>" method="post">
+      <div class="col-sm-12" id="contact_details">
+
+
+
+                                <div class="panel-heading clearfix">
+                                    <h3>Contact Details</h3>
+                                </div>
+                                         
+                                        <fieldset class="col-md-6 myaccount_margin">
+                                        <div class="form-group col-sm-12">
+
+                                         <label class="control-label" for="address">Name</label>
+                                           <input type="text" id="" name="name" class="form-control" readonly value="<?php echo $user[0]->username; ?>"  >
+                                               </div>
+
+                                               </fieldset>
+                                              <fieldset class="col-md-6 myaccount_margin">
+                                               <div class="form-group col-sm-12">
+                                             <label class="control-label" for="address">Phone</label>
+                                             <input type="text" id="" name="phone" class="form-control" readonly value="<?php echo $user[0]->phone; ?>" >
+                                               </div>
+                                               <div class="col-sm-6 text-right">
+                                           <input onclick="checkValue(this)" class="btn btn-primary col-sm-6 form-control hvr-underline-from-center-primary"  name="button"type="button" value="Edit">
+                                           </div>
+                                               </fieldset>
+                                        
+
+                                 
+                        </div>
+                        <!-- hidden div start -->
+                              <div class="col-sm-12" id="contact_details1"style="display:none" >
 
 
 
@@ -137,54 +76,55 @@
                                     <h3>Contact Details</h3>
                                 </div>
 
-                                    <table class="table table-bordered">
+                                    
+                                        <fieldset class="col-md-6 myaccount_margin">
+                                        <div class="form-group col-sm-12">
 
-                                        <tbody>
+                                         <label class="control-label" for="address">Name</label>
+                                           <input type="text" id="name" name="name" class="form-control" value="<?php echo $user[0]->username; ?>"  >
+                                               </div>
 
-                                            <tr>
+                                               </fieldset>
+                                              <fieldset class="col-md-6 myaccount_margin">
+                                               <div class="form-group col-sm-12">
+                                             <label class="control-label" for="address">Phone</label>
+                                             <input type="text" id="phone" name="phone" class="form-control" value="<?php echo $user[0]->phone; ?>" >
+                                               <input type="hidden" name="id" value="<?php echo $user[0]->id; ?>">
+                                               </div>
+                                               <div class="col-sm-6 text-right">
+                                       <input class="btn btn-primary col-sm-6 form-control hvr-underline-from-center-primary " type="submit" name="submit" value="Save ">
+                                           </div>
+                                               </fieldset>
+                                           
 
-                                                <td>Name</td>
-                                                <td><?php echo $user[0]->username; ?></td>
-                                            </tr>
-											<tr>
-
-                                                <td>Phone</td>
-                                                <td><?php echo $user[0]->phone; ?></td>
-                                            </tr>
-                                            <tr>
-
-                                              <td>&nbsp</td>
-                                              <td><a href="">Edit</a></td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-
+                                        
 
 
                         </div>
+                              </form>
 
+                        <!-- hidden div end -->
+                      
 
-
-
-			<div class="col-sm-12">
-						<h3>Personal Details</h3>
-						<!--start of checkout-->
-                <div class="col-sm-12">
-                  <form role="form">
-                    <div class="row">
-					<form role="form" action="<?=(base_url().'User/add_personal_info')?>" name="personalInfo" method="post">
+      <div class="col-sm-12 myaccount_margin">
+            <h3>Personal Details</h3>
+            <!--start of checkout-->
+                <!-- <div class="col-sm-12"> -->
+                 <!--  <form role="form"> -->
+                    <!-- <div class="row"> -->
+                  
+                  <form role="form"  action="<?=(base_url().'User/add_personal_info')?>" name="personalInfo" method="post">
 
                       <!-- START Presonal information -->
-                      <fieldset class="col-md-6">
+                       <fieldset class="col-md-6 myaccount_margin"> 
                         <legend>Personal information</legend>
 
                         <!-- Name -->
                         <div class="form-group">
-                          <label class="control-label" for="card">Gender</label>
-                          <select class="selectpicker" id="card" name="user_gender" required>
-                            <option value="Male" <?php if($user[0]->user_gender=='Male') echo 'selected'; ?>>Male</option>
-                            <option value="Female" <?php if($user[0]->user_gender=='Female') echo 'selected'; ?>>Female</option>
+                          <label class="control-label col-sm-12" for="card">Gender</label>
+                          <select class="selectpicker col-sm-12" id="card" name="user_gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
 
                           </select>
                         </div>
@@ -196,7 +136,7 @@
                            $dob=explode('/',$user[0]->user_dob);
                         ?>
 
-						<div class="col-sm-4 form-group">
+            <div class="col-sm-4 form-group">
                             <label class="control-label" for="year">Date</label>
                             <select class="selectpicker" id="year" name="date" required>
                               <option value=''>Date</option>
@@ -207,7 +147,7 @@
                               ?>
                             </select>
                           </div>
-                          <div class="col-sm-5 form-group">
+                          <div class="col-sm-4 form-group">
                             <label class="control-label" for="month">Month</label>
                             <select class="selectpicker" id="month" name="month" required>
                               <option value=''>Month</option>
@@ -226,7 +166,7 @@
                             </select>
                           </div>
 
-                          <div class="col-sm-3 form-group">
+                          <div class="col-sm-4 form-group">
                             <label class="control-label" for="year">Year</label>
                             <select class="selectpicker" id="year" name="year" required>
                               <option>Year</option>
@@ -244,17 +184,23 @@
                         <!-- Country and state -->
 
                           <div class="form-group">
-                          <label class="control-label" for="card">Select Any State</label>
-                          <select class="selectpicker" id="card" name="user_state" required>
+                          <label class="control-label col-sm-12" for="card">Select Any State</label>
+                          <select class="selectpicker col-sm-12" id="card" name="user_state" required>
                           <option>select</option>
                           <option value="U.P." <?php if($user[0]->user_state=='U.P.') echo 'selected'; ?>>U.P.</option>
-							            <option value="M.P." <?php if($user[0]->user_state=='M.P.') echo 'selected'; ?>>M.P.</option>
+                          <option value="M.P." <?php if($user[0]->user_state=='M.P.') echo 'selected'; ?>>M.P.</option>
                           <option value="H.P." <?php if($user[0]->user_state=='H.P.') echo 'selected'; ?>>H.P.</option>
-							            <option value="A.P." <?php if($user[0]->user_state=='A.P.') echo 'selected'; ?>>A.P.</option>
+                          <option value="A.P." <?php if($user[0]->user_state=='A.P.') echo 'selected'; ?>>A.P.</option>
                           </select>
-
+                          </div>
 
                                             <!-- City and Zip code -->
+                          <div class="form-group col-sm-12">
+                          <label class="control-label col-sm-12" for="card-number">Address</label>
+                          <input type="text" id="card-number"  maxlength='500' name="user_address"   placeholder="Address" class="form-control col-sm-12" required="">
+                        </div>
+
+
 
                       </fieldset>
                       <!-- END Personal information-->
@@ -268,8 +214,8 @@
                           <label class="control-label" for="card">Marital Status</label>
                           <select class="selectpicker" id="card" name="user_marital" required>
                             <option>Marital Status</option>
-							<option value="Single">Single</option>
-							<option value="Married">Married</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
 
                           </select>
                         </div>
@@ -286,8 +232,8 @@
                           <select class="selectpicker" id="card" name="user_city" required>
                             <option>City</option>
                             <option value="Allahabad">Allahabad</option>
-							<option value="Kanpur">KanPur</option>
-							<option value="Varansi">Varansi</option>
+              <option value="Kanpur">KanPur</option>
+              <option value="Varansi">Varansi</option>
 
 
                           </select>
@@ -295,50 +241,52 @@
 
                         <!-- Expriation and CCV -->
                         <div class="row">
-                          <div class="form-group">
+                          <div class="form-group col-sm-12">
                           <label class="control-label" for="card-number">Pin Code</label>
                           <input type="text" id="card-number" name="user_pincode" value="<?php echo $user[0]->user_pincode; ?>" placeholder="Pin Code" class="form-control" required="">
                         </div>
 
 
                         </div>
+
+                        <div class="col-sm-6 text-right">
+                        <input class="btn btn-primary col-sm-6 form-control hvr-underline-from-center-primary " type="submit" value="Save Details">
+                      </div>
                       </fieldset>
                       <!-- END Payment information-->
                     </div>
 
                     <!-- Agree checkbox and Continue button -->
 
-                      <div class="col-sm-12">
-                        <fieldset>
+                      <!-- <div class="col-sm-12"> -->
+                        <!-- <fieldset>
                           <legend>Address</legend>
                           <textarea class="form-control" rows="5" placeholder="Address" cols="40" maxlength='500' name="user_address" id="" required=""><?php echo $user[0]->user_address; ?></textarea>
-                          <hr>
+                          
                         </fieldset>
+ -->
 
-
-                      <div class="col-sm-6 text-right">
-                        <input class="btn btn-primary hvr-underline-from-center-primary " type="submit" value="Save Details">
-                      </div>
-                    </div>
-                  </form><hr>
-                </div>
-
+                      
+                   <!--  </div> -->
+                  </form>
+               <!--  </div>
+ -->
                 <!--end of checkout-->
 
 
 
 
-			</div>
-			<div class="col-sm-12">
-						<h3>Change Password</h3><hr>
-							<div class="col-sm-8 col-md-9 sub-data-left main-sec">
+      <!-- </div> -->
+      <div class="col-sm-12">
+            <h3>Change Password</h3>
+              <!-- <div class="col-sm-12 col-md-12  main-sec"> -->
               <div class="row">
 
 
                 <!--end of breadcrumb-->
 
                 <!--start of checkout-->
-                <div class="col-sm-12">
+                <div class="col-sm-12"> 
                   <form role="form" action="<?=(base_url().'Auth/change_password')?>" name="changePassword" method="post">
                     <div class="row">
 
@@ -349,7 +297,7 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="address">Current Password</label>
-                          <input type="text" id="" name="old_password" class="form-control" placeholder="Current Password" required="">
+                          <input type="text" id="" name="old_password" class="form-control " placeholder="Current Password" required="">
                         </div>
 
                         <!-- Product Title -->
@@ -371,7 +319,14 @@
                           <label class="control-label" for="address">New Password</label>
                           <input type="text" id="" name="new_password" class="form-control" placeholder="New Password" required="">
                         </div>
+                         <div  style="margin-top:44px"></div>
+                        <div class="row">
+                       <div class="col-sm-6 text-right">
+                        <input type="submit" class="btn col-sm-6 form-control btn-primary hvr-underline-from-center-primary " value="Submit">
+                      </div>
+                    </div> 
 
+                        </fieldset>
                         <!-- Image -->
 
 
@@ -379,34 +334,30 @@
                     </div>
 
                     <!-- Agree checkbox and Continue button -->
-                    <div class="row">
-                       <div class="col-sm-6 text-right">
-                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " value="Submit">
-                      </div>
-                    </div>
+                    
                   </form>
-                </div>
+                <!-- </div> -->
 
                 <!--end of checkout-->
 
-              </div><hr>
-            </div>
-			<div class="col-sm-12">
-						<h3>Frequently Asked Questions</h3>	<hr>
+              </div>
+<!--             </div> -->
+      <!-- <div class="col-sm-12">
+            <h3>Frequently Asked Questions</h3> 
 
 
-			</div><hr>
+      --></div> 
 
 
-			</div>
+      </div>
 
 
 
 
-			</div>
-			<div class="col-sm-4">
-				<hr>
-				<div class="rgt-acc-bg">
+      </div>
+      <div class="col-sm-4">
+        
+        <div class="rgt-acc-bg">
                                 <h6 id="payment">Your Account Balance</h6>
                                 <div class="row">
                                     <div class=" txtcenter approved-cb">
@@ -426,13 +377,13 @@
                                     <div class="alignleft">
                                         Pending Cashback<span id="ContentPlaceHolder1_tdPendingCash">&nbsp&nbsp0.00</span></div>
 
-                                </div><hr>
+                                </div>
                             </div>
 
-			</div><hr>
-			<div class="col-sm-4">
-						<hr>
-				<div class="rgt-acc-bg">
+      </div>
+      <div class="col-sm-4">
+            
+        <div class="rgt-acc-bg">
                                 <h6 id="payment">Your Total Gift Card Value</h6>
                                 <div class="row">
                                     <div class=" txtcenter approved-cb">
@@ -448,17 +399,17 @@
                                 </div>
 
 
-                                <div class="row">
+                               <!--  <div class="row">
                                     <div class="alignleft">
                                         Pending Gift Card Value<span id="ContentPlaceHolder1_tdPendingCash">&nbsp&nbspRs,0.00</span></div>
 
-                                </div><hr>
+                                </div> -->
                             </div>
 
-			</div><hr>
-			<div class="col-sm-4">
-						<hr>
-				<div class="row full-width">
+      </div>
+      <div class="col-sm-4">
+            
+        <!-- <div class="row full-width">
                                     <p class=" font-lightgrey">
                                         <i>Your Flipkart Gift Cards cashback value will be rounded off to the nearest whole
                                             number.</i></p>
@@ -466,12 +417,12 @@
                                         <i>Examples</i><br>
                                         <i>1. Rs.101.30 = Rs. 101</i><br>
                                         <i>2. Rs.101.60 = Rs. 102</i></p>
-                                </div><hr>
-
-			</div>
-			<div class="col-sm-4">
-						<h3>Quick Links</h3><hr>
-				<div class="quicklink-cont">
+                                </div>
+ -->
+      </div>
+      <div class="col-sm-4">
+            <h3>Quick Links</h3>
+        <div class="quicklink-cont">
 
                                 <ul>
                                     <li>
@@ -498,16 +449,34 @@
                                         <label>
                                             <a href="<?php echo base_url().'User/wallet_show/'.$user[0]->id;?>">Wallet Details</a></label></li>
                                 </ul>
-                            </div><hr>
+                            </div>
 
-			</div>
-
-
+      </div>
 
 
-		</div>
+
+
+    </div>
 
 
 
     </section>
     <!--end of new arrivals-->
+
+
+
+<script type="text/javascript">
+function checkValue(obj)
+   {
+          
+                 var theDiv = document.getElementById('contact_details1');
+                   theDiv.style.display='';
+               
+                
+                    document.getElementById('contact_details').style.display='none';
+              
+      
+       }   
+
+</script>
+

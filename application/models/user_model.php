@@ -321,4 +321,15 @@ public function google_login_data($name,$email,$id){
 
 }
 //
+
+public function edit_contact(){
+  $id=$this->input->post('id');
+   $d=array(
+   'username'=>$this->input->post('name'),
+   'phone'=>$this->input->post('phone'));
+
+ $this->db->where("id",$id);
+ $this->db->update('users',$d);
+  return true;
+}
 }
