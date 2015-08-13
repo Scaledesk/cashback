@@ -93,7 +93,9 @@ public function my_account()
     $data['logo']= $this->Product_model->logo_banner_display();
 	$data['w']=$this->User_model->getWalletDetails();
 	$data['user']=$this->User_model->getUser();
+	$data['wallet_data']=$this->User_model->wallet_show();
 	$this->load->view('templates/header.php',$data);
+	$this->load->view('templates/userSidebar.php');
 	$this->load->view('pages/myaccount.php',$data);
 	$this->load->view('templates/footer.php');
 }

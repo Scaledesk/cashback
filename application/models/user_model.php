@@ -156,8 +156,9 @@ public function show_store()
 // // }
 
 
-  public function wallet_show($id)
+  public function wallet_show()
 {
+  $id=$this->session->userdata('user_id');
   $this->db->where("user_id",$id);
   $query=$this->db->get("wallet_description");
   return $query->result();

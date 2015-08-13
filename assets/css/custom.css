@@ -32,8 +32,14 @@
 {
 
 margin: 0px auto;
-width: 40%;
+width: 100%;
 }
 .show_wallet_details  table tr td{
 	text-align: left;
+}
+.margin{
+	margin-top:25px;
+}
+.margin1{
+	margin-top:25px;
 }
