@@ -111,7 +111,7 @@ public function delete_product($id)
 
 public function update_product($newimage,$id)
 {
-   $newimage_file = base_url().'application/upload/'.$newimage;
+   $newimage_file = 'application/upload/'.$newimage;
  $data=array(
 'product_category'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
