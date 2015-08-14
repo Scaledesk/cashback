@@ -54,8 +54,19 @@ class Coupon_control extends CI_Controller {
     $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
 		$data['c']=$this->Coupon_model->getCouponDetails();
+    $this->load->view('templates/header.php',$data);
+		//$this->load->view('templates/adminSidebar.php',$data);
+    $this->load->view('pages/view_coupon',$data);
+    $this->load->view('templates/footer.php');
+  }
+   Public function view_coupon_admin()
+  {
+    $data['title']='Add Coupon';
+    $data['cg']= $this->Product_model->select_category();
+    $data['logo']= $this->Product_model->logo_banner_display();
+    $data['c']=$this->Coupon_model->getCouponDetails();
     $this->load->view('templates/admin_header.php',$data);
-		$this->load->view('templates/adminSidebar.php',$data);
+    $this->load->view('templates/adminSidebar.php',$data);
     $this->load->view('pages/view_coupon',$data);
     $this->load->view('templates/footer.php');
   }

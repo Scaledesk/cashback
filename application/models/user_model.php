@@ -221,6 +221,8 @@ public function add_personal_info()
 {
 	$dob=$this->input->post('date').'/'.$this->input->post('month').'/'.$this->input->post('year');
 	$d=array(
+    'username'=>$this->input->post('name'),
+    'phone'=>$this->input->post('phone'),
 	 'user_gender'=>$this->input->post('user_gender'),
 	 'user_dob'=>$dob,
 	 'user_marital'=>$this->input->post('user_marital'),

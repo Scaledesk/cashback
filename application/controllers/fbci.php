@@ -30,113 +30,113 @@ class Fbci extends CI_Controller {
 		header('Location: '.$base_url);  //redirect to the home page
 		
 	}
-	function fblogin(){
-		$base_url=$this->config->item('base_url'); //Read the baseurl from the config.php file
-		//get the Facebook appId and app secret from facebook.php which located in config directory for the creating the object for Facebook class
-    	$facebook = new Facebook(array(
-		'appId'		=>  $this->config->item('appID'), 
-		'secret'	=> $this->config->item('appSecret'),
-		));
+// 	function fblogin(){
+// 		$base_url=$this->config->item('base_url'); //Read the baseurl from the config.php file
+// 		//get the Facebook appId and app secret from facebook.php which located in config directory for the creating the object for Facebook class
+//     	$facebook = new Facebook(array(
+// 		'appId'		=>  $this->config->item('appID'), 
+// 		'secret'	=> $this->config->item('appSecret'),
+// 		));
 		
-		$user = $facebook->getUser(); // Get the facebook user id 
+// 		$user = $facebook->getUser(); // Get the facebook user id 
 		
 
-		if($user){
+// 		if($user){
 			
-			try{
-				$user_profile = $facebook->api('/me');  //Get the facebook user profile data
+// 			try{
+// 				$user_profile = $facebook->api('/me');  //Get the facebook user profile data
 				
-				$params = array('next' => $base_url.'fbci/logout');
+// 				$params = array('next' => $base_url.'fbci/logout');
 				
-				$ses_user=array('User'=>$user_profile,
-				   'logout' =>$facebook->getLogoutUrl($params)   //generating the logout url for facebook 
-				);
-                 print_r($ses_user);
+// 				$ses_user=array('User'=>$user_profile,
+// 				   'logout' =>$facebook->getLogoutUrl($params)   //generating the logout url for facebook 
+// 				);
+//                  print_r($ses_user);
 
-		        $this->session->set_userdata($ses_user);
-				header('Location: '.$base_url);
-			}catch(FacebookApiException $e){
-				error_log($e);
-				$user = NULL;
-			}		
-		}	
-		$this->load->view('auth/main');
-	}
+// 		        $this->session->set_userdata($ses_user);
+// 				header('Location: '.$base_url);
+// 			}catch(FacebookApiException $e){
+// 				error_log($e);
+// 				$user = NULL;
+// 			}		
+// 		}	
+// 		$this->load->view('auth/main');
+// 	}
 	
 
 
 
 
 
-	function google_login1(){
+// 	function google_login1(){
 
-     $data['title']='Cashback';
-       $data['logo']= $this->Product_model->logo_banner_display();
-       $this->load->library('Google_Client.php');
-       $this->load->library('Google_Oauth2Service.php');
-      $this->load->view('templates/header.php');
-      $this->load->view('pages/google_login.php');
-      $this->load->view('templates/footer.php');
+//      $data['title']='Cashback';
+//        $data['logo']= $this->Product_model->logo_banner_display();
+//        $this->load->library('Google_Client.php');
+//        $this->load->library('Google_Oauth2Service.php');
+//       $this->load->view('templates/header.php');
+//       $this->load->view('pages/google_login.php');
+//       $this->load->view('templates/footer.php');
 
-}
+// }
 
-public function google_login2(){
+// public function google_login2(){
 
 
 	
-$provider = new League\OAuth2\Client\Provider\ Google([
-    'clientId'      => '488548419189-f9fh4l2lq9o5ufle358ta9jkk8l6s4cc.apps.googleusercontent.com',
-    'clientSecret'  => 'h0yrMZCliF1rjh_QeNsPUqU9',
-    'redirectUri'   => 'http://localhost:88/cashback/fbci/google_login',
-    'scopes'        => ['email','publish_actions','user_birthday','user_location','user_work_history','user_hometown','user_photos'],
-]);
+// $provider = new League\OAuth2\Client\Provider\ Google([
+//     'clientId'      => '488548419189-f9fh4l2lq9o5ufle358ta9jkk8l6s4cc.apps.googleusercontent.com',
+//     'clientSecret'  => 'h0yrMZCliF1rjh_QeNsPUqU9',
+//     'redirectUri'   => 'http://localhost:88/cashback/fbci/google_login',
+//     'scopes'        => ['email','publish_actions','user_birthday','user_location','user_work_history','user_hometown','user_photos'],
+// ]);
 
-if (!isset($_GET['code'])) {
+// if (!isset($_GET['code'])) {
 
-    // If we don't have an authorization code then get one
-    $authUrl = $provider->getAuthorizationUrl();
-    $_SESSION['oauth2state'] = $provider->getState();
-    header('Location: '.$authUrl);
-    exit;
+//     // If we don't have an authorization code then get one
+//     $authUrl = $provider->getAuthorizationUrl();
+//     $_SESSION['oauth2state'] = $provider->getState();
+//     header('Location: '.$authUrl);
+//     exit;
 
-// Check given state against previously stored one to mitigate CSRF attack
-} elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
+// // Check given state against previously stored one to mitigate CSRF attack
+// } elseif (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
 
-    unset($_SESSION['oauth2state']);
-    exit('Invalid state');
+//     unset($_SESSION['oauth2state']);
+//     exit('Invalid state');
 
-} else {
+// } else {
 
-    // Try to get an access token (using the authorization code grant)
-    $token = $provider->getAccessToken('authorization_code', [
-        'code' => $_GET['code']
-    ]);
+//     // Try to get an access token (using the authorization code grant)
+//     $token = $provider->getAccessToken('authorization_code', [
+//         'code' => $_GET['code']
+//     ]);
 
-    // Optional: Now you have a token you can look up a users profile data
-    try {
+//     // Optional: Now you have a token you can look up a users profile data
+//     try {
 
-        // We got an access token, let's now get the user's details
-        $userDetails = $provider->getResourceOwner($token);
+//         // We got an access token, let's now get the user's details
+//         $userDetails = $provider->getResourceOwner($token);
 
-        // Use these details to create a new profile
-        printf('Hello %s!', $userDetails->firstName);
+//         // Use these details to create a new profile
+//         printf('Hello %s!', $userDetails->firstName);
 
-    } catch (Exception $e) {
+//     } catch (Exception $e) {
 
-        // Failed to get user details
-        exit('Oh dear...');
-    }
+//         // Failed to get user details
+//         exit('Oh dear...');
+//     }
 
-    // Use this to interact with an API on the users behalf
-    echo $token->accessToken;
+//     // Use this to interact with an API on the users behalf
+//     echo $token->accessToken;
 
-    // Use this to get a new access token if the old one expires
-    echo $token->refreshToken;
+//     // Use this to get a new access token if the old one expires
+//     echo $token->refreshToken;
 
-    // Unix timestamp of when the token will expire, and need refreshing
-    echo $token->expires;
-}
-}
+//     // Unix timestamp of when the token will expire, and need refreshing
+//     echo $token->expires;
+// }
+// }
 
 
 

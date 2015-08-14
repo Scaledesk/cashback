@@ -232,6 +232,7 @@
 
 <!-- .........................change password start.......................... -->
          <div id="password" style="display:none;">
+           <form role="form"  action="<?=(base_url().'Auth/change_password')?>" name="personalInfo" method="post">
          <fieldset class="col-md-6">
                         
 
@@ -239,13 +240,13 @@
                         <div class="form-group col-sm-12">
                         <legend>Current Password</legend>
                           <label class="control-label" for="address">Current Password</label>
-                          <input type="text" id="" name="old_password" class="form-control " placeholder="Current Password" required="">
+                          <input type="text" id="" name="old" class="form-control " placeholder="Current Password" required="">
                         </div>
 
                         <!-- Product Title -->
                         <div class="form-group col-sm-12">
-                          <label class="control-label" for="address">Confirm Password</label>
-                          <input type="text" id="" name="new_password_confirm" class="form-control"  placeholder="Confirm Password" required="">
+                          <label class="control-label" for="address"> New Password</label>
+                          <input type="text" id="" name="new" class="form-control"  placeholder=" New  Password" required="">
                         </div>
 
 
@@ -257,17 +258,18 @@
                         <!-- Price -->
                         <div class="form-group col-sm-12">
                         <legend>New Password</legend>
-                          <label class="control-label" for="address">New Password</label>
-                          <input type="text" id="" name="new_password" class="form-control" placeholder="New Password" required="">
+                          <label class="control-label" for="address">Confirm New Password</label>
+                          <input type="text" id="" name="new_confirm" class="form-control" placeholder="Confirm New Password" required="">
                         </div>
-                         <div  style="margin-top:44px"></div>
-                        <div class="row">
-                       <div class="col-sm-6 text-right">
+                         
+                        <div class="row " >
+                       <div class="col-sm-6 text-right margin2">
                         <input type="submit" class="btn col-sm-6 form-control btn-primary hvr-underline-from-center-primary " value="Submit">
                       </div>
                     </div> 
 
                         </fieldset>
+                        </form>
             </div>
 <!-- .........................change password end.......................... -->
                 </div>

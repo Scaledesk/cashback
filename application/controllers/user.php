@@ -20,7 +20,7 @@ public function show_coupon(){
    $data['cg']= $this->Product_model->select_category();
    $data['logo']= $this->Product_model->logo_banner_display();
     $data['cu']= $this->User_model->show_coupon();
-   $this->load->view('templates/admin_header.php',$data);
+   $this->load->view('templates/header.php',$data);
    $this->load->view('pages/coupon_show.php',$data);
   $this->load->view('templates/footer.php');
 
@@ -32,7 +32,7 @@ public function show_store(){
    $data['cg']= $this->Product_model->select_category();
     $data['logo']= $this->Product_model->logo_banner_display();
     $data['st']= $this->User_model->show_store();
-   $this->load->view('templates/admin_header.php',$data);
+   $this->load->view('templates/header.php',$data);
     //$this->load->view('templates/adminSidebar');
    //print_r($data['st']->result());
    //die();
@@ -122,15 +122,19 @@ public function add_personal_info()
 {
 	if($this->User_model->add_personal_info())
   {
-		$data['msg']="personal information saved";
-		$data['title']='My Account';
-		$data['cg']= $this->Product_model->select_category();
-        $data['logo']= $this->Product_model->logo_banner_display();
-		$data['w']=$this->User_model->getWalletDetails();
-		$data['user']=$this->User_model->getUser();
-		$this->load->view('templates/header.php',$data);
-		$this->load->view('pages/myaccount.php',$data);
-		$this->load->view('templates/footer.php');
+  	echo "Successful Update Information";
+  	redirect(base_url().'User/my_account', 'refresh');
+		// $data['msg']="personal information saved";
+		// $data['title']='My Account';
+		// $data['cg']= $this->Product_model->select_category();
+  //       $data['logo']= $this->Product_model->logo_banner_display();
+		// $data['w']=$this->User_model->getWalletDetails();
+		// $data['wallet_data']=$this->User_model->wallet_show();
+		// $data['user']=$this->User_model->getUser();
+		// $this->load->view('templates/userSidebar.php');
+		// $this->load->view('templates/header.php',$data);
+		// $this->load->view('pages/myaccount.php',$data);
+		// $this->load->view('templates/footer.php');
   }
 }
 
