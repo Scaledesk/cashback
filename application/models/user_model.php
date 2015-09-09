@@ -28,6 +28,42 @@ public function show_store()
 
 	}
 
+  public function search()
+  {
+    $category_name=$this->input->post('category_name');
+    $search_key=$this->input->post('search_key');
+    $store=0;
+    $coupon=0;
+    $product=0;
+    if($category_name=="STORE"){ 
+
+        $store=$this->db->query("select * from store_details where store_name='$search_key'")->result();
+    }
+    elseif ($category_name=="COUPON") {
+         
+      
+       $coupon=$this->db->query("select * from coupon_details where coupon_name='$search_key'")->result();
+    }
+
+    elseif ($category_name=="PRODUCTS") {
+       $product=$this->db->query("select * from product  where product_title='$search_key'")->result();
+      }
+    else{  
+             $store=$this->db->query("select * from store_details where store_name='$search_key'")->result();
+             $coupon=$this->db->query("select * from coupon_details where coupon_name='$search_key'")->result();
+              $product=$this->db->query("select * from product  where product_title='$search_key'")->result();
+    }
+    
+    $result= array('store' =>$store ,'coupon' => $coupon ,'product' => $product );
+     //  echo "<pre/>";
+     // print_r($result) ;
+     // die();
+// 
+    return $result;
+
+  }
+
+
 
 // public function add_category(){
 

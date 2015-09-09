@@ -12,7 +12,7 @@
               <h1 class="title fadeInDownBig wow"> WOMEN COLLECTION 2015</h1>
               <p class="subtitle col-sm-9 fadeInUp wow hidden-xs">Donec pede justo fringilla vel aliquet nec vulputate eget arcu. In enim justo rhoncus ut imperdiet a venenatis vitae dictum felis eu pede mollis pretium integer tincidunt</p>
               <div class="clearfix"></div>
-              <a class="btn btn-primary fadeInUp wow hvr-underline-from-center-primary hidden-xs" href="#"> <i class="rm-icon ion-android-checkmark-circle"></i> <span>Discover Now</span> </a> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs" href="#"> <i class="rm-icon ion-android-star"></i> <span>All Collections</span> </a> </div>
+              <a class="btn btn-primary fadeInUp wow hvr-underline-from-center-primary hidden-xs" href="#"> <i class="rm-icon ion-android-checkmark-circle"></i>  </a> <a class="btn btn-default fadeInUp wow hvr-underline-from-center-default hidden-xs" href="#"> <i class="rm-icon ion-android-star"></i> <span>All Collections</span> </a> </div>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
               <h1 data-animation="fadeInDownBig" class="title fadeInDownBig text-primary"> THE NEW COLLECTION</h1>
               <p data-animation="fadeInUp" class="subtitle col-sm-9  fadeInUp text-primary hidden-xs">Donec pede justo fringilla vel aliquet nec vulputate eget arcu. In enim justo rhoncus ut imperdiet a venenatis vitae dictum felis eu pede mollis pretium integer tincidunt</p>
               <div class="clearfix"></div>
-              <a data-animation="fadeIn" class="btn btn-primary  fadeInUp hvr-underline-from-center-primary hidden-xs" href="#"> <i class="rm-icon ion-android-checkmark-circle"></i> <span>Discover Now</span> </a> <a data-animation="fadeIn" class="btn btn-default fadeInUp hvr-underline-from-center-default hidden-xs" href="#"> <i class="rm-icon ion-android-star"></i> <span>All Collections</span> </a> </div>
+              <a data-animation="fadeIn" class="btn btn-primary  fadeInUp hvr-underline-from-center-primary hidden-xs" href="#"> <i class="rm-icon ion-android-checkmark-circle"></i>  </a> <a data-animation="fadeIn" class="btn btn-default fadeInUp hvr-underline-from-center-default hidden-xs" href="#"> <i class="rm-icon ion-android-star"></i> <span>All Collections</span> </a> </div>
           </div>
         </div>
       </div>
@@ -332,32 +332,7 @@
           </div>
         </div>
         <?php } ?>
-<!--         <div class="col-sm-12 col-md-4 ad-box-outer">
-          <div class="small-ad">
-          <?php foreach ($slider_image as  $image) {
-           
-           ?>
-            <figure ><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
-              <?php } ?>
-              <figcaption>
-                
-                <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 ad-box-outer">
-          <div class="small-ad">
-          <?php foreach ($slider_image as  $image) {
-           
-           ?>
-            <figure ><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
-              <?php } ?>
-              <figcaption>
-                
-                <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
-            </figure>
-          </div>
-        </div> -->
+
       </div>
     </section>
     <!--end of ad-boxes-->
@@ -390,7 +365,7 @@
         <div class="row">
           <div class="subscribe col-sm-12">
             <h3><span>lookbook sunglasses</span> <small>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus</small> </h3>
-            <div class="subscribe-icn"> <a class="btn btn-primary hvr-underline-from-center-primary" href="#">Discover Now</a> </div>
+            
           </div>
         </div>
       </section>
@@ -398,166 +373,7 @@
 
     <!--end of parallax subscribtion-->
 
-    <!--start of best selling--
-    <section class="container" data-speed="2">
-      <div class="row">
-        <!--start of big title--
-        <div class="col-sm-12 big-title text-uppercase text-center">
-          <h3 class="text-primary">best selling</h3>
-          <small>Maecenas nec odio et ante tincidunt tempus</small>
-          <p><span class="ion-android-star-outline"></span></p>
-        </div>
-        <!--end of big title--
-        <div class="col-sm-12">
-          <ul class="row list-inline best-selling wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-1.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-2.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span> </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-3.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-4.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-5.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span> </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-sm-6 col-md-4">
-              <div>
-                <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                    <figure><img class="img-responsive" src="images\s-6.jpg" width="200" height="230" alt=""></figure>
-                  </div>
-                  <div class="col-sm-6 col-md-8">
-                    <h3 class="product-name"><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                    <div class="product-price"> <span class="real-price text-info"><strong>$600</strong></span> <span class="old-price"><del>$790</del></span> </div>
-                    <div class="product-evaluate text-info"><span><i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star"></i> <i class="ion-android-star-half"></i></span> </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!--end of best selling-->
-
-    <!--start of latest from the blog--
-
-    <section class="container">
-      <div class="row">
-        <!--start of big title--
-        <div class="col-sm-12 big-title text-uppercase text-center">
-          <h3 class="text-primary">from the blog</h3>
-          <small>Maecenas nec odio et ante tincidunt tempus</small>
-          <p><span class="ion-android-star-outline"></span></p>
-        </div>
-        <!--end of big title--
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail">
-                <figure><a href="post-details.html"><img class="img-responsive" src="images\general-3.jpg" width="1024" height="683" alt=""></a></figure>
-                <div class="caption">
-                  <h4 class="text-uppercase"><a href="post-details.html">Aenean imperdiet. Etiam ultricies nisi vel</a></h4>
-                  <div class="blog-info">
-                    <p class="text-muted"><span>By <a href="#">WebyZona</a> / In: <a href="#">Fashion</a> / <a href="#">3 Comments</a></span></p>
-                  </div>
-                  <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet</p>
-                  <hr>
-                  <a href="post-details.html" class="btn btn-primary hvr-underline-from-center-primary">read more</a> </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail">
-                <figure><a href="post-details.html"><img class="img-responsive" src="images\blog-img-2.jpg" width="800" height="532" alt=""></a></figure>
-                <div class="caption">
-                  <h4 class="text-uppercase"><a href="post-details.html">Donec pede justo, fringilla vel aliquet nec</a></h4>
-                  <div class="blog-info">
-                    <p class="text-muted"><span>By <a href="#">WebyZona</a> / In: <a href="#">Fashion</a> / <a href="#">3 Comments</a></span></p>
-                  </div>
-                  <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet</p>
-                  <hr>
-                  <a href="post-details.html" class="btn btn-primary hvr-underline-from-center-primary">read more</a> </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <div class="thumbnail">
-                <figure><a href="post-details.html"><img class="img-responsive" src="images\blog-img-3.jpg" width="1024" height="683" alt=""></a></figure>
-                <div class="caption">
-                  <h4 class="text-uppercase"><a href="post-details.html">Aenean leo ligula porttitor eu consequat vitae</a></h4>
-                  <div class="blog-info">
-                    <p class="text-muted"><span>By <a href="#">WebyZona</a> / In: <a href="#">Fashion</a> / <a href="#">3 Comments</a></span></p>
-                  </div>
-                  <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet</p>
-                  <hr>
-                  <a href="post-details.html" class="btn btn-primary hvr-underline-from-center-primary">read more</a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--end of blatest from the blogs-->
+  
 
   </div>
   <!--end of middle sec-->

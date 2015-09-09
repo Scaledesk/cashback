@@ -27,6 +27,65 @@ public function show_coupon(){
 }
 
 
+
+public function search(){
+
+ 
+    $data['cu'] = $this->User_model->search();
+
+    if($data['cu']['store']){
+        $data['title']='Show Store';
+        $data['cg']= $this->Product_model->select_category();
+        $data['logo']= $this->Product_model->logo_banner_display();
+        $this->load->view('templates/header.php',$data);
+        $this->load->view('pages/show_user_store_search.php');
+        $this->load->view('templates/footer.php');  
+    }
+    elseif ($data['cu']['coupon']) {
+      $data['title']='Show Coupon';
+      $data['cg']= $this->Product_model->select_category();
+      $data['logo']= $this->Product_model->logo_banner_display();
+      $this->load->view('templates/header.php',$data);
+      $this->load->view('pages/coupon_show_search.php',$data);
+      $this->load->view('templates/footer.php');
+      
+       }
+    else{
+        $data['title']='Display Product Details';
+        $data['cg']= $this->Product_model->select_category();
+        $data['logo']= $this->Product_model->logo_banner_display();
+        $this->load->view('templates/header.php',$data);
+        $this->load->view('pages/user_product_display_search.php',$data);
+        $this->load->view('templates/footer.php');
+    }
+
+
+
+}
+
+
+public function contact(){
+   $data['title']='contact';
+   $data['cg']= $this->Product_model->select_category();
+   $data['logo']= $this->Product_model->logo_banner_display();
+    $data['cu']= $this->User_model->show_coupon();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/contact.php',$data);
+  $this->load->view('templates/footer.php');
+
+}
+
+public function how_it_work(){
+   $data['title']='How It Work';
+   $data['cg']= $this->Product_model->select_category();
+   $data['logo']= $this->Product_model->logo_banner_display();
+    $data['cu']= $this->User_model->show_coupon();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/how _it_work.php',$data);
+  $this->load->view('templates/footer.php');
+
+}
+
 public function show_store(){
    $data['title']='Manage Coupon';
    $data['cg']= $this->Product_model->select_category();

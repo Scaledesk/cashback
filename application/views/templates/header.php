@@ -1,6 +1,5 @@
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -163,19 +162,19 @@ else
                 <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
               </ul>
             </li> -->
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">INR <span class="ion-android-arrow-dropdown"></span></a>
-              <ul class="dropdown-menu" role="menu">
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">INR </a>
+              <!-- <ul class="dropdown-menu" role="menu">
                 <li><a href="#">USD</a></li>
                 <li><a href="#">GBP</a></li>
                 <li><a href="#">EUR </a></li>
-              </ul>
+              </ul> -->
             </li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/inr.png'; ?>" <span class="ion-android-arrow-dropdown"></span></a>
-              <ul class="dropdown-menu">
+              <!-- <ul class="dropdown-menu">
               <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/uk.png'; ?>"></a> </li>
                 <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/italy.png';?>"></a> </li>
                 <li> <a href="#"><img width="16" height="12" alt="" src="<?php echo base_url().'assets/images/turkey.png';?>"></a> </li>
-              </ul>
+              </ul -->
             </li>
           </ul>
           <form class="navbar-form navbar-left lno-search-form visible-xs" role="search">
@@ -243,7 +242,7 @@ else
   <!--end of header-->
   <!-- strat of navigation -->
   <nav class="navbar navbar-default navbar-static-top line-navbar-two">
-    <div class="container">
+    <div class="container row-4">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="line-navbar-collapse-2">
         <ul class="nav navbar-nav lnt-nav-mega">
@@ -276,8 +275,8 @@ else
 
                 </ul>
                 <!-- Subcategory and carousel wrap -->
-                <div class="lnt-subcategroy-carousel-wrap container-fluid">
-                  <div id="subcategory-home" class="active"> <!-- Sub categories list-->
+<!--                 <div class="lnt-subcategroy-carousel-wrap container-fluid">
+                  <div id="subcategory-home" class="active"> <!-- Sub categories list--
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">All pages</h3>
                       <ul class="list-unstyled col-sm-6">
@@ -304,7 +303,7 @@ else
                         <li> <a href="shortcodes.html"><i class="ion-ios-briefcase icon"></i>Shortcodes</a> </li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-home" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -321,7 +320,7 @@ else
                     </div>
                   </div>
                   <div id="subcategory-sports">
-                    <!-- Sub categories list-->
+                    <!-- Sub categories list--
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Sports and outdoors</h3>
                       <ul class="list-unstyled col-sm-6">
@@ -343,7 +342,7 @@ else
                         <li><a href="#">Game room</a> <span class="label label-danger">Hot</span></li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-sports" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -360,7 +359,7 @@ else
                     </div>
                   </div>
                   <div id="subcategory-music">
-                    <!-- Sub categories list-->
+                    <!-- Sub categories list--
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Digital music</h3>
                       <ul class="list-unstyled col-sm-6">
@@ -379,7 +378,7 @@ else
                         <li><a href="#">Rock</a></li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-music" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -417,7 +416,7 @@ else
                         <li><a href="#">Political</a></li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-books" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -434,7 +433,7 @@ else
                     </div>
                   </div>
                   <div id="subcategory-fashion">
-                    <!-- Sub categories list-->
+                    <!-- Sub categories list--
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Fashion and beauty</h3>
                       <ul class="list-unstyled col-sm-6">
@@ -454,7 +453,7 @@ else
                         <li><a href="#">Health</a></li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-fashion" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -471,7 +470,7 @@ else
                     </div>
                   </div>
                   <div id="subcategory-movies">
-                    <!-- Sub categories list-->
+                    <!-- Sub categories list--
                     <div class="lnt-subcategory col-sm-8 col-md-8">
                       <h3 class="lnt-category-name text-info text-uppercase">Movies and games</h3>
                       <ul class="list-unstyled col-sm-6">
@@ -490,7 +489,7 @@ else
                         <li><a href="#">Game room</a></li>
                       </ul>
                     </div>
-                    <!-- Carousel -->
+                    <!-- Carousel --
                     <div class="col-sm-4 col-md-4">
                       <div id="carousel-category-movies" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -506,7 +505,7 @@ else
                       </div>s
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </li>
@@ -514,49 +513,56 @@ else
         <ul class="nav navbar-nav main-nav">
           
             <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
-            <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
+            <li><a href="<?php echo base_url().'User/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="<?php echo base_url().'User/contact'; ?>">CONTACT</a></li>
           <li><a href="#" class="active_nav nemu_hover">How It Works?</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#">Home</a></li>
         </ul>
-        <form class="navbar-form navbar-right lnt-search-form" role="search">
+        <form class="navbar-form navbar-right lnt-search-form" role="search" method="post" action="<?php echo base_url().'User/search'; ?>">
+
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-btn lnt-search-category">
-                <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false"> <span class="selected-category-text">All </span> <span class="ion-android-arrow-dropdown"></span> </button>
-                <ul class="dropdown-menu " role="menu">
-                  <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
+              
+                 
+
+                <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false"> 
+                  <span>
+
+                       <select class="selectpicker" name="category_name">
+                 <option>ALL</option>
+                 <option>STORE</option>
+                 <option>COUPON</option>
+                 <option>PRODUCTS</option> 
+                  </select>
+
+                  </span>
+
+                  </button>
+                <!-- <ul class="dropdown-menu " role="menu"> -->
+                 <!--  <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
                   <li><a href="<?php echo base_url().'user/show_coupon'; ?>">COUPON</a></li>
                   <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
                   <li><a href="<?php echo base_url(); ?>">Home</a></li>
                   <li><a href="#">Toys</a></li>
-                  <li><a href="#">Motors</a></li>
-                </ul>
+                  <li><a href="#">Motors</a></li> -->
+
+               <!--  <a href="#" id="submit"> Get Value</a>
+            <ul>  <span class="selected-category-text">All  </span>
+             <li class="init">[SELECT]</li>
+             <li data-value="value 1">Option 1</li>
+           <li data-value="value 2">Option 2</li>
+              <li data-value="value 3">Option 3</li>
+           </ul> -->
+
               </div>
-              <input type="text" class="form-control lnt-search-input" aria-label="Search" placeholder="Find Your Product">
+              <input type="text" name="search_key" class="form-control lnt-search-input" aria-label="Search" placeholder="Find Your Product">
             </div>
           </div>
-          <div class="lnt-search-suggestion">
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Leader mask in <span class="text-info">entertainment</span></a></li>
-              <li><a href="#">Plain leader bags in <span class="text-info">fashion</span></a></li>
-              <li><a href="#">Black leader shoes in <span class="text-info">fashion</span></a></li>
-              <li><a href="#">Covers in <span class="text-info">electronics</span></a></li>
-              <li><a href="#">Leader overcoat in <span class="text-info">fashion</span></a></li>
-              <li><a href="#">Hi motor in <span class="text-info">motors</span></a></li>
-              <li><a href="#">Fake leader bag in <span class="text-info">Electronics</span></a></li>
-              <li class="lnt-search-bottom-links">
-                <ul class="list-inline">
-                  <li><a href="#">All suggestions</a></li>
-                  <li><a href="#">New products</a></li>
-                  <li><a href="#">Popular products</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+          
           <button type="submit" class="btn btn-xs btn-search"><span class="ion-android-search"></span></button>
         </form>
       </div>

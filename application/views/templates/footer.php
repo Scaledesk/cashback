@@ -13,15 +13,16 @@
                 <li><a href="faqs.html">FAQ</a> </li>
                 <li><a href="contact.html">Contact us</a> </li>
               </ul>
-              <hr>
-              <h5 class="text-info text-uppercase">User section</h5>
-              <ul class="list-unstyled nudge">
-                <li><a href="#">Login</a> </li>
-                <li><a href="register.html">Regiter</a> </li>
-              </ul>
+              
+              
               <hr class="hidden-md hidden-lg hidden-sm">
             </div>
             <div class="col-md-2 col-sm-3">
+            <h5 class="text-info text-uppercase">User section</h5>
+              <ul class="list-unstyled nudge">
+                <li><a class="login" href="javascript:void(0)" data-toggle="modal" data-target="#login-box"> login</a> </li>
+                <li><a href="<?php echo base_url().'auth/register';?>">Register</a> </li>
+              </ul>
               <!--footer menu1-->
             </div>
             <div class="col-md-2 col-sm-3">
@@ -32,7 +33,7 @@
             </div>
             <div class="col-sm-12 col-md-4">
               <div class="row">
-                <div class="col-sm-12">
+                <!--<div class="col-sm-12">
                   <h5 class="text-info text-uppercase">Get the news</h5>
                   <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                   <form action="#" method="post" id="newsletter">
@@ -41,7 +42,7 @@
                     </div>
                   </form>
                   <hr>
-                </div>
+                </div>-->
                 <div class="col-sm-12">
                   <h5 class="text-info text-uppercase">Stay in touch</h5>
                   <ul class="list-inline social clearfix">
