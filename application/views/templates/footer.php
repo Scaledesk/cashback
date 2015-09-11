@@ -8,10 +8,10 @@
             <div class="col-md-2 col-sm-3">
               <h5 class="text-info text-uppercase">useful pages</h5>
               <ul class="list-unstyled nudge">
-                <li><a href="text.html">About us</a> </li>
-                <li><a href="text-left.html">Terms and conditions</a> </li>
-                <li><a href="faqs.html">FAQ</a> </li>
-                <li><a href="contact.html">Contact us</a> </li>
+                <li><a href="<?php echo base_url().'User/about'; ?>">About us</a> </li>
+                <li><a href="<?php echo base_url().'User/termcondition'; ?>">Terms and conditions</a> </li>
+                <li><a href="<?php echo base_url().'User/faq'; ?>">FAQ</a> </li>
+                <li><a href="<?php echo base_url().'User/contact'; ?>">Contact us</a> </li>
               </ul>
               
               

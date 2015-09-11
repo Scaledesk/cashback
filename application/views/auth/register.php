@@ -24,7 +24,7 @@
               <div id="sticky">
                 <section>
                   <h5 class="sub-title text-info text-uppercase">why register?</h5>
-                  <p>Donec imperdiet enim quis risus porttitor congue. Vestibulum vel tristique urna. </p>
+                  <!-- <p>Donec imperdiet enim quis risus porttitor congue. Vestibulum vel tristique urna. </p>
                   <dl>
                     <dt>Saving Time</dt>
                     <dd>A description list is perfect for defining terms.</dd>
@@ -33,7 +33,7 @@
                     <dd>Donec id elit non mi porta gravida at eget metus.</dd>
                     <dt>Malesuada porta</dt>
                     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                  </dl>
+                  </dl> -->
                 </section>
               </div>
             </div>
@@ -52,7 +52,7 @@
                 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                <form role="form" action="<?=(base_url().'auth/create_user/')?>" method="Post">
+                <form role="form" action="<?=(base_url().'auth/create_user/')?>" method="Post" name="registration">
                     <div class="row"> 
                       
                       <!-- START Presonal information -->
@@ -73,7 +73,8 @@
                         
                           <div class="form-group">
                             <label class="control-label" for="password">choose password<span class="req">*</span></label>
-                            <input type="password" id="card-number" name="password"class="form-control" placeholder="Use at least one lowercase letter, one numeral, and seven characters" required="">
+                            <input type="password" id="card-number" name="password"class="form-control" placeholder="Use at least one lowercase letter and seven characters." required="">
+                             
                           </div>
                         </fieldset>
                       <!-- END Personal information--> 
@@ -100,7 +101,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="password_confirm">password confirm</label>
-                            <input type="password" id="password-confirm" name="password_confirm" class="form-control" placeholder="Confirm Password" required="">
+                            <input type="password" id="password-confirm" name="password_confirm" class="form-control" placeholder="Confirm Password" onblur="myFunction()" required="">
                           </div>
                       </fieldset>
                       <!-- END Payment information--> 
@@ -132,4 +133,35 @@
     </section>
   </div>
   <!--end of middle sec-->
+  <script type="text/javascript">
+function myFunction()  
+{  
 
+ var pass= document.registration.password.value; 
+ var pass1= document.registration.password_confirm.value;  
+ 
+ 
+
+ var pass_len = pass.length;
+
+//alert(pass_len);
+if(pass_len==8)  
+{
+  //alert(pass);
+//alert(123);
+return true;  
+}  
+else{
+ // alert(pass);
+alert("Password in minmum 8 letters ");
+//password.focus();
+return false;  
+}
+ 
+//uzip.focus();  
+
+  
+
+
+}  
+</script>

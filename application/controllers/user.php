@@ -14,6 +14,27 @@ class User extends CI_Controller {
 	}
 
 
+public function contact_mail(){
+
+
+
+   
+  
+  //Email information
+   $admin_email = "nkscoder@gmail.com";
+   $name    = $_REQUEST['author'];
+   $email = $_REQUEST['email'];
+   $subject = "Cashback";
+   $comment = $_REQUEST['body'];
+   //die();
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+
+
 
 public function show_coupon(){
    $data['title']='Manage Coupon';
@@ -32,25 +53,33 @@ public function search(){
 
  
     $data['cu'] = $this->User_model->search();
+    // echo $data['cu']['store'][0]->store_id;
+     // print_r($data['cu']);
+     // die();
 
-    if($data['cu']['store']){
-      
+
+     // if(isset($data['cu'])){
+
+//print_r($data['cu']['store']);
+//die;
+      if(isset($data['cu']['store'][0]->store_id)){
+
         $data['title']='Show Store';
         $data['cg']= $this->Product_model->select_category();
         $data['logo']= $this->Product_model->logo_banner_display();
         $this->load->view('templates/header.php',$data);
         $this->load->view('pages/show_user_store_search.php');
-        $this->load->view('templates/footer.php');  
-    }
-    elseif ($data['cu']['coupon']) {
-      $data['title']='Show Coupon';
-      $data['cg']= $this->Product_model->select_category();
-      $data['logo']= $this->Product_model->logo_banner_display();
-      $this->load->view('templates/header.php',$data);
-      $this->load->view('pages/coupon_show_search.php',$data);
-      $this->load->view('templates/footer.php');
-      
-       }
+            $this->load->view('templates/footer.php');  
+        }
+        /*elseif ($data['cu']['coupon']) {
+          $data['title']='Show Coupon';
+          $data['cg']= $this->Product_model->select_category();
+          $data['logo']= $this->Product_model->logo_banner_display();
+          $this->load->view('templates/header.php',$data);
+          $this->load->view('pages/coupon_show_search.php',$data);
+          $this->load->view('templates/footer.php');
+          
+           }
     else{
         $data['title']='Display Product Details';
         $data['cg']= $this->Product_model->select_category();
@@ -58,9 +87,18 @@ public function search(){
         $this->load->view('templates/header.php',$data);
         $this->load->view('pages/user_product_display_search.php',$data);
         $this->load->view('templates/footer.php');
+    }*/
+
+
+else{
+
+     $data['title']='Display Error';
+        $data['cg']= $this->Product_model->select_category();
+        $data['logo']= $this->Product_model->logo_banner_display();
+        $this->load->view('templates/header.php',$data);
+        $this->load->view('pages/display_error.php',$data);
+        $this->load->view('templates/footer.php');
     }
-
-
 
 }
 
@@ -75,14 +113,44 @@ public function contact(){
   $this->load->view('templates/footer.php');
 
 }
+   
+ public function faq(){
+   $data['title']='FAQ';
+   $data['cg']= $this->Product_model->select_category();
+   $data['logo']= $this->Product_model->logo_banner_display();
+    $data['cu']= $this->User_model->show_coupon();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/work.php',$data);
+  $this->load->view('templates/footer.php');
 
+}
+public function termcondition(){
+   $data['title']='Terms and conditions';
+   $data['cg']= $this->Product_model->select_category();
+   $data['logo']= $this->Product_model->logo_banner_display();
+    $data['cu']= $this->User_model->show_coupon();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/work.php',$data);
+  $this->load->view('templates/footer.php');
+
+}
+public function about(){
+   $data['title']='About';
+   $data['cg']= $this->Product_model->select_category();
+   $data['logo']= $this->Product_model->logo_banner_display();
+    $data['cu']= $this->User_model->show_coupon();
+   $this->load->view('templates/header.php',$data);
+   $this->load->view('pages/work.php',$data);
+  $this->load->view('templates/footer.php');
+
+}
 public function how_it_work(){
    $data['title']='How It Work';
    $data['cg']= $this->Product_model->select_category();
    $data['logo']= $this->Product_model->logo_banner_display();
     $data['cu']= $this->User_model->show_coupon();
    $this->load->view('templates/header.php',$data);
-   $this->load->view('pages/how _it_work.php',$data);
+   $this->load->view('pages/work.php',$data);
   $this->load->view('templates/footer.php');
 
 }

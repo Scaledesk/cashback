@@ -37,26 +37,26 @@
                   </ol>
                     </div>
                 <div class="col-sm-12">
-                      <form method="post" id="contact-form" action="#" accept-charset="UTF-8">
+                      <form method="post" id="contact-form" action="<?=(base_url().'User/contact_mail')?> " accept-charset="UTF-8">
                     <fieldset>
                           <legend>conact us</legend>
                         </fieldset>
                     <ul class="row list-unstyled">
                           <li class="col-md-12">
                         <label class="control-label" for="comment-author">Your name <span class="req">*</span></label>
-                        <input type="text" class="form-control" value="" name="comment[author]" id="comment-author" required="">
+                        <input type="text" class="form-control" value="" name="author" id="comment-author" required="">
                       </li>
                           <li class="col-md-12">
                         <label class="control-label" for="comment-email">Your email <span class="req">*</span></label>
-                        <input type="email" class="form-control" value="" name="comment[email]" id="comment-email" required="">
+                        <input type="email" class="form-control" value="" name="email" id="comment-email" required="">
                       </li>
                           <li class="col-md-12">
                         <label class="control-label" for="comment-body">Your message <span class="req">*</span></label>
-                        <textarea class="form-control" rows="5" cols="40" name="comment[body]" id="comment-body" required=""></textarea>
+                        <textarea class="form-control" rows="5" cols="40" name="body" id="comment-body" required=""></textarea>
                       </li>
-                          <li class="col-sm-12">
+                         <!--  <li class="col-sm-12">
                         <p id="allowed-tags" class="allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
-                      </li>
+                      </li> -->
                           <li class="col-md-12">
                         <button class="btn btn-primary  hvr-underline-from-center-primary" id="comment-submit" type="submit">Send Message</button>
                       </li>

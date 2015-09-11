@@ -116,7 +116,7 @@ else
         { ?>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
              <ul class="dropdown-menu" role="menu">
-               <li><a href="<?php echo base_url().'User/user_account'; ?>">My Acount</a></li>
+               <li><a href="<?php echo base_url().'User/my_account'; ?>">My Acount</a></li>
                <li><a href="<?php echo base_url().'Auth/logout'; ?>">Logout</a></li>
              </ul>
            </li>
@@ -516,7 +516,7 @@ else
             <li><a href="<?php echo base_url().'User/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
           <li><a href="<?php echo base_url().'User/contact'; ?>">CONTACT</a></li>
-          <li><a href="#" class="active_nav nemu_hover">How It Works?</a></li>
+          <li><a href="<?php echo base_url().'User/how_it_work'; ?>" class="active_nav nemu_hover">How It Works?</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
           <li><a href="#">Home</a></li>

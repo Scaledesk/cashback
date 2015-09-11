@@ -187,7 +187,11 @@ else
   <header>
     <div class="container">
       <div class="row"> <!--start of logo-->
-        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" class="navbar-brand"></a></div>
+       <?php foreach ($logo as $logo_image) {
+             
+          ?>
+        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" ><img class="navbar-brand" src="<?php echo base_url().$logo_image->logo;?>"> </a></div>
+        <?php   } ?>
         <!--end of logo--> <!--start of features-->
         <div class="col-xs-12 col-sm-9 col-md-8 feature hidden-xs">
           <div class="row">

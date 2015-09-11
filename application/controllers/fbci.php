@@ -241,10 +241,10 @@ if(isset($authUrl)) //user is not logged in, show login button
 else // user logged in 
 {
 
-     $this->load->model('User_model');
+   $this->load->model('User_model');
 	 $user['user']=$this->User_model->google_data($user_id);
 
-	 if(isset($user)){
+	 if(is_array($user['user']&& sizeof($user['user'])>0)){
 
 	 	$this->set_session($user);
         redirect('auth/home','refresh');
