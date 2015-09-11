@@ -76,7 +76,7 @@
         <div class="modal-body">
           <ul class="list-inline row">
             <li class="col-sm-4"> <a href="<?php echo base_url().'Facebook\facebook_login"'?>" class="btn btn-block btn-facebook  "><i class="ion-social-facebook"></i></a> </li>
-            <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\twitter_login"'?>" class="btn btn-block btn-twitter"><i class="ion-social-twitter"></i></a></li>
+            <!-- <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\twitter_login"'?>" class="btn btn-block btn-twitter"><i class="ion-social-twitter"></i></a></li> -->
             <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\google_login"'?>" class="btn btn-block btn-google"><i class="ion-social-google"></i></a></li>
           </ul>
           <hr>

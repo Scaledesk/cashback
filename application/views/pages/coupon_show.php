@@ -15,9 +15,9 @@
 
               <!-- Nav tabs -->
               <div class="centered-pills">
-                <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
+               <!--  <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">men</a></li>
-                 </ul>
+                 </ul> -->
               </div>
 
               <!-- Tab panes -->
