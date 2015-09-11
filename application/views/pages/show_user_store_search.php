@@ -30,9 +30,17 @@
                 
                     <?php 
                     $a=$cu['store'];
-                 //print_r($a);
-                   
-                    foreach($a as $row) { ?>
+                    //echo "<pre/>";
+                     //print_r($cu['store'][]);
+                  // echo  $a[0]->store_description;
+                   //die();
+                    foreach($a as $row) {
+                      // foreach ($row as  $value) {
+                      //   # code...
+                      //   echo $value->store_description; die();
+                      // }
+                     
+                     ?>
                 <li class="item list-group-item  clearfix">
                   <div class="item-information">
 

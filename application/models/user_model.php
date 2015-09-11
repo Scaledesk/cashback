@@ -35,29 +35,61 @@ public function show_store()
     $store=0;
     $coupon=0;
     $product=0;
-    if($category_name=="STORE"){ 
-
-        $store=$this->db->query("select * from store_details where store_name='$search_key'")->result();
-    }
+    if($category_name=="STORE"){  //$this->db->where("user_id",$id);
+         $this->db->like("store_name",$search_key);
+         $store=$this->db->get("store_details");
+        $store=$store->result();
+         // echo "<pre/>";
+         //  print_r($store->result());
+         // die();
+        }
     elseif ($category_name=="COUPON") {
+
+          $this->db->like("coupon_name",$search_key);
+          $coupon=$this->db->get("coupon_details");
+          $coupon=$coupon->result();
          
-      
-       $coupon=$this->db->query("select * from coupon_details where coupon_name='$search_key'")->result();
+      // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
     }
 
     elseif ($category_name=="PRODUCTS") {
-       $product=$this->db->query("select * from product  where product_title='$search_key'")->result();
+         $this->db->like("product_title",$search_key);
+         $product=$this->db->get("product");
+         $product=$product->result();
+
+      // $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
       }
     else{  
-             $store=$this->db->query("select * from store_details where store_name='$search_key'")->result();
-             $coupon=$this->db->query("select * from coupon_details where coupon_name='$search_key'")->result();
-              $product=$this->db->query("select * from product  where product_title='$search_key'")->result();
+           $this->db->like("store_name",$search_key);
+           $store=$this->db->get("store_details");
+           $store=$store->result();
+
+         //    echo "<pre/>";
+         //  print_r($store->result());
+         // die();
+
+           $this->db->like("coupon_name",$search_key);
+           $coupon=$this->db->get("coupon_details");
+           $coupon=$coupon->result();
+
+           $this->db->like("product_title",$search_key);
+           $product=$this->db->get("product");
+           $product=$product->result();
+
+             // $store=$this->db->query("select * from store_details like store_name='$search_key'")->result();
+             // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
+             //  $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
     }
     
+  // $store=$store->result();
+  // $coupon=$coupon->result();
+   //$product=$product->result();
+    // echo "<pre/>";
+    // print_r($store);
     $result= array('store' =>$store ,'coupon' => $coupon ,'product' => $product );
-     //  echo "<pre/>";
-     // print_r($result) ;
-     // die();
+       // echo "<pre/>";
+       // print_r($result) ;
+      // die();
 // 
     return $result;
 
@@ -88,7 +120,7 @@ public function show_store()
 // public function update_category($id){
 
 // $data=array(
-// 'category_title'=>$this->input->post('category_title'),
+// 'category_title'=>$this->input->post('category_title'),` 
 // 'category_description'=>$this->input->post('category_description')
 // );
 // $this->db->where("category_id",$id);

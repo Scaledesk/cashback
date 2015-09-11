@@ -34,6 +34,7 @@ public function search(){
     $data['cu'] = $this->User_model->search();
 
     if($data['cu']['store']){
+      
         $data['title']='Show Store';
         $data['cg']= $this->Product_model->select_category();
         $data['logo']= $this->Product_model->logo_banner_display();
