@@ -35,12 +35,15 @@ public function show_store()
     $store=0;
     $coupon=0;
     $product=0;
+   // $error=0;
     if($category_name=="STORE"){  //$this->db->where("user_id",$id);
-         $this->db->like("store_name",$search_key);
-         $store=$this->db->get("store_details");
+         $store=$this->db->like("store_name",$search_key)->get("store_details");
         $store=$store->result();
+        // if(empty($store)){
+        //   $error[0]="no store found";
+        // }
          // echo "<pre/>";
-         //  print_r($store->result());
+         //  print_r($store);
          // die();
         }
     elseif ($category_name=="COUPON") {
@@ -48,7 +51,14 @@ public function show_store()
           $this->db->like("coupon_name",$search_key);
           $coupon=$this->db->get("coupon_details");
           $coupon=$coupon->result();
+<<<<<<< HEAD
 
+=======
+        //    if(empty($coupon)){
+        //   $error[0]="no coupon found";
+        // }
+         
+>>>>>>> origin/master
       // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
     }
 
@@ -56,6 +66,9 @@ public function show_store()
          $this->db->like("product_title",$search_key);
          $product=$this->db->get("product");
          $product=$product->result();
+        //   if(empty($product)){
+        //   $error[0]="no product found";
+        // }
 
       // $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
       }
@@ -63,6 +76,9 @@ public function show_store()
            $this->db->like("store_name",$search_key);
            $store=$this->db->get("store_details");
            $store=$store->result();
+           // if(empty($store)){
+           // $error[0]="no store found";
+           // }
 
          //    echo "<pre/>";
          //  print_r($store->result());
@@ -71,11 +87,16 @@ public function show_store()
            $this->db->like("coupon_name",$search_key);
            $coupon=$this->db->get("coupon_details");
            $coupon=$coupon->result();
+          //  if(empty($coupon)){
+          //  $error[0]="no coupon found";
+          // }
 
            $this->db->like("product_title",$search_key);
            $product=$this->db->get("product");
            $product=$product->result();
-
+          //  if(empty($product)){
+          //  $error[0]="no product found";
+          // }
              // $store=$this->db->query("select * from store_details like store_name='$search_key'")->result();
              // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
              //  $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
@@ -86,7 +107,8 @@ public function show_store()
    //$product=$product->result();
     // echo "<pre/>";
     // print_r($store);
-    $result= array('store' =>$store ,'coupon' => $coupon ,'product' => $product );
+
+    $result= array('store' =>$store ,'coupon' => $coupon ,'product' => $product, );
        // echo "<pre/>";
        // print_r($result) ;
       // die();
@@ -240,8 +262,12 @@ public function getUserDetails()
 
 public function getUser()
 {
-	$id=$this->session->userdata('user_id');
-	$query=$this->db->query("select * from users where id='$id'");
+	 $id=$this->session->userdata('user_id');
+
+  
+  //die();
+  $query=$this->db->query("select * from users where id='$id'");
+	$query=$this->db->query("select * from users where google_id='$id'");
 	return $query->result();
 }
 
