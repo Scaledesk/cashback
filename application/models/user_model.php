@@ -51,14 +51,12 @@ public function show_store()
           $this->db->like("coupon_name",$search_key);
           $coupon=$this->db->get("coupon_details");
           $coupon=$coupon->result();
-<<<<<<< HEAD
 
-=======
         //    if(empty($coupon)){
         //   $error[0]="no coupon found";
         // }
-         
->>>>>>> origin/master
+
+
       // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
     }
 
@@ -264,7 +262,7 @@ public function getUser()
 {
 	 $id=$this->session->userdata('user_id');
 
-  
+
   //die();
   $query=$this->db->query("select * from users where id='$id'");
 	$query=$this->db->query("select * from users where google_id='$id'");
