@@ -54,7 +54,7 @@ public function home(){
       $this->load->view('templates/header.php',$data);
 		  $data['h']=$this->Product_model->getProductDetails();
 			$data['s']=$this->User_model->show_store();
-			$data['c']=$this->User_model->show_coupon(); 
+			$data['c']=$this->User_model->show_coupon();
           $this->load->view('pages/index.php',$data);
           $this->load->view('templates/footer.php');
     }
@@ -245,7 +245,19 @@ public function register(){
 
 			//set any errors and display the form
 			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-			$this->_render_page('auth/forgot_password', $this->data);
+
+			$data['title'] = "Forgot Password";
+			$data['slider_image']= $this->Product_model->home_page_image();
+      $data['logo']= $this->Product_model->logo_banner_display();
+      $data['cg']= $this->Product_model->select_category();
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('pages/forgot_password.php');
+			$this->load->view('templates/footer.php');
+
+			// redirect forgot passsword page.
+
+
+			//$this->_render_page('auth/forgot_password', $this->data);
 		}
 		else
 		{
@@ -269,7 +281,13 @@ public function register(){
 		            	}
 
 		                $this->session->set_flashdata('message', $this->ion_auth->messages());
-                		redirect("auth/forgot_password", 'refresh');
+										$data['title'] = "Forgot Password";
+										$data['slider_image']= $this->Product_model->home_page_image();
+							      $data['logo']= $this->Product_model->logo_banner_display();
+							      $data['cg']= $this->Product_model->select_category();
+										$this->load->view('templates/header.php',$data);
+										$this->load->view('pages/forgot_password.php');
+										$this->load->view('templates/footer.php');
             		}
 
 			//run the forgotten password method to email an activation code to the user
@@ -279,12 +297,18 @@ public function register(){
 			{
 				//if there were no errors
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
-				redirect("auth/login", 'refresh'); //we should display a confirmation page here instead of the login page
+				redirect("auth/home", 'refresh'); //we should display a confirmation page here instead of the login page
 			}
 			else
 			{
 				$this->session->set_flashdata('message', $this->ion_auth->errors());
-				redirect("auth/forgot_password", 'refresh');
+				$data['title'] = "Forgot Password";
+				$data['slider_image']= $this->Product_model->home_page_image();
+	      $data['logo']= $this->Product_model->logo_banner_display();
+	      $data['cg']= $this->Product_model->select_category();
+				$this->load->view('templates/header.php',$data);
+				$this->load->view('pages/forgot_password.php');
+				$this->load->view('templates/footer.php');
 			}
 		}
 	}
@@ -361,7 +385,7 @@ public function register(){
 					{
 						//if the password was successfully changed
 						$this->session->set_flashdata('message', $this->ion_auth->messages());
-						redirect("auth/login", 'refresh');
+						redirect("auth/home", 'refresh');
 					}
 					else
 					{
@@ -375,7 +399,14 @@ public function register(){
 		{
 			//if the code is invalid then send them back to the forgot password page
 			$this->session->set_flashdata('message', $this->ion_auth->errors());
-			redirect("auth/forgot_password", 'refresh');
+			//redirect("auth/forgot_password", 'refresh');
+			$data['title'] = "Forgot Password";
+			$data['slider_image']= $this->Product_model->home_page_image();
+      $data['logo']= $this->Product_model->logo_banner_display();
+      $data['cg']= $this->Product_model->select_category();
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('pages/forgot_password.php');
+			$this->load->view('templates/footer.php');
 		}
 	}
 

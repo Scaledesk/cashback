@@ -51,7 +51,7 @@
         </div>
         <!--end of big title-->
 
-<!-- 
+<!--
         <div id="best-deals" class="col-sm-12 wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
           <?php foreach ($c->result() as $row) { ?>
 
@@ -86,15 +86,15 @@
                       <div class="product-view">
                         <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""></a></figure>
                         <span class="label offer-label-left"></span> </div>
-                        
+
                       <div class="product-btns  effect-content-inner">
                       <div class="col-sm-2 text-center left-bordered button_coupon"> <a class="btn btn-primary hvr-underline-from-center-primary login" href="javascript:void(0)" data-toggle="modal"data-target="#<?php echo $row->coupon_id; ?>">See Coupon</a> </div>
-                        
-                        
+
+
                       </div>
                     </div>
-                    
-                  
+
+
                   </div>
 
 
@@ -110,19 +110,19 @@
           <h5>Coupon Name:-<?php echo $row->coupon_name; ?></h5>
           <hr>
           <h3>Coupon Code:-<?php echo $row->coupon_code; ?></h3>
-           
+
           <p class="item-description"> <?php echo $row->coupon_description; ?></p>
-          
+
         </div>
         <div class="modal-footer">
-          
+
         </div>
       </div>
     </div>
   </div>
   <!-- end model -->
                   <?php  } ?>
-                 
+
                 </div>
           <!--end of product item container-->
 
@@ -137,12 +137,12 @@
     <!--start of wide ad-->
    <!--  <section class="container">
       <div class="row">
-         <div class="col-sm-12 wide-ad"> 
-           <figure> 
-         <?php 
-             
+         <div class="col-sm-12 wide-ad">
+           <figure>
+         <?php
+
          foreach ($logo as $logo_image) {
-             
+
           ?>
           <img class="img-responsive" src="<?php echo base_url().$logo_image->banner;?>" width="1920" height="275" alt="">
             <?php echo base_url().$logo_image->banner;?>
@@ -151,8 +151,8 @@
               <h2>Enjoy our <span>free shipping</span> for any order</h2>
               <p>Maecenas nec odio et ante tincidunt tempus</p>
               <a href="#">View more</a> </figcaption> --
-          </figure> 
-         </div> 
+          </figure>
+         </div>
       </div>
     </section> -->
 
@@ -371,15 +371,15 @@
     <section class="container">
       <div class="row">
       <?php foreach ($slider_image as  $image) {
-           
+
            ?>
         <div class="col-sm-12 col-md-4 ">
           <div class="small-ad">
-          
+
             <figure><img class="img-responsive" src="<?php echo base_url().$image->image;?>" width="370" height="200" alt="">
-              
+
               <figcaption>
-                
+
                 <span class="start-price hvr-underline-from-center-primary">shop now</span> </figcaption>
             </figure>
           </div>
@@ -418,7 +418,7 @@
         <div class="row">
           <div class="subscribe col-sm-12">
             <h3><span>lookbook sunglasses</span> <small>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus</small> </h3>
-            
+
           </div>
         </div>
       </section>
@@ -426,7 +426,7 @@
 
     <!--end of parallax subscribtion-->
 
-  
+
 
   </div>
   <!--end of middle sec-->

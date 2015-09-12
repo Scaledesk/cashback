@@ -1,17 +1,10 @@
-<?php
-include_once("header.php")
-
-?>
-
-
-
 
   <!--start of middle sec-->
   <div class="middle-sec wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
     <div class="page-header">
       <div class="container text-center">
         <h2 class="text-primary text-uppercase">Add Store</h2>
-        
+
       </div>
     </div>
     <section class="container">
@@ -42,26 +35,26 @@ include_once("header.php")
               </div>
             </div>
             <div class="col-sm-8 col-md-9 sub-data-left main-sec">
-              <div class="row"> 
-                
-                
-                <!--end of breadcrumb--> 
-                
+              <div class="row">
+
+
+                <!--end of breadcrumb-->
+
                 <!--start of checkout-->
                 <div class="col-sm-12">
                   <form role="form" action="" name="" method="Post">
-                    <div class="row"> 
-                      
+                    <div class="row">
+
                       <!-- START Presonal information -->
                       <fieldset class="col-md-6">
                         <legend>Change Password</legend>
-                        
+
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="address">Old Password</label>
                           <input type="text" id="" name="" class="form-control" placeholder="Name" required="">
                         </div>
-                        
+
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="">New Password</label>
@@ -71,17 +64,17 @@ include_once("header.php")
                           <label class="control-label" for="">Confirm Password</label>
                           <input type="text" id="" name="" class="form-control" placeholder="Image" required="">
                         </div>
-                        
-                        
+
+
                       </fieldset>
-                      
-                      
+
+
                       <!-- START Payment infromation -->
-                     
-                                                              
-                      <!-- END Payment information--> 
+
+
+                      <!-- END Payment information-->
                     </div>
-                    
+
                     <!-- Agree checkbox and Continue button -->
                     <div class="row">
                        <div class="col-sm-6 text-right">
@@ -90,9 +83,9 @@ include_once("header.php")
                     </div>
                   </form>
                 </div>
-                
-                <!--end of checkout--> 
-                
+
+                <!--end of checkout-->
+
               </div>
             </div>
           </div>
@@ -100,9 +93,5 @@ include_once("header.php")
       </div>
     </section>
   </div>
-  <!--end of middle sec--> 
+  <!--end of middle sec-->
   
-  <?php
-include_once("footer.php")
-
-?>
