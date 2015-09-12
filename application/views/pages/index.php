@@ -109,25 +109,25 @@
       <div class="row">
         <!--start of big title-->
 
-        <div class="col-sm-12 big-title text-uppercase text-center">
+        <!-- <div class="col-sm-12 big-title text-uppercase text-center">
           <h3 class="text-primary">new arrivals</h3>
           <small>Maecenas nec odio et ante tincidunt tempus</small>
           <p><span class="ion-android-star-outline"></span></p>
-        </div>
+        </div> -->
         <!--end of big title-->
         <div class="col-sm-12">
           <div id="new-arrivals" class="col-sm-12 accordion wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
             <div role="tabpanel">
 
               <!-- Nav tabs -->
-              <div class="centered-pills">
+              <!-- <div class="centered-pills">
                 <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
                   <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">men</a></li>
                   <li role="presentation"><a href="#women" aria-controls="women" role="tab" data-toggle="tab">women</a></li>
                   <li role="presentation"><a href="#children" aria-controls="children" role="tab" data-toggle="tab">children</a></li>
                   <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">accessories</a></li>
                 </ul>
-              </div>
+              </div> -->
 
               <!-- Tab panes -->
               <div class="tab-content">
@@ -150,7 +150,7 @@
                     <div class="product-info">
                       <h3 class="product-name"><?php echo $row->product_link;  ?></h3>
                     </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong><?php echo $row->product_price; ?></strong></span></span> <span class="old-price"><?php echo $row->product_price; ?></span> </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong><?php echo $row->product_price; ?></strong></span></span></div>
                   </div>
                       <?php  } ?>
                   <!--end of product item container-->
@@ -180,7 +180,7 @@
                     <div class="product-info">
                       <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
                     </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> </div>
                   </div>
                   <!--end of product item container-->
 
@@ -207,7 +207,7 @@
                     <div class="product-info">
                       <h3 class="product-name"><a href="product-details.html">Draped-front wool cardigan</a></h3>
                     </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span> <span class="old-price">$75.00</span> </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>$80.00</strong></span></span></div>
                   </div>
                   <!--end of product item container-->
 

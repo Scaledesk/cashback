@@ -30,9 +30,8 @@
                 
                     <?php 
                     $a=$cu['store'];
-                    //echo "<pre/>";
-                     //print_r($cu['store'][]);
-                  // echo  $a[0]->store_description;
+                    // echo "<pre/>";
+                    //  print_r($cu['store']);
                    //die();
                     foreach($a as $row) {
                       // foreach ($row as  $value) {

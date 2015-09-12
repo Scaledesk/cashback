@@ -8,10 +8,10 @@
             <div class="col-md-2 col-sm-3">
               <h5 class="text-info text-uppercase">useful pages</h5>
               <ul class="list-unstyled nudge">
-                <li><a href="text.html">About us</a> </li>
-                <li><a href="text-left.html">Terms and conditions</a> </li>
-                <li><a href="faqs.html">FAQ</a> </li>
-                <li><a href="contact.html">Contact us</a> </li>
+                <li><a href="<?php echo base_url().'User/about'; ?>">About us</a> </li>
+                <li><a href="<?php echo base_url().'User/termcondition'; ?>">Terms and conditions</a> </li>
+                <li><a href="<?php echo base_url().'User/faq'; ?>">FAQ</a> </li>
+                <li><a href="<?php echo base_url().'User/contact'; ?>">Contact us</a> </li>
               </ul>
               
               
@@ -76,7 +76,7 @@
         <div class="modal-body">
           <ul class="list-inline row">
             <li class="col-sm-4"> <a href="<?php echo base_url().'Facebook\facebook_login"'?>" class="btn btn-block btn-facebook  "><i class="ion-social-facebook"></i></a> </li>
-            <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\twitter_login"'?>" class="btn btn-block btn-twitter"><i class="ion-social-twitter"></i></a></li>
+            <!-- <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\twitter_login"'?>" class="btn btn-block btn-twitter"><i class="ion-social-twitter"></i></a></li> -->
             <li class="col-sm-4"> <a href="<?php echo base_url().'fbci\google_login"'?>" class="btn btn-block btn-google"><i class="ion-social-google"></i></a></li>
           </ul>
           <hr>

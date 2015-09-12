@@ -60,10 +60,10 @@ public function home(){
     }
 
 public function register(){
-      $data['title']='Cashback';
+      $data['title']='Registration';
       $data['logo']= $this->Product_model->logo_banner_display();
       $this->load->view('templates/header_reg.php',$data);
-      $this->load->view('auth/register.php');
+      $this->load->view('pages/register.php');
       $this->load->view('templates/footer.php');
     }
 
@@ -544,8 +544,8 @@ public function register(){
 				'type'  => 'password',
 				'value' => $this->form_validation->set_value('password_confirm'),
 			);
-
-		$this->_render_page('auth/create_user', $this->data);
+         redirect(base_url().'Auth/register', 'refresh');
+		//$this->_render_page('auth/create_user', $this->data);
 		}
 	}
 

@@ -16,7 +16,7 @@
               <!-- Nav tabs -->
               <div class="centered-pills">
                 <ul id="new-items" class="nav nav-tabs nav-pills" role="tablist">
-                  <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab">men</a></li>
+                  <!-- <li role="presentation" class="active"><a href="#men" aria-controls="men" role="tab" data-toggle="tab"></a></li> -->
                  </ul>
               </div>
 
@@ -1078,12 +1078,12 @@
                   </div>
                   <!--end of product item container-->
 
-                  <div class="col-xs-12">
+                  <!-- <div class="col-xs-12">
                     <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
                   </div>
                   <div class="col-xs-12">
                     <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
