@@ -37,7 +37,11 @@
                           <label class="control-label" for="address">Product Title</label>
                           <input type="text" id="" name="product_title" class="form-control" placeholder="Product Title" required="">
                         </div>
+                            
 
+                          <legend>Link</legend>
+                          <textarea class="form-control" rows="5" cols="40" placeholder="Link" name="link" id="comment-body" required=""></textarea>
+                        
 
                       </fieldset>
 
@@ -58,11 +62,19 @@
                           <input type="file"  name="product_image" class="form-control" required="">
                         </div>
 
+                        <div class="form-group">
+                          <label class="control-label" for="address">Company Name</label>
+                          <input type="test"  name="company_name" class="form-control" required="">
+                        </div>
+                        <div class="col-sm-6 text-right">
+                        <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " name="submit" value="Submit">
+                      </div>
+                      </fiedset>
                       <!-- END Payment information-->
                     </div>
 
                     <!-- Agree checkbox and Continue button -->
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-sm-12">
                         <fieldset>
                           <legend>Link</legend>
@@ -70,13 +82,11 @@
                           <hr>
                         </fieldset>
                       </div>
-                      <div class="col-sm-6">
-
-                      </div>
+                      
                       <div class="col-sm-6 text-right">
                         <input type="submit" class="btn btn-primary hvr-underline-from-center-primary " name="submit" value="Submit">
                       </div>
-                    </div>
+                    </div> -->
                   </form>
                 </div>
 
