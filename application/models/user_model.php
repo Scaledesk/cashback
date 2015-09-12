@@ -48,7 +48,7 @@ public function show_store()
           $this->db->like("coupon_name",$search_key);
           $coupon=$this->db->get("coupon_details");
           $coupon=$coupon->result();
-         
+
       // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
     }
 
@@ -59,7 +59,7 @@ public function show_store()
 
       // $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
       }
-    else{  
+    else{
            $this->db->like("store_name",$search_key);
            $store=$this->db->get("store_details");
            $store=$store->result();
@@ -80,7 +80,7 @@ public function show_store()
              // $coupon=$this->db->query("select * from coupon_details like coupon_name='$search_key'")->result();
              //  $product=$this->db->query("select * from product  like product_title='$search_key'")->result();
     }
-    
+
   // $store=$store->result();
   // $coupon=$coupon->result();
    //$product=$product->result();
@@ -90,7 +90,7 @@ public function show_store()
        // echo "<pre/>";
        // print_r($result) ;
       // die();
-// 
+//
     return $result;
 
   }
@@ -120,7 +120,7 @@ public function show_store()
 // public function update_category($id){
 
 // $data=array(
-// 'category_title'=>$this->input->post('category_title'),` 
+// 'category_title'=>$this->input->post('category_title'),`
 // 'category_description'=>$this->input->post('category_description')
 // );
 // $this->db->where("category_id",$id);
@@ -314,9 +314,9 @@ public function facebook_data($name,$email){
   $oldname=explode(' ', $name);
   $fname=$oldname[0];
   $lname=$oldname[1];
-  
 
-  
+
+
 
     $this->db->where(array('email'=>$email));
      $query=$this->db->get('users');
@@ -324,10 +324,10 @@ public function facebook_data($name,$email){
 
 	if($result='1'){
 
-		
+
      return true;
      }
- 
+
   else{
   $data=array(
   'username'=>$name,
@@ -335,25 +335,25 @@ public function facebook_data($name,$email){
   'first_name'=>$fname,
   'last_name'=>$lname,
   'provider'=>'Facebook'
- );  
+ );
     $this->db->where(array('email'=>$email));
   	$this->db->insert('users',$data);
-   
+
    //echo "insert";
   return true;
 }
 
 }
-// 
+//
 
 
 public function select_user($email){
-	
+
 
 
 	$this->db->where('email',$email);
 	$query=$this->db->get('users');
-	return $query->result(); 
+	return $query->result();
 
 }
 
@@ -368,13 +368,13 @@ public function google_data($id){
 }
 
 public function google_login_data($name,$email,$id){
-   
+
    $name;
    $email;
   $oldname=explode(' ', $name);
   $fname=$oldname[0];
   $lname=$oldname[1];
-  
+
   $data=array(
   'google_id'=>$id,
   'username'=>$name,
@@ -382,10 +382,10 @@ public function google_login_data($name,$email,$id){
   'first_name'=>$fname,
   'last_name'=>$lname,
   'provider'=>'Google'
- );  
+ );
     $this->db->where(array('google_id'=>$id));
   	$this->db->insert('users',$data);
-   
+
    //echo "insert";
   return true;
 
@@ -403,4 +403,30 @@ public function edit_contact(){
  $this->db->update('users',$d);
   return true;
 }
+
+public function getCategoryWiseDetails($id)
+{
+
+
+$product = $this->db->query("SELECT product.product_id, product.product_category_id, product.product_link,
+	product.product_price, product.product_title, product.product_image, category.category_title
+FROM product
+LEFT JOIN category
+ON product.product_category_id=category.category_id where product.product_category_id='$id'")->result_array();
+
+
+$coupon = $this->db->query("SELECT coupon_details.coupon_id, coupon_details.coupon_name, coupon_details.coupon_company,
+	coupon_details.coupon_category_id, coupon_details.coupon_code, coupon_details.coupon_description, coupon_details.coupon_offer,
+	coupon_details.coupon_url, category.category_title
+FROM coupon_details
+LEFT JOIN category
+ON coupon_details.coupon_category_id=category.category_id where coupon_details.coupon_category_id='$id'")->result();
+
+
+			 $result= array('product' =>$product , 'coupon' => $coupon);
+			 return $result;
+				// 	print_r($result);
+				// die;
+}
+
 }

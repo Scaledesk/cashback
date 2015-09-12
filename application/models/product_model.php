@@ -21,7 +21,6 @@ parent::__construct();
 
 
 public function add_category(){
-
 $data=array(
 'category_title'=>$this->input->post('category_title'),
 'category_description'=>$this->input->post('category_description')
@@ -167,7 +166,7 @@ public function logo_banner($logo,$banner_image)
 $this->db->insert('logo_banner',$data);
 return true;
 }
-  
+
 
 public function slider_image($slider_image,$image)
 {
@@ -190,14 +189,14 @@ $query=$this->db->get("logo_banner");
 		// print_r($query);
 		// die();
 
-		return $query->result();	
+		return $query->result();
 }
 
 public function home_page_image(){
-	
-	
+
+
 	$this->db->order_by("UPPER(image)","desc");
-	
+
 	$this->db->limit(3);
 	$query=$this->db->get("slider_image");
 		// echo '<pre />';

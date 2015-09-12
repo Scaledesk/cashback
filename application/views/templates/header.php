@@ -86,7 +86,7 @@ else
        <?php if($this->ion_auth->logged_in())
        {
           if($this->ion_auth->is_admin())
-          { 
+          {
 
             redirect(base_url().'Product/admin', 'refresh');
             ?>
@@ -110,7 +110,7 @@ else
            </li>
     <?php  }
         }
-       else { 
+       else {
 
         if($this->session->userdata('username')!='')
         { ?>
@@ -205,10 +205,10 @@ else
   <header>
     <div class="container">
 
-    
+
       <div class="row"> <!--start of logo-->
            <?php foreach ($logo as $logo_image) {
-             
+
           ?>
         <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" ><img class="navbar-brand" src="<?php echo base_url().$logo_image->logo;?>"> </a></div>
         <?php   } ?>
@@ -256,17 +256,17 @@ else
                 <!-- List of categories -->
                 <ul class="lnt-category list-unstyled">
               <li class="active"><a href="#subcategory-home">All pages</a></li>
-               <?php  
+               <?php
 
                 foreach($cg->result() as $row)
-                                             {?>
-                            
-                                   
-                                  <li><a href="#subcategory-sports"><?php echo $row->category_title; ?></a></li>
-                                    
+                                             { ?>
+
+
+                                  <li><a href="<?php echo base_url().'User/getCategoryWiseDetails/'.$row->category_id; ?>"><?php echo $row->category_title; ?></a></li>
+
                                 <?php  }?>
-                  <!-- 
-                  
+                  <!--
+
                   <li><a href="#subcategory-music">Digital music</a></li>
                   <li><a href="#subcategory-books">Books <span class="label label-danger">Hot</span></a></li>
                   <li><a href="#subcategory-fashion">Fashion and beauty</a></li>
@@ -511,7 +511,7 @@ else
           </li>
         </ul>
         <ul class="nav navbar-nav main-nav">
-          
+
             <li><a href="<?php echo base_url().'User/show_store'; ?>">STORE</a></li>
             <li><a href="<?php echo base_url().'User/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
@@ -526,17 +526,17 @@ else
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-btn lnt-search-category">
-              
-                 
 
-                <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false"> 
+
+
+                <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false">
                   <span>
 
                        <select class="selectpicker" name="category_name">
                  <option>ALL</option>
                  <option>STORE</option>
                  <option>COUPON</option>
-                 <option>PRODUCTS</option> 
+                 <option>PRODUCTS</option>
                   </select>
 
                   </span>
@@ -562,7 +562,7 @@ else
               <input type="text" name="search_key" class="form-control lnt-search-input" aria-label="Search" placeholder="Find Your Product">
             </div>
           </div>
-          
+
           <button type="submit" class="btn btn-xs btn-search"><span class="ion-android-search"></span></button>
         </form>
       </div>

@@ -30,17 +30,17 @@ public function show_coupon(){
 
 public function search(){
 
- 
+
     $data['cu'] = $this->User_model->search();
 
     if($data['cu']['store']){
-      
+
         $data['title']='Show Store';
         $data['cg']= $this->Product_model->select_category();
         $data['logo']= $this->Product_model->logo_banner_display();
         $this->load->view('templates/header.php',$data);
         $this->load->view('pages/show_user_store_search.php');
-        $this->load->view('templates/footer.php');  
+        $this->load->view('templates/footer.php');
     }
     elseif ($data['cu']['coupon']) {
       $data['title']='Show Coupon';
@@ -49,7 +49,7 @@ public function search(){
       $this->load->view('templates/header.php',$data);
       $this->load->view('pages/coupon_show_search.php',$data);
       $this->load->view('templates/footer.php');
-      
+
        }
     else{
         $data['title']='Display Product Details';
@@ -217,5 +217,22 @@ public function edit_contact(){
 		 echo "Successful ";
      redirect(base_url().'User/my_account', 'refresh');
 	}
+}
+
+
+public function getCategoryWiseDetails($id)
+{
+
+		$data['resultData'] = $this->User_model->getCategoryWiseDetails($id);
+		
+
+    $data['cg']= $this->Product_model->select_category();
+		$data['title']='Display Category';
+     $data['logo']= $this->Product_model->logo_banner_display();
+     $data['st']= $this->User_model->show_store();
+    $this->load->view('templates/header.php',$data);
+    $this->load->view('pages/categorySearch.php',$data);
+    $this->load->view('templates/footer.php');
+
 }
 }
