@@ -48,6 +48,12 @@ else
 <link rel="icon" type="image/png" href="<?php echo base_url().'assets/favicon/favicon-32x32.png';?>" sizes="32x32">
 <link rel="icon" type="image/png" href="<?php echo base_url().'assets/favicon/favicon-16x16.png';?>" sizes="16x16">
 <link rel="manifest" href="<?php echo base_url().'assets/favicon/manifest.json';?>">
+
+
+
+
+
+
 </head>
 <body>
 <!--start of loader-->
@@ -116,7 +122,7 @@ else
         { ?>
         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->session->userdata('username'); ?><span class="ion-android-arrow-dropdown"></span></a>
              <ul class="dropdown-menu" role="menu">
-               <li><a href="<?php echo base_url().'User/user_account'; ?>">My Acount</a></li>
+               <li><a href="<?php echo base_url().'User/my_account'; ?>">My Acount</a></li>
                <li><a href="<?php echo base_url().'Auth/logout'; ?>">Logout</a></li>
              </ul>
            </li>
@@ -210,7 +216,7 @@ else
            <?php foreach ($logo as $logo_image) {
 
           ?>
-        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="index.html" ><img class="navbar-brand" src="<?php echo base_url().$logo_image->logo;?>"> </a></div>
+        <div class="col-xs-12 col-sm-3 col-md-4 "> <a href="<?php echo base_url();?>" ><img class="navbar-brand" src="<?php echo base_url().$logo_image->logo;?>"> </a></div>
         <?php   } ?>
         <!--end of logo--> <!--start of features-->
         <div class="col-xs-12 col-sm-9 col-md-8 feature hidden-xs">
@@ -245,8 +251,8 @@ else
     <div class="container row-4">
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="line-navbar-collapse-2">
-        <ul class="nav navbar-nav lnt-nav-mega">
-          <li><a href="<?php echo base_url();?>" class="ion-ios-home"></a></li>
+        <ul class="nav navbar-nav">
+          <li><a href="<?php echo base_url();?>" class="ion-home"></a></li>
         </ul>
         <ul class="nav navbar-nav lnt-nav-mega">
 
@@ -259,15 +265,14 @@ else
                <?php
 
                 foreach($cg->result() as $row)
-                                             { ?>
+                                             {?>
 
 
                                   <li><a href="<?php echo base_url().'User/getCategoryWiseDetails/'.$row->category_id; ?>"><?php echo $row->category_title; ?></a></li>
 
                                 <?php  }?>
-
-
                   <!--
+
                   <li><a href="#subcategory-music">Digital music</a></li>
                   <li><a href="#subcategory-books">Books <span class="label label-danger">Hot</span></a></li>
                   <li><a href="#subcategory-fashion">Fashion and beauty</a></li>
@@ -517,23 +522,21 @@ else
             <li><a href="<?php echo base_url().'User/show_coupon'; ?>">COUPON</a></li>
            <li><a href="<?php echo base_url().'User/display_product'; ?>">PRODUCTS</a></li>
           <li><a href="<?php echo base_url().'User/contact'; ?>">CONTACT</a></li>
-          <li><a href="#" class="active_nav nemu_hover">How It Works?</a></li>
+          <li><a href="<?php echo base_url().'User/how_it_work'; ?>" class="active_nav nemu_hover">How It Works?</a></li>
         </ul>
         <ul class="nav navbar-nav visible-xs">
-          <li><a href="#">Home</a></li>
+          <li><a href="<?php echo base_url() ?>">Home</a></li>
         </ul>
         <form class="navbar-form navbar-right lnt-search-form" role="search" method="post" action="<?php echo base_url().'User/search'; ?>">
 
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-btn lnt-search-category">
+              <div class="input-group-btn lnt-search-category" >
 
+               <!--  <button type="button" class="dropdown-toggle selected-category-btn" style="hover:none;"data-toggle="dropdown" aria-expanded="false" >  -->
+                  <span style="color:red !important;">
 
-
-                <button type="button" class="btn btn-default dropdown-toggle selected-category-btn" data-toggle="dropdown" aria-expanded="false">
-                  <span>
-
-                       <select class="selectpicker" name="category_name">
+                  <select class="selectpicker dropdown-toggle" data-toggle="dropdown"  aria-expanded="false" name="category_name">
                  <option>ALL</option>
                  <option>STORE</option>
                  <option>COUPON</option>
