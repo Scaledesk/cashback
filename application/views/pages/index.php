@@ -51,7 +51,7 @@
         </div>
         <!--end of big title-->
 
-
+<!-- 
         <div id="best-deals" class="col-sm-12 wow fadeIn" data-wow-offset="10" data-wow-duration="2s">
           <?php foreach ($c->result() as $row) { ?>
 
@@ -75,14 +75,67 @@
           </div>
 
         <?php  } ?>
-          </div>
+          </div> -->
+
+
+                          <div role="tabpanel" class=" row tab-pane fade in active clearfix" id="men">
+                  <!--start of product item container-->
+                  <?php foreach($c->result() as $row) { ?>
+                  <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 product-item-container effect-wrasp effect-animate">
+                    <div class="product-main">
+                      <div class="product-view">
+                        <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""></a></figure>
+                        <span class="label offer-label-left"></span> </div>
+                        
+                      <div class="product-btns  effect-content-inner">
+                      <div class="col-sm-2 text-center left-bordered button_coupon"> <a class="btn btn-primary hvr-underline-from-center-primary login" href="javascript:void(0)" data-toggle="modal"data-target="#<?php echo $row->coupon_id; ?>">See Coupon</a> </div>
+                        
+                        
+                      </div>
+                    </div>
+                    
+                  
+                  </div>
+
+
+  <!--start of model box-->
+  <div class="modal fade" id="<?php echo $row->coupon_id; ?>" tabindex="-1" role="dialog" aria-labelledby="loginboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title text-primary text-uppercase" id="loginboxLabel">Coupon</h4>
+        </div>
+        <div class="modal-body">
+          <h5>Coupon Name:-<?php echo $row->coupon_name; ?></h5>
+          <hr>
+          <h3>Coupon Code:-<?php echo $row->coupon_code; ?></h3>
+           
+          <p class="item-description"> <?php echo $row->coupon_description; ?></p>
+          
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end model -->
+                  <?php  } ?>
+                 
+                </div>
           <!--end of product item container-->
 
       </div>
     </section>
+     <div class="col-sm-12 big-title text-uppercase text-center">
+          <h3 class="text-primary">Top Coupons and Deals</h3>
+          <small>Maecenas nec odio et ante tincidunt tempus</small>
+          <p><span class="ion-android-star-outline"></span></p>
+        </div>
     <!--end of best deals-->
     <!--start of wide ad-->
-    <section class="container">
+   <!--  <section class="container">
       <div class="row">
          <div class="col-sm-12 wide-ad"> 
            <figure> 
@@ -97,11 +150,11 @@
             <!-- <figcaption>
               <h2>Enjoy our <span>free shipping</span> for any order</h2>
               <p>Maecenas nec odio et ante tincidunt tempus</p>
-              <a href="#">View more</a> </figcaption> -->
+              <a href="#">View more</a> </figcaption> --
           </figure> 
          </div> 
       </div>
-    </section>
+    </section> -->
 
     <!--end of wide ad-->
     <!--start of new arrivals-->
@@ -139,16 +192,16 @@
                     <div class="product-main">
                       <div class="product-view">
                         <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->product_image;  ?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->product_image; ?>" width="215" height="240" alt=""></a></figure>
-                        <span class="label offer-label-left">polo shirts</span> </div>
-                      <div class="product-btns  effect-content-inner">
+                        <span class="label offer-label-left"><?php echo $row->company_name;?></span> </div>
+                     <!--  <div class="product-btns  effect-content-inner">
                         <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
                         <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
                         <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Compare"> <span class="compare ion-android-funnel"></span> </a></p>
                         <p class="effect-icon"> <a data-toggle="modal" data-target="#quick-view-box" class="hint-top" data-hint="Quick View"><span class="ion-ios-eye view"></span> </a></p>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="product-info">
-                      <h3 class="product-name"><?php echo $row->product_link;  ?></h3>
+                      <h3 class="product-name"><a href="<?php echo $row->product_link;  ?>"><?php echo $row->product_title;  ?></a></h3>
                     </div>
                     <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong><?php echo $row->product_price; ?></strong></span></span></div>
                   </div>

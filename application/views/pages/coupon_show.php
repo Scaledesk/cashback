@@ -66,76 +66,7 @@
   </div>
   <!-- end model -->
                   <?php  } ?>
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-                  <!--start of product item container-->
-
-                  <!--end of product item container-->
-
-
-
-
-                  <!-- <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div>
-                </div>
-                <div role="tabpanel" class="row tab-pane fade in clearfix" id="women"> <!--start of product item container-->
-                  
-                  <!--end of product item container-->
-
-                  <!-- <div class="col-xs-12">
-                    <div class="load-more"><a href="#" class="ion-ios-plus"></a></div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="load-less"><a href="#" class="ion-minus-circled"></a></div>
-                  </div> -->
+                 
                 </div>
               </div>
             </div>

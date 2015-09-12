@@ -70,12 +70,13 @@ public function delete_category($id)
 
 public function add_product($newimage)
 {
- $newimage_file = 'application/upload/'.$newimage;
+ $newimage_file = 'application/upload/'.$newimage; 
  $data=array(
 'product_category_id'=>$this->input->post('category'),
 'product_link'=>$this->input->post('link'),
 'product_price'=>$this->input->post('price'),
 'product_title'=>$this->input->post('product_title'),
+'company_name'=>$this->input->post('company_name'),
 'product_image'=>$newimage_file
 
 );

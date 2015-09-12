@@ -8,11 +8,11 @@
     </div>
     <section class="container">
       <div class="row">
-        <div class="col-sm-12 ">
+        <!-- <div class="col-sm-12 ">
           <div class="inner-ad">
             <figure><img class="img-responsive" src="images\inner-ad.jpg" width="1170" height="100" alt=""></figure>
           </div>
-        </div>
+        </div> -->
         
         <!--main sec start-->
         
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="col-sm-12">
               <ol class="breadcrumb  dashed-border">
-                <li><a href="#">Home</a></li>
+                <li><a href="<?php echo base_url();?>">Home</a></li>
                 <li class="active">Store</li>
               </ol>
             </div>
@@ -47,7 +47,8 @@
                       <h5 class="item-title text-primary text-uppercase text-primary text-uppercase"><a href="#"><?php echo $row->store_name; ?></a></h5>
                       <p class="item-description"> <?php echo $row->store_description; ?></p>
                      </div>
-                      <div class="item-price js-item-price col-sm-2 text-info text-center" data-price="11.99"> <strong>$1199</strong> </div>
+                     <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary">Shop Now</a> </div>
+                      <!-- <div class="item-price js-item-price col-sm-2 text-info text-center" data-price="11.99"> <strong>$1199</strong> </div> -->
                     </div>
 
                     
@@ -60,7 +61,7 @@
                       <div class="col-sm-8">
                         
                       </div>
-                      <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary">See Coupon</a> </div>
+                     <!--  <div class="col-sm-2 text-center left-bordered"> <a class="btn btn-primary hvr-underline-from-center-primary">See Coupon</a> </div> -->
                     </div>
                   </div>
 
