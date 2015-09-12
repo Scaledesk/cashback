@@ -29,7 +29,7 @@
                     <div class="product-main">
                       <div class="product-view">
                         <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->product_image;?>" width="215" height="240" alt=""></a></figure>
-                        <span class="label offer-label-left">polo shirts</span> </div>
+                        <span class="label offer-label-left"><?php echo $row->company_name;?></span> </div>
                       <div class="product-btns  effect-content-inner">
                         <p class="effect-icon"> <a href="<?php echo $row->product_link; ?>" class="hint-top" data-hint="Add To Cart"><span class="cart ion-bag"></span></a></p>
                         <p class="effect-icon"> <a href="#" class="hint-top" data-hint="Wishlist"><span class="fav ion-ios-star"></span></a></p>
@@ -40,7 +40,7 @@
                     <div class="product-info">
                       <h3 class="product-name"><a href="product-details.html"><?php echo $row->product_title;?>"</a></h3>
                     </div>
-                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?> </strong></span></span> <span class="old-price">Rs <?php echo $row->product_price; ?></span> </div>
+                    <div class="product-price"><span class="real-price text-info"><span class="real-price text-info"><strong>Rs <?php echo $row->product_price; ?> </strong></span></span> </div>
                   </div>
                   <?php  } ?>
                   <!--end of product item container-->
