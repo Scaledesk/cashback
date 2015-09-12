@@ -18,8 +18,8 @@ public function contact_mail(){
 
 
 
-   
-  
+
+
   //Email information
    $admin_email = "nkscoder@gmail.com";
    $name    = $_REQUEST['author'];
@@ -29,7 +29,7 @@ public function contact_mail(){
    //die();
   //send email
   mail($admin_email, "$subject", $comment, "From:" . $email);
-  
+
   //Email response
   echo "Thank you for contacting us!";
   }
@@ -64,17 +64,15 @@ public function search(){
 //die;
       if(isset($data['cu']['store'][0]->store_id)){
 
-<<<<<<< HEAD
+
     if($data['cu']['store']){
 
-=======
->>>>>>> origin/master
         $data['title']='Show Store';
         $data['cg']= $this->Product_model->select_category();
         $data['logo']= $this->Product_model->logo_banner_display();
         $this->load->view('templates/header.php',$data);
         $this->load->view('pages/show_user_store_search.php');
-<<<<<<< HEAD
+
         $this->load->view('templates/footer.php');
     }
     elseif ($data['cu']['coupon']) {
@@ -86,8 +84,8 @@ public function search(){
       $this->load->view('templates/footer.php');
 
        }
-=======
-            $this->load->view('templates/footer.php');  
+
+            $this->load->view('templates/footer.php');
         }
         /*elseif ($data['cu']['coupon']) {
           $data['title']='Show Coupon';
@@ -96,9 +94,9 @@ public function search(){
           $this->load->view('templates/header.php',$data);
           $this->load->view('pages/coupon_show_search.php',$data);
           $this->load->view('templates/footer.php');
-          
+
            }
->>>>>>> origin/master
+
     else{
         $data['title']='Display Product Details';
         $data['cg']= $this->Product_model->select_category();
@@ -132,7 +130,7 @@ public function contact(){
   $this->load->view('templates/footer.php');
 
 }
-   
+
  public function faq(){
    $data['title']='FAQ';
    $data['cg']= $this->Product_model->select_category();
@@ -311,7 +309,7 @@ public function getCategoryWiseDetails($id)
 {
 
 		$data['resultData'] = $this->User_model->getCategoryWiseDetails($id);
-		
+
 
     $data['cg']= $this->Product_model->select_category();
 		$data['title']='Display Category';

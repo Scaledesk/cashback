@@ -17,6 +17,7 @@
         <?php foreach ($resultData['coupon'] as $row) { ?>
 
           <div class="product-item-container effect-wrap effect-animate">
+            
             <div class="product-main">
               <div class="product-view">
                 <figure class="double-img"><a href="#"><img class="btm-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""> <img class="top-img" src="<?php echo base_url().$row->coupon_url;?>" width="215" height="240" alt=""></a></figure>
@@ -37,29 +38,7 @@
       </div>
     </section>
     <!--end of best deals-->
-    <!--start of wide ad-->
-    <section class="container">
-      <div class="row">
-         <div class="col-sm-12 wide-ad">
-           <figure>
-         <?php
 
-         foreach ($logo as $logo_image) {
-
-          ?>
-          <img class="img-responsive" src="<?php echo base_url().$logo_image->banner;?>" width="1920" height="275" alt="">
-            <?php echo base_url().$logo_image->banner;?>
-            <?php } ?>
-            <!-- <figcaption>
-              <h2>Enjoy our <span>free shipping</span> for any order</h2>
-              <p>Maecenas nec odio et ante tincidunt tempus</p>
-              <a href="#">View more</a> </figcaption> -->
-          </figure>
-         </div>
-      </div>
-    </section>
-
-    <!--end of wide ad-->
     <!--start of new arrivals-->
     <section class="container">
       <div class="row">
