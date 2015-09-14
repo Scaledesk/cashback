@@ -38,7 +38,7 @@ class Store_control extends CI_Controller {
         {
 					if( $this->Store_model->add_store($nstore)){
             $data['cg']= $this->Product_model->select_category();
-
+						$data['logo']= $this->Product_model->logo_banner_display();
     			$data['title']='Add Store';
     			$data['msg']='Store Details Saved';
     			$this->load->view('templates/admin_header.php',$data);

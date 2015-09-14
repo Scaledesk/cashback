@@ -14,8 +14,8 @@ class Product extends CI_Controller {
 	}
 
   public function logo_banner_display(){
-   $data['logo']= $this->Product_model->logo_banner_display(); 
-   
+   $data['logo']= $this->Product_model->logo_banner_display();
+
   }
   public function product_page(){
 
@@ -64,7 +64,14 @@ public function add_category(){
 
 
  if($this->Product_model->add_category()){
-      echo "successful Add Category";
+	 $data['title']='Manage Category';
+	 $data['msg'] = "Category Add Successfully";
+	 $data['cg']= $this->Product_model->select_category();
+	 $data['logo']= $this->Product_model->logo_banner_display();
+	 $this->load->view('templates/admin_header.php',$data);
+	 $this->load->view('templates/adminSidebar.php');
+	 $this->load->view('pages/add_category.php',$data);
+	 $this->load->view('templates/footer.php');
 
       }
 
@@ -271,27 +278,27 @@ public function home_page_setting(){
   $config['allowed_types'] = 'png|jpeg|gif|jpg';
   $config['max_size'] = '2048000';
   $this->load->library('upload',$config);
-  
+
            $image=$_FILES['image']['name'];
           $_FILES['image']['name']=$image;
          $this->upload->do_upload('image');
-         
+
           $slider_image=$_FILES['slider_image']['name'];
           $_FILES['slider_image']['name']=$slider_image;
          $this->upload->do_upload('slider_image');
 
-          
-          $this->Product_model->slider_image($slider_image,$image);
-        
-    
-   
-          //$this->Product_model->image($image);
-        
 
-  
+          $this->Product_model->slider_image($slider_image,$image);
+
+
+
+          //$this->Product_model->image($image);
+
+
+
       echo "successful Add Slider and Image";
       redirect(base_url().'product/home_page_setting','refresh');
-      
-     
+
+
   }
 }

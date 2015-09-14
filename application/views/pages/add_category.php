@@ -5,13 +5,14 @@
 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                  <form role="form" action="" name="" method="Post">
-                    <div class="row-center"> 
-                      
+                  <form role="form" action="<?=(base_url().'Product/add_category')?>" name="" method="Post">
+                    <div class="row-center">
+                      <div><?php error_reporting(0); if($msg!='') echo $msg; ?></div>
                       <div class="col-sm-8">
                         <fieldset>
                           <legend>Category Title</legend>
-                          <input type="text" maxlength="60" placeholder="Category Title" name="" id="ccv" class="form-control" required="">
+                          <div><p style="color=red"<?php error_reporting(0); if($msg!='') echo $msg; ?></div>
+                          <input type="text" maxlength="60" placeholder="Category Title" name="category_title" id="ccv" class="form-control" required="">
                           <hr>
                         </fieldset>
                       </div>
@@ -19,20 +20,20 @@
                       <div class="col-sm-8">
                         <fieldset>
                           <legend>Categories Descritpion</legend>
-                          <textarea class="form-control" placeholder="Categories Descritpion" rows="5" cols="100" name="" id="" required=""></textarea>
+                          <textarea class="form-control" placeholder="Categories Descritpion" rows="5" cols="100" name="category_description" id="" required=""></textarea>
                           <hr>
                         </fieldset>
                       </div>
-                      
+
                       <div class="col-sm-6 text-center">
                         <input class="btn btn-primary hvr-underline-from-center-primary " type="submit" value="Add Category">
                       </div>
                     </div>
                   </form>
                 </div>
-                
-                <!--end of checkout--> 
-                
+
+                <!--end of checkout-->
+
               </div>
             </div>
           </div>
@@ -40,7 +41,7 @@
       </div>
     </section>
   </div>
-  <!--end of middle sec--> 
+  <!--end of middle sec-->
 
 
               </div>

@@ -7,7 +7,7 @@
 
                 <!--start of checkout-->
                 <div class="col-sm-12">
-                  <form role="form" action="" name="" method="Post">
+                  <form role="form" action="<?php echo base_url().'do_add_store'; ?>" name="" method="Post" enctype="multipart/form-data">
                     <div class="row">
 
                       <!-- START Presonal information -->
@@ -17,13 +17,13 @@
                         <!-- Select Category -->
                         <div class="form-group">
                           <label class="control-label" for="address">Store Name</label>
-                          <input type="text" id="" name="" class="form-control" placeholder="Name" required="">
+                          <input type="text" id="" name="store_name" class="form-control" placeholder="Name" required="">
                         </div>
 
                         <!-- Product Title -->
                         <div class="form-group">
                           <label class="control-label" for="address">Store Link</label>
-                          <textarea class="form-controle" placeholder="Store Link" required="" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea>
+                          <textarea class="form-controle" placeholder="Store Link" required="" name="store_link" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea>
                         </div>
 
 
@@ -37,13 +37,13 @@
                         <!-- Price -->
                         <div class="form-group">
                           <label class="control-label" for="address">Image</label>
-                          <input type="file" id="" name="" class="form-control" placeholder="Image" required="">
+                          <input type="file" id="" name="store_image" class="form-control" placeholder="Image" required="">
                         </div>
 
                         <!-- Image -->
                         <div class="form-group">
                           <label class="control-label" for="address">Store Desciption</label>
-                          <textarea class="form-controle" placeholder="Store Desciption" required="" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea>
+                          <textarea class="form-controle" placeholder="Store Desciption" name="store_description" required="" maxlength='500' style="margin: 0px; width: 407px; height: 127px;"></textarea>
                         </div>
 
                       <!-- END Payment information-->
