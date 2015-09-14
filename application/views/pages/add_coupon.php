@@ -37,11 +37,15 @@
 
                         <!-- Price -->
                         <div class="form-group">
-                          <label class="control-label" for="card">Coupon Category</label>
-                          <select class="selectpicker" id="" name="coupon_category_id" required="">
-                            <option value="1">MasterCard</option>
-                            <option value="2">Visa</option>
-
+                          <label class="control-label" for="coupon_category_id">Coupon Category</label>
+                          <select class="form-control" id="coupon_category_id" name="coupon_category_id" required="">
+                            <option value="">Select</option>
+                            <?php
+                                 foreach($cg->result() as $row)
+                                 {
+                               ?>
+                               <option value="<?php echo $row->category_id; ?>"><?php echo $row->category_title; ?></option>
+                               <?php }?>
                           </select>
                         </div>
 

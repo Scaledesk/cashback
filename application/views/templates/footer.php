@@ -1,7 +1,6 @@
 <!--start of btm sec-->
   <div class="btm-sec">
     <footer>
-
       <div class="footer-middle wow fadeIn" data-wow-offset="40" data-wow-duration="2s">
         <div class="container">
           <div class="row">

@@ -17,7 +17,7 @@ class Coupon_control extends CI_Controller {
     $data['logo']= $this->Product_model->logo_banner_display();
     $this->load->view('templates/admin_header.php',$data);
 		$this->load->view('templates/adminSidebar.php',$data);
-    $this->load->view('pages/add_coupon.php');
+    $this->load->view('pages/add_coupon.php',$data);
     $this->load->view('templates/footer.php');
   }
 
